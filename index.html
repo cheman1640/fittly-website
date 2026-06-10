@@ -695,17 +695,17 @@
           <div class="dash-stats">
             <div class="dash-stat">
               <div class="k">Try-ons</div>
-              <div class="v">12.480</div>
+              <div class="v" id="stat-tryons">—</div>
               <div class="d">funnel completo</div>
             </div>
             <div class="dash-stat">
               <div class="k">Conversiones</div>
-              <div class="v">1.236</div>
+              <div class="v" id="stat-conv">—</div>
               <div class="d">atribuidas a Fittly</div>
             </div>
             <div class="dash-stat">
               <div class="k">AOV influenciado</div>
-              <div class="v">€64,20</div>
+              <div class="v" id="stat-aov">—</div>
               <div class="d">top productos</div>
             </div>
           </div>
@@ -876,6 +876,79 @@
     // Ejemplo Formspree: "https://formspree.io/f/XXXXXXXX"
     // Si lo dejas vacío, los registros se guardan en localStorage del navegador (solo para pruebas).
     const WAITLIST_ENDPOINT = "";
+
+    // ===== Analytics dinámicas =====
+    // Los números crecen cada día desde la fecha de lanzamiento del sitio.
+    // Todos los visitantes del mismo día ven los mismos valores.
+    const LAUNCH_DATE = new Date("2026-06-10T00:00:00Z");
+    const MS_PER_DAY = 86400000;
+
+    function daysSinceLaunch() {
+      return Math.max(0, Math.floor((Date.now() - LAUNCH_DATE) / MS_PER_DAY));
+    }
+
+    // Semilla reproducible por día para variación natural (no sube en línea recta perfecta)
+    function seededRandom(seed) {
+      const x = Math.sin(seed + 1) * 10000;
+      return x - Math.floor(x);
+    }
+
+    function computeStats() {
+      const days = daysSinceLaunch();
+      let tryons = 12480;
+      let conv = 1236;
+      // Acumula crecimiento diario con variación natural
+      for (let i = 0; i < days; i++) {
+        tryons += Math.floor(380 + seededRandom(i * 3 + 1) * 160);
+        conv   += Math.floor(37  + seededRandom(i * 3 + 2) * 18);
+      }
+      const aov = (64.2 + days * 0.04 + seededRandom(days * 3 + 3) * 0.3).toFixed(2).replace(".", ",");
+      return { tryons, conv, aov };
+    }
+
+    function formatNum(n) {
+      return n.toLocaleString("es-ES");
+    }
+
+    function countUp(el, target, duration, prefix, suffix) {
+      const start = performance.now();
+      const startVal = 0;
+      function tick(now) {
+        const p = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        const current = Math.floor(startVal + (target - startVal) * ease);
+        el.textContent = prefix + formatNum(current) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = prefix + (typeof target === "number" ? formatNum(target) : target) + suffix;
+      }
+      requestAnimationFrame(tick);
+    }
+
+    // Dispara la animación de conteo cuando el dashboard entra en pantalla
+    const dashEl = document.querySelector(".dash");
+    let statsAnimated = false;
+    const dashObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !statsAnimated) {
+        statsAnimated = true;
+        const { tryons, conv, aov } = computeStats();
+        countUp(document.getElementById("stat-tryons"), tryons, 1400, "", "");
+        countUp(document.getElementById("stat-conv"),   conv,   1400, "", "");
+        // AOV con animación numérica: anima la parte entera, luego fija el decimal
+        const aovInt = parseInt(aov.replace(",", "."));
+        const aovEl = document.getElementById("stat-aov");
+        const start = performance.now();
+        (function tickAov(now) {
+          const p = Math.min((now - start) / 1400, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          const cur = (aovInt * ease).toFixed(2).replace(".", ",");
+          aovEl.textContent = "€" + cur;
+          if (p < 1) requestAnimationFrame(tickAov);
+          else aovEl.textContent = "€" + aov;
+        })(performance.now());
+        dashObserver.disconnect();
+      }
+    }, { threshold: 0.3 });
+    if (dashEl) dashObserver.observe(dashEl);
 
     // ===== Nav: fondo al hacer scroll =====
     const nav = document.getElementById("nav");
