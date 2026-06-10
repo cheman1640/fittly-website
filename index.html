@@ -870,12 +870,14 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script>
-    // ===== Configuración de la waitlist =====
-    // Pega aquí tu endpoint de Formspree, Getform, Google Apps Script, etc.
-    // Ejemplo Formspree: "https://formspree.io/f/XXXXXXXX"
-    // Si lo dejas vacío, los registros se guardan en localStorage del navegador (solo para pruebas).
-    const WAITLIST_ENDPOINT = "";
+    // ===== Supabase =====
+    const { createClient } = supabase;
+    const sb = createClient(
+      "https://oaotoxzrftwrstcvevjs.supabase.co",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9hb3RveHpyZnR3cnN0Y3ZldmpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3Mjk1ODcsImV4cCI6MjA5MDMwNTU4N30.N83UswzOHIx8D4fuhUO8fHOnlopxki3UKRnl6_6NYcU"
+    );
 
     // ===== Analytics dinámicas =====
     // Los números crecen cada día desde la fecha de lanzamiento del sitio.
@@ -977,31 +979,17 @@
       if (!form.reportValidity()) return;
       if (form._gotcha.value) return; // honeypot
 
-      const data = {
-        store: form.store.value.trim(),
-        email: form.email.value.trim(),
-        url: form.url.value.trim(),
-        catalog: form.catalog.value,
-        date: new Date().toISOString(),
-      };
-
       submitBtn.disabled = true;
       submitBtn.textContent = "Enviando…";
 
       try {
-        if (WAITLIST_ENDPOINT) {
-          const res = await fetch(WAITLIST_ENDPOINT, {
-            method: "POST",
-            headers: { "Content-Type": "application/json", Accept: "application/json" },
-            body: JSON.stringify(data),
-          });
-          if (!res.ok) throw new Error("Respuesta " + res.status);
-        } else {
-          // Modo prueba: guarda localmente hasta que conectes un endpoint real
-          const list = JSON.parse(localStorage.getItem("fittly_waitlist") || "[]");
-          list.push(data);
-          localStorage.setItem("fittly_waitlist", JSON.stringify(list));
-        }
+        const { error } = await sb.from("waitlist").insert({
+          store_name: form.store.value.trim(),
+          email:      form.email.value.trim(),
+          store_url:  form.url.value.trim() || null,
+          catalog:    form.catalog.value || null,
+        });
+        if (error) throw error;
         form.style.display = "none";
         document.querySelector(".waitlist-perk").style.display = "none";
         successBox.style.display = "block";
