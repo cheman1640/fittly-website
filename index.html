@@ -164,41 +164,114 @@
       box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255,255,255,0.08);
       text-align: left; overflow: hidden;
     }
-    .mock-widget { width: 400px; padding: 26px; }
-    .mock-widget h4 { font-family: var(--font-display); font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
-    .mock-widget .mock-sub { font-size: 13px; color: #71717a; margin-top: 2px; }
-    .mock-models { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 18px; }
-    .mock-model {
-      border-radius: 14px; overflow: hidden; border: 2px solid #e4e4e7;
-      aspect-ratio: 3 / 4.4; position: relative; background: #f4f4f5;
+    .mock-widget { width: 400px; padding: 24px; }
+
+    /* --- Réplica del widget real (Try it on) --- */
+    .uiw-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .uiw-spark {
+      width: 40px; height: 40px; border-radius: 50%; background: #111; color: #fff;
+      display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;
     }
-    .mock-model img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .mock-model.selected { border-color: #111; }
-    .mock-model.selected::after {
-      content: "✓"; position: absolute; top: 6px; right: 6px;
-      width: 20px; height: 20px; border-radius: 50%;
-      background: #111; color: #fff; font-size: 12px; font-weight: 700;
+    .uiw-title { font-family: var(--font-display); font-size: 19px; font-weight: 800; letter-spacing: -0.02em; color: #111; }
+    .uiw-sub { font-size: 12.5px; color: #71717a; margin-top: 1px; }
+    .uiw-btn {
+      display: flex; align-items: center; gap: 12px;
+      border: 1px solid #e4e4e7; background: #fafafa; border-radius: 14px;
+      padding: 13px 14px; margin-top: 10px;
+    }
+    .uiw-btn--dark { background: #111; border-color: #111; }
+    .uiw-ic {
+      width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(255,255,255,0.14); color: #fff;
       display: flex; align-items: center; justify-content: center;
     }
-    .mock-model-label { font-size: 11px; text-align: center; color: #71717a; margin-top: 5px; font-weight: 500; }
-    .mock-upload {
-      margin-top: 16px; border: 1.5px dashed #d4d4d8; border-radius: 14px;
-      padding: 13px 16px; font-size: 13.5px; color: #52525b;
-      display: flex; align-items: center; gap: 10px; font-weight: 500;
+    .uiw-btn:not(.uiw-btn--dark) .uiw-ic { background: #fff; color: #111; border: 1px solid #e4e4e7; }
+    .uiw-ic svg { width: 18px; height: 18px; }
+    .uiw-txt { flex: 1; min-width: 0; }
+    .uiw-txt b { display: block; font-size: 14.5px; font-weight: 700; color: #111; letter-spacing: -0.01em; }
+    .uiw-btn--dark .uiw-txt b { color: #fff; }
+    .uiw-txt small { display: block; font-size: 12px; color: #71717a; margin-top: 1px; }
+    .uiw-btn--dark .uiw-txt small { color: #a1a1aa; }
+    .uiw-chev { font-size: 20px; color: #a1a1aa; font-weight: 400; }
+    .uiw-btn--dark .uiw-chev { color: #71717a; }
+    .uiw-privacy { text-align: center; font-size: 12px; color: #71717a; margin-top: 16px; }
+    .uiw-meta {
+      display: flex; justify-content: center; gap: 8px; align-items: center;
+      font-size: 12.5px; margin-top: 10px; color: #a1a1aa;
     }
-    .mock-size {
-      margin-top: 16px; background: #f4f4f5; border-radius: 14px;
-      padding: 14px 16px; display: flex; align-items: center; justify-content: space-between;
+    .uiw-meta .ok { color: #16a34a; font-weight: 600; }
+    .uiw-meta .lnk { color: #4f46e5; font-weight: 500; }
+    .uiw-powered {
+      display: flex; justify-content: center; align-items: center; gap: 5px;
+      font-size: 11px; color: #a1a1aa; margin-top: 14px;
     }
-    .mock-size .label { font-size: 12.5px; color: #71717a; font-weight: 500; }
-    .mock-size .value { font-family: var(--font-display); font-weight: 800; font-size: 17px; letter-spacing: -0.02em; }
-    .mock-size .chip {
-      background: #111; color: #fff; font-size: 12px; font-weight: 600;
-      padding: 5px 12px; border-radius: var(--radius-pill);
+    .uiw-powered img { width: 14px; height: 14px; border-radius: 26%; }
+    .uiw-powered b { color: #52525b; font-weight: 700; }
+
+    /* --- Showcase: réplicas de talla y cuenta --- */
+    .showcase-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+      margin-top: 70px; align-items: start;
     }
-    .mock-btn {
-      margin-top: 18px; background: #111; color: #fff; border-radius: var(--radius-pill);
-      padding: 15px; text-align: center; font-weight: 600; font-size: 15px;
+    .showcase-item { display: flex; flex-direction: column; align-items: center; gap: 22px; }
+    .showcase-caption { font-size: 15px; color: var(--muted); text-align: center; max-width: 420px; }
+    .showcase-caption b { color: var(--text); font-weight: 600; }
+
+    .sizer { width: 100%; max-width: 430px; padding: 26px; }
+    .sizer-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .sizer-title { font-family: var(--font-display); font-size: 15px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #111; }
+    .sizer-units { font-size: 11.5px; font-weight: 600; color: #52525b; border: 1px solid #e4e4e7; border-radius: var(--radius-pill); padding: 4px 11px; }
+    .sizer-inputs { display: flex; gap: 10px; }
+    .sizer-input { flex: 1; border: 1px solid #e4e4e7; border-radius: 12px; padding: 10px 14px; }
+    .sizer-input small { display: block; font-size: 11px; color: #71717a; }
+    .sizer-input b { font-family: var(--font-display); font-size: 18px; font-weight: 800; color: #111; }
+    .sizer-fit-label { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #71717a; margin: 16px 0 8px; }
+    .sizer-fits { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+    .sizer-fits span {
+      text-align: center; font-size: 12px; font-weight: 600; color: #52525b;
+      border: 1px solid #e4e4e7; border-radius: 10px; padding: 9px 4px;
+    }
+    .sizer-fits span.on { background: #111; color: #fff; border-color: #111; }
+    .sizer-result {
+      display: flex; gap: 16px; margin-top: 18px;
+      background: #f4f4f5; border-radius: 16px; padding: 18px;
+    }
+    .sizer-size {
+      font-family: var(--font-display); font-size: 44px; font-weight: 900; letter-spacing: -0.04em;
+      color: #111; line-height: 1; flex-shrink: 0;
+    }
+    .sizer-result-txt .row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .sizer-result-txt b { font-size: 13.5px; color: #111; }
+    .sizer-result-txt .conf {
+      font-size: 10.5px; font-weight: 700; color: #16a34a;
+      background: rgba(22, 163, 74, 0.1); border-radius: var(--radius-pill); padding: 3px 9px;
+    }
+    .sizer-result-txt p { font-size: 12.5px; color: #52525b; margin-top: 6px; line-height: 1.5; }
+
+    .uia { width: 100%; max-width: 430px; padding: 26px; }
+    .uia-brand { display: flex; justify-content: center; align-items: center; gap: 7px; margin-bottom: 18px; }
+    .uia-brand img { width: 26px; height: 26px; border-radius: 26%; }
+    .uia-brand span { font-family: var(--font-display); font-weight: 800; font-size: 18px; letter-spacing: -0.02em; color: #111; }
+    .uia-user { display: flex; align-items: center; gap: 13px; padding-bottom: 16px; border-bottom: 1px solid #f0f0f1; }
+    .uia-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: top; }
+    .uia-user b { display: block; font-size: 14.5px; color: #111; font-weight: 700; }
+    .uia-user small { font-size: 12px; color: #a1a1aa; }
+    .uia-label {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #a1a1aa; margin: 16px 0 6px;
+    }
+    .uia-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 7px 0; border-bottom: 1px solid #f7f7f8; font-size: 14px; color: #52525b;
+    }
+    .uia-row b { color: #111; font-weight: 700; }
+    .uia-row .sz { font-family: var(--font-display); font-size: 19px; font-weight: 900; }
+    .uia-row .when { font-size: 11.5px; color: #a1a1aa; text-align: right; }
+    .uia-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+    .uia-strip img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 9px; }
+    .uia-note {
+      margin-top: 14px; background: #f4f4f5; border-radius: 10px; padding: 11px 13px;
+      font-size: 11px; color: #71717a; line-height: 1.5;
     }
     .mock-tryon { width: 290px; position: relative; }
     .mock-tryon img { width: 100%; display: block; }
@@ -459,7 +532,7 @@
 
     /* ---------- Responsive ---------- */
     @media (max-width: 980px) {
-      .features-grid, .steps { grid-template-columns: 1fr; }
+      .features-grid, .steps, .showcase-grid { grid-template-columns: 1fr; }
       .merchants-grid { grid-template-columns: 1fr; gap: 50px; }
       .shopify-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-visual { flex-direction: column; align-items: center; }
@@ -467,6 +540,12 @@
     }
     @media (max-width: 640px) {
       .nav-links a:not(.nav-cta) { display: none; }
+      .features-grid > *, .steps > *, .showcase-grid > *,
+      .merchants-grid > *, .shopify-grid > * { min-width: 0; }
+      .merchant-list li > div { min-width: 0; }
+      .visual-row { flex-wrap: wrap; }
+      .avatars img, .avatars .more { width: 42px; height: 42px; }
+      .mini-inputs { flex-direction: column; }
       section { padding: 80px 0; }
       .waitlist-card { padding: 32px 24px; }
       .mock-widget { width: 100%; max-width: 400px; }
@@ -513,23 +592,31 @@
     <!-- Mockup -->
     <div class="hero-visual reveal">
       <div class="mock-card mock-widget">
-        <h4>Pruébatelo con Fittly</h4>
-        <div class="mock-sub">Elige un modelo o sube tu foto</div>
-        <div class="mock-models">
-          <div class="mock-model"><img src="assets/modelo-hombre-delgado.webp" alt="Modelo slim" loading="lazy" /></div>
-          <div class="mock-model selected"><img src="assets/modelo-hombre-regular.webp" alt="Modelo regular" loading="lazy" /></div>
-          <div class="mock-model"><img src="assets/modelo-hombre-atletico.webp" alt="Modelo athletic" loading="lazy" /></div>
-          <div class="mock-model"><img src="assets/modelo-hombre-grande.webp" alt="Modelo plus-size" loading="lazy" /></div>
-        </div>
-        <div class="mock-upload">📷 O sube tu propia foto <span style="margin-left:auto; font-size:11px; color:#a1a1aa;">se elimina en 72 h</span></div>
-        <div class="mock-size">
+        <div class="uiw-head">
+          <div class="uiw-spark">✦</div>
           <div>
-            <div class="label">Talla recomendada</div>
-            <div class="value">M</div>
+            <div class="uiw-title">Try it on</div>
+            <div class="uiw-sub">See how it looks before you buy</div>
           </div>
-          <div class="chip">IA · según tus medidas</div>
         </div>
-        <div class="mock-btn">Ver cómo me queda</div>
+        <div class="uiw-btn uiw-btn--dark">
+          <span class="uiw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+          <span class="uiw-txt"><b>✨ Try it on yourself</b><small>Use your own photo</small></span>
+          <span class="uiw-chev">›</span>
+        </div>
+        <div class="uiw-btn">
+          <span class="uiw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-5.5 6.5-5.5s6.5 2 6.5 5.5"/><circle cx="17" cy="9" r="2.8"/><path d="M16 14.6c2.8 0.3 5.5 2 5.5 5.4"/></svg></span>
+          <span class="uiw-txt"><b>Browse models</b><small>See available models</small></span>
+          <span class="uiw-chev">›</span>
+        </div>
+        <div class="uiw-btn">
+          <span class="uiw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="6" rx="2"/><path d="M7.5 9v3M12 9v3M16.5 9v3"/></svg></span>
+          <span class="uiw-txt"><b>Find my size</b><small>Get a size recommendation</small></span>
+          <span class="uiw-chev">›</span>
+        </div>
+        <div class="uiw-privacy">🛡️ Your photos are private and secure</div>
+        <div class="uiw-meta"><span class="ok">✓ Model saved</span><span>·</span><span class="lnk">Mi cuenta</span><span>·</span><span>Eliminar</span></div>
+        <div class="uiw-powered">Powered by <img src="assets/fittly-icon.png" alt="" /> <b>fittly</b></div>
       </div>
       <div class="mock-card mock-tryon">
         <div class="tag"><span class="spark">✦</span> Generado con IA</div>
@@ -565,6 +652,70 @@
           <h3>Compra con la talla exacta</h3>
           <p>La IA analiza altura, peso y preferencia de fit, y recomienda la talla correcta. Menos dudas, menos devoluciones, más conversión.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ASÍ SE VE (UI real) ============ -->
+  <section id="demo">
+    <div class="container">
+      <div class="center reveal">
+        <div class="section-label">El producto real</div>
+        <h2 class="section-title">Así se ve.<br />Así funciona.</h2>
+        <p class="section-sub">No es un concepto: esta es la interfaz que ya corre en las tiendas piloto.</p>
+      </div>
+      <div class="showcase-grid">
+
+        <div class="showcase-item reveal">
+          <div class="mock-card sizer">
+            <div class="sizer-head">
+              <span class="sizer-title">Size recommendation</span>
+              <span class="sizer-units">cm / kg</span>
+            </div>
+            <div class="sizer-inputs">
+              <div class="sizer-input"><small>Height (cm)</small><b>181</b></div>
+              <div class="sizer-input"><small>Weight (kg)</small><b>55</b></div>
+            </div>
+            <div class="sizer-fit-label">Fit preference</div>
+            <div class="sizer-fits">
+              <span>Tight</span><span>Standard</span><span>Relaxed</span><span class="on">Oversized</span>
+            </div>
+            <div class="sizer-result">
+              <div class="sizer-size">L</div>
+              <div class="sizer-result-txt">
+                <div class="row"><b>Recommended size</b><span class="conf">High confidence</span></div>
+                <p>With a height of 181 cm and a slim build, size L provides the oversized fit you're looking for — based on this product's size guide.</p>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-caption"><b>Talla exacta, explicada.</b> La IA cruza altura, peso y fit preferido con la guía de tallas real del producto — y le dice al shopper por qué.</div>
+        </div>
+
+        <div class="showcase-item reveal">
+          <div class="mock-card uia">
+            <div class="uia-brand"><img src="assets/fittly-icon.png" alt="Fittly" /><span>fittly</span></div>
+            <div class="uia-user">
+              <img class="uia-avatar" src="assets/modelo-hombre-regular.webp" alt="" loading="lazy" />
+              <div><b>diego@gmail.com</b><small>Fittly account</small></div>
+            </div>
+            <div class="uia-label">Measurements</div>
+            <div class="uia-row"><span>Height</span><b>181 cm</b></div>
+            <div class="uia-row"><span>Weight</span><b>55 kg</b></div>
+            <div class="uia-label">Recent size recommendations</div>
+            <div class="uia-row"><b class="sz">L</b><span class="when">tienda-streetwear · 10-06</span></div>
+            <div class="uia-row"><b class="sz">M</b><span class="when">tienda-basics · 07-06</span></div>
+            <div class="uia-label">My try-ons</div>
+            <div class="uia-strip">
+              <img src="assets/modelo-hombre-regular.webp" alt="" loading="lazy" />
+              <img src="assets/modelo-hombre-delgado.webp" alt="" loading="lazy" />
+              <img src="assets/modelo-hombre-atletico.webp" alt="" loading="lazy" />
+              <img src="assets/modelo-hombre-grande.webp" alt="" loading="lazy" />
+            </div>
+            <div class="uia-note">Stored data: email, photo, generated model, height/weight and size history. Never shared with third parties.</div>
+          </div>
+          <div class="showcase-caption"><b>Una cuenta. Todas las tiendas.</b> El shopper inicia sesión en cualquier tienda con Fittly y su foto, su modelo y sus medidas cargan al instante.</div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -690,23 +841,23 @@
         <div class="dash reveal">
           <div class="dash-head">
             <span class="t">Analytics</span>
-            <span class="period">Últimos 30 días</span>
+            <span class="period">Piloto · datos reales</span>
           </div>
           <div class="dash-stats">
             <div class="dash-stat">
-              <div class="k">Try-ons</div>
+              <div class="k">Try-ons generados</div>
               <div class="v" id="stat-tryons">—</div>
-              <div class="d">funnel completo</div>
+              <div class="d">en tiendas reales</div>
             </div>
             <div class="dash-stat">
-              <div class="k">Conversiones</div>
-              <div class="v" id="stat-conv">—</div>
-              <div class="d">atribuidas a Fittly</div>
+              <div class="k">Tiendas piloto</div>
+              <div class="v" id="stat-shops">—</div>
+              <div class="d">en producción</div>
             </div>
             <div class="dash-stat">
-              <div class="k">AOV influenciado</div>
-              <div class="v" id="stat-aov">—</div>
-              <div class="d">top productos</div>
+              <div class="k">Interacciones · 3 días</div>
+              <div class="v" id="stat-cyber">—</div>
+              <div class="d">pico durante el Cyber</div>
             </div>
           </div>
           <div class="dash-bars" aria-hidden="true">
@@ -879,75 +1030,50 @@
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9hb3RveHpyZnR3cnN0Y3ZldmpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3Mjk1ODcsImV4cCI6MjA5MDMwNTU4N30.N83UswzOHIx8D4fuhUO8fHOnlopxki3UKRnl6_6NYcU"
     );
 
-    // ===== Analytics dinámicas =====
-    // Los números crecen cada día desde la fecha de lanzamiento del sitio.
-    // Todos los visitantes del mismo día ven los mismos valores.
-    const LAUNCH_DATE = new Date("2026-06-10T00:00:00Z");
-    const MS_PER_DAY = 86400000;
-
-    function daysSinceLaunch() {
-      return Math.max(0, Math.floor((Date.now() - LAUNCH_DATE) / MS_PER_DAY));
-    }
-
-    // Semilla reproducible por día para variación natural (no sube en línea recta perfecta)
-    function seededRandom(seed) {
-      const x = Math.sin(seed + 1) * 10000;
-      return x - Math.floor(x);
-    }
-
-    function computeStats() {
-      const days = daysSinceLaunch();
-      let tryons = 12480;
-      let conv = 1236;
-      // Acumula crecimiento diario con variación natural
-      for (let i = 0; i < days; i++) {
-        tryons += Math.floor(380 + seededRandom(i * 3 + 1) * 160);
-        conv   += Math.floor(37  + seededRandom(i * 3 + 2) * 18);
-      }
-      const aov = (64.2 + days * 0.04 + seededRandom(days * 3 + 3) * 0.3).toFixed(2).replace(".", ",");
-      return { tryons, conv, aov };
-    }
-
+    // ===== Analytics — datos reales de Supabase =====
     function formatNum(n) {
       return n.toLocaleString("es-ES");
     }
 
-    function countUp(el, target, duration, prefix, suffix) {
+    function countUp(el, target, duration, prefix = "") {
       const start = performance.now();
-      const startVal = 0;
       function tick(now) {
         const p = Math.min((now - start) / duration, 1);
         const ease = 1 - Math.pow(1 - p, 3);
-        const current = Math.floor(startVal + (target - startVal) * ease);
-        el.textContent = prefix + formatNum(current) + suffix;
+        el.textContent = prefix + formatNum(Math.floor(target * ease));
         if (p < 1) requestAnimationFrame(tick);
-        else el.textContent = prefix + (typeof target === "number" ? formatNum(target) : target) + suffix;
+        else el.textContent = prefix + formatNum(target);
       }
       requestAnimationFrame(tick);
     }
 
-    // Dispara la animación de conteo cuando el dashboard entra en pantalla
+    // Try-ons reales desde Supabase; si la llamada falla usamos el último valor conocido
+    const TRYONS_FALLBACK = 1638;
+    const PILOT_SHOPS = 2;
+    const CYBER_PEAK = 1000;
+
+    async function loadTryons() {
+      try {
+        const { data, error } = await sb.rpc("get_landing_stats");
+        if (error || !data) return TRYONS_FALLBACK;
+        return Number(data.tryons) || TRYONS_FALLBACK;
+      } catch { return TRYONS_FALLBACK; }
+    }
+
     const dashEl = document.querySelector(".dash");
     let statsAnimated = false;
-    const dashObserver = new IntersectionObserver((entries) => {
+
+    // Carga los datos en background tan pronto carga el script
+    const tryonsLoaded = loadTryons();
+
+    const dashObserver = new IntersectionObserver(async (entries) => {
       if (entries[0].isIntersecting && !statsAnimated) {
         statsAnimated = true;
-        const { tryons, conv, aov } = computeStats();
-        countUp(document.getElementById("stat-tryons"), tryons, 1400, "", "");
-        countUp(document.getElementById("stat-conv"),   conv,   1400, "", "");
-        // AOV con animación numérica: anima la parte entera, luego fija el decimal
-        const aovInt = parseInt(aov.replace(",", "."));
-        const aovEl = document.getElementById("stat-aov");
-        const start = performance.now();
-        (function tickAov(now) {
-          const p = Math.min((now - start) / 1400, 1);
-          const ease = 1 - Math.pow(1 - p, 3);
-          const cur = (aovInt * ease).toFixed(2).replace(".", ",");
-          aovEl.textContent = "€" + cur;
-          if (p < 1) requestAnimationFrame(tickAov);
-          else aovEl.textContent = "€" + aov;
-        })(performance.now());
         dashObserver.disconnect();
+        const tryons = await tryonsLoaded;
+        countUp(document.getElementById("stat-tryons"), tryons,      1400);
+        countUp(document.getElementById("stat-shops"),  PILOT_SHOPS, 1400);
+        countUp(document.getElementById("stat-cyber"),  CYBER_PEAK,  1400, "+");
       }
     }, { threshold: 0.3 });
     if (dashEl) dashObserver.observe(dashEl);
