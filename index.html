@@ -273,6 +273,33 @@
       margin-top: 14px; background: #f4f4f5; border-radius: 10px; padding: 11px 13px;
       font-size: 11px; color: #71717a; line-height: 1.5;
     }
+
+    /* --- Outfit Builder mock --- */
+    .ob { width: 100%; max-width: 460px; padding: 22px; }
+    .ob-head { display: flex; align-items: center; gap: 9px; padding-bottom: 16px; border-bottom: 1px solid #f0f0f1; }
+    .ob-head img { width: 24px; height: 24px; border-radius: 26%; }
+    .ob-head b { font-family: var(--font-display); font-weight: 800; font-size: 16px; letter-spacing: -0.02em; color: #111; flex: 1; }
+    .ob-head .x { width: 26px; height: 26px; border-radius: 50%; background: #f4f4f5; color: #71717a; display: flex; align-items: center; justify-content: center; font-size: 15px; }
+    .ob-body { display: grid; grid-template-columns: 150px 1fr; gap: 16px; margin-top: 18px; }
+    .ob-model { position: relative; border-radius: 16px; overflow: hidden; background: #f4f4f5; aspect-ratio: 3/4.3; }
+    .ob-model img { width: 100%; height: 100%; object-fit: cover; }
+    .ob-model .tag {
+      position: absolute; top: 10px; left: 10px; background: rgba(17,17,17,0.85);
+      color: #fff; backdrop-filter: blur(6px); font-size: 10.5px; font-weight: 600;
+      padding: 5px 10px; border-radius: 999px; display: flex; align-items: center; gap: 5px;
+    }
+    .ob-slots-label { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #a1a1aa; margin-bottom: 9px; }
+    .ob-slot { display: flex; align-items: center; gap: 11px; border: 1px solid #e9e9eb; border-radius: 13px; padding: 9px; margin-bottom: 8px; }
+    .ob-slot.empty { border-style: dashed; justify-content: center; color: #a1a1aa; font-size: 13px; font-weight: 600; padding: 13px; }
+    .ob-thumb { width: 42px; height: 42px; border-radius: 9px; background: #f0f0f1; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .ob-slot .meta { flex: 1; min-width: 0; }
+    .ob-slot .meta small { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #a1a1aa; }
+    .ob-slot .meta b { font-size: 13px; color: #111; font-weight: 600; }
+    .ob-slot .price { font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: #111; }
+    .ob-foot { display: flex; align-items: center; gap: 10px; margin-top: 16px; }
+    .ob-cart { flex: 1; background: #111; color: #fff; border-radius: 999px; padding: 13px; text-align: center; font-weight: 600; font-size: 14px; }
+    .ob-cart small { font-weight: 500; opacity: 0.75; }
+
     .mock-tryon { width: 290px; position: relative; }
     .mock-tryon img { width: 100%; display: block; }
     .mock-tryon .tag {
@@ -526,6 +553,44 @@
     .footer-links a:hover { color: var(--text); }
     .footer-meta { color: var(--muted-2); font-size: 13.5px; }
 
+    /* ---------- Pricing ---------- */
+    .price-banner {
+      display: inline-flex; align-items: center; gap: 9px; margin: 26px auto 0;
+      border: 1px solid var(--border-strong); border-radius: var(--radius-pill);
+      padding: 9px 20px; font-size: 14.5px; color: var(--muted); background: rgba(255,255,255,0.03);
+    }
+    .price-banner b { color: var(--text); font-weight: 600; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 56px; align-items: stretch; }
+    .price-card {
+      border: 1px solid var(--border); border-radius: var(--radius-lg);
+      background: var(--bg-elev); padding: 30px 26px;
+      display: flex; flex-direction: column; position: relative;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .price-card:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+    .price-card.featured { border-color: var(--white); background: var(--bg-card); }
+    .price-pop {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--white); color: var(--black); font-size: 11.5px; font-weight: 700;
+      letter-spacing: 0.04em; text-transform: uppercase; padding: 5px 14px; border-radius: var(--radius-pill);
+      white-space: nowrap;
+    }
+    .price-name { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -0.02em; }
+    .price-amt { margin-top: 14px; font-family: var(--font-display); font-weight: 900; letter-spacing: -0.04em; font-size: 42px; line-height: 1; }
+    .price-amt .per { font-size: 15px; font-weight: 600; color: var(--muted-2); letter-spacing: 0; }
+    .price-credits { margin-top: 12px; font-size: 14px; color: var(--text); font-weight: 600; }
+    .price-credits span { color: var(--muted); font-weight: 400; }
+    .price-feats { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 20px; margin-bottom: 24px; }
+    .price-feats li { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; color: var(--muted); }
+    .price-feats li::before {
+      content: "✓"; flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%;
+      background: rgba(255,255,255,0.1); color: var(--text); font-size: 10px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; margin-top: 1px;
+    }
+    .price-card .btn { margin-top: auto; width: 100%; padding: 14px; font-size: 15px; }
+    .price-extra { font-size: 12px; color: var(--muted-2); margin-top: 14px; text-align: center; }
+    .pricing-foot { text-align: center; font-size: 13.5px; color: var(--muted-2); margin-top: 30px; }
+
     /* ---------- Reveal animations ---------- */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
     .reveal.visible { opacity: 1; transform: none; }
@@ -535,6 +600,7 @@
       .features-grid, .steps, .showcase-grid { grid-template-columns: 1fr; }
       .merchants-grid { grid-template-columns: 1fr; gap: 50px; }
       .shopify-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-visual { flex-direction: column; align-items: center; }
       .mock-tryon { display: none; }
     }
@@ -550,6 +616,8 @@
       .waitlist-card { padding: 32px 24px; }
       .mock-widget { width: 100%; max-width: 400px; }
       .shopify-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .ob-body { grid-template-columns: 110px 1fr; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
     }
   </style>
@@ -564,10 +632,10 @@
         <span>fittly</span>
       </a>
       <div class="nav-links">
-        <a href="#como-funciona">Cómo funciona</a>
         <a href="#producto">Producto</a>
+        <a href="#outfit">Outfit Builder</a>
         <a href="#merchants">Para tiendas</a>
-        <a href="#faq">FAQ</a>
+        <a href="#precios">Precios</a>
         <a href="#waitlist" class="nav-cta">Unirse a la waitlist</a>
       </div>
     </div>
@@ -713,7 +781,7 @@
             </div>
             <div class="uia-note">Stored data: email, photo, generated model, height/weight and size history. Never shared with third parties.</div>
           </div>
-          <div class="showcase-caption"><b>Una cuenta. Todas las tiendas.</b> El shopper inicia sesión en cualquier tienda con Fittly y su foto, su modelo y sus medidas cargan al instante.</div>
+          <div class="showcase-caption"><b>Una cuenta. Todas las tiendas.</b> El shopper inicia sesión en cualquier tienda con Fittly y su foto, modelo y medidas cargan al instante — sin volver a subir nada. Las tiendas nunca ven su foto ni sus medidas, solo el resultado.</div>
         </div>
 
       </div>
@@ -773,14 +841,13 @@
         </div>
 
         <div class="feature-card reveal">
-          <div class="badge-dev">En desarrollo</div>
           <h3>Outfit Builder</h3>
           <p>De una prenda a un look completo, en un solo click.</p>
           <div class="feature-visual">
             <div class="outfit-grid">
               <div class="outfit-slot filled">👕</div>
               <div class="outfit-slot filled">👖</div>
-              <div class="outfit-slot filled">🧥</div>
+              <div class="outfit-slot filled">👟</div>
               <div class="outfit-slot">+</div>
             </div>
             <div class="visual-row">
@@ -791,10 +858,70 @@
           <ul class="feature-list">
             <li><span><strong>Mix &amp; Match</strong> — combina hasta 4 prendas del catálogo en un look generado con IA.</span></li>
             <li><span><strong>Add all to cart</strong> — el outfit completo al carrito de una vez.</span></li>
+            <li><span><strong>Compara hasta 3 looks</strong> — el shopper decide entre combinaciones lado a lado.</span></li>
             <li><span><strong>Compatibilidad IA</strong> — Fittly puntúa qué productos combinan bien entre sí.</span></li>
           </ul>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUTFIT BUILDER ============ -->
+  <section id="outfit">
+    <div class="container">
+      <div class="showcase-grid">
+        <div class="showcase-item reveal">
+          <div class="mock-card ob">
+            <div class="ob-head">
+              <img src="assets/fittly-icon.png" alt="Fittly" />
+              <b>Outfit Builder</b>
+              <span class="x">✕</span>
+            </div>
+            <div class="ob-body">
+              <div class="ob-model">
+                <span class="tag">✦ Tu look</span>
+                <img src="assets/modelo-hombre-regular.webp" alt="Look generado" loading="lazy" />
+              </div>
+              <div>
+                <div class="ob-slots-label">Tu outfit</div>
+                <div class="ob-slot">
+                  <span class="ob-thumb">👕</span>
+                  <span class="meta"><small>Top</small><b>Crewneck café</b></span>
+                  <span class="price">$20</span>
+                </div>
+                <div class="ob-slot">
+                  <span class="ob-thumb">👖</span>
+                  <span class="meta"><small>Bottom</small><b>Short gris</b></span>
+                  <span class="price">$18</span>
+                </div>
+                <div class="ob-slot">
+                  <span class="ob-thumb">👟</span>
+                  <span class="meta"><small>Shoes</small><b>Sneaker blanco</b></span>
+                  <span class="price">$45</span>
+                </div>
+                <div class="ob-slot empty">+ Añadir prenda</div>
+              </div>
+            </div>
+            <div class="ob-foot">
+              <div class="ob-cart">Add all to cart · 3 items <small>· $83</small></div>
+            </div>
+          </div>
+          <div class="showcase-caption"><b>Un look completo, no una prenda suelta.</b> El shopper combina hasta 4 prendas de tu catálogo y la IA las viste capa por capa sobre el mismo cuerpo.</div>
+        </div>
+
+        <div class="showcase-item reveal" style="align-items: flex-start; text-align: left;">
+          <div class="section-label">Outfit Builder</div>
+          <h2 class="section-title" style="font-size: clamp(2rem, 4.5vw, 3.4rem);">De una prenda<br />a un look entero.</h2>
+          <p class="section-sub" style="margin-top: 14px;">Más prendas por ticket, sin que el shopper tenga que imaginarse cómo combina nada.</p>
+          <ul class="feature-list" style="margin-top: 28px; gap: 16px;">
+            <li><span><strong>Mix &amp; Match en vivo</strong> — arma el outfit con TOP, BOTTOM y SHOES (o una prenda one-piece) directo de tu catálogo.</span></li>
+            <li><span><strong>Add all to cart</strong> — el outfit completo al carrito en un click, listo para checkout.</span></li>
+            <li><span><strong>Compara hasta 3 looks</strong> — el shopper decide entre combinaciones lado a lado.</span></li>
+            <li><span><strong>Talla para todo el outfit</strong> — recomendación por prenda según altura, peso y fit.</span></li>
+            <li><span><strong>Eficiente en créditos</strong> — cambiar una prenda cuesta 1 crédito; el resto sale de caché.</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -915,6 +1042,77 @@
     </div>
   </section>
 
+  <!-- ============ PRECIOS ============ -->
+  <section id="precios">
+    <div class="container">
+      <div class="center reveal">
+        <div class="section-label">Precios</div>
+        <h2 class="section-title">Paga por lo que usas.<br />Nada más.</h2>
+        <p class="section-sub">Planes por créditos: 1 crédito = 1 try-on, incluido el try-on con foto propia.</p>
+        <div class="price-banner">🎁 <span><b>14 días gratis</b> con 150 créditos · sin tarjeta</span></div>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card reveal">
+          <div class="price-name">Free</div>
+          <div class="price-amt">$0<span class="per"> / mes</span></div>
+          <div class="price-credits">10 créditos <span>/ mes</span></div>
+          <ul class="price-feats">
+            <li>1 crédito por try-on</li>
+            <li>Try-on con foto propia</li>
+            <li>Todos los tipos de cuerpo</li>
+          </ul>
+          <a href="#waitlist" class="btn btn-ghost">Empezar gratis</a>
+        </div>
+
+        <div class="price-card reveal">
+          <div class="price-name">Starter</div>
+          <div class="price-amt">$69<span class="per"> / mes</span></div>
+          <div class="price-credits">150 créditos <span>/ mes</span></div>
+          <ul class="price-feats">
+            <li>1 crédito por try-on</li>
+            <li>Try-on con foto propia</li>
+            <li>Todos los tipos de cuerpo</li>
+            <li>Soporte por email</li>
+          </ul>
+          <a href="#waitlist" class="btn btn-ghost">Unirse a la waitlist</a>
+          <div class="price-extra">Créditos extra: $0,45 c/u</div>
+        </div>
+
+        <div class="price-card featured reveal">
+          <div class="price-pop">Más popular</div>
+          <div class="price-name">Growth</div>
+          <div class="price-amt">$149<span class="per"> / mes</span></div>
+          <div class="price-credits">350 créditos <span>/ mes</span></div>
+          <ul class="price-feats">
+            <li>1 crédito por try-on</li>
+            <li>Try-on con foto propia</li>
+            <li>Outfit Builder completo</li>
+            <li>Soporte prioritario</li>
+          </ul>
+          <a href="#waitlist" class="btn btn-primary">Unirse a la waitlist</a>
+          <div class="price-extra">Créditos extra: $0,42 c/u</div>
+        </div>
+
+        <div class="price-card reveal">
+          <div class="price-name">Pro</div>
+          <div class="price-amt">$349<span class="per"> / mes</span></div>
+          <div class="price-credits">900 créditos <span>/ mes</span></div>
+          <ul class="price-feats">
+            <li>1 crédito por try-on</li>
+            <li>Try-on con foto propia</li>
+            <li>Outfit Builder completo</li>
+            <li>Soporte prioritario 24/7</li>
+          </ul>
+          <a href="#waitlist" class="btn btn-ghost">Unirse a la waitlist</a>
+          <div class="price-extra">Créditos extra: $0,38 c/u</div>
+        </div>
+      </div>
+
+      <p class="pricing-foot">🏷️ Las tiendas de la waitlist obtienen un <b style="color:var(--text);">descuento exclusivo de lanzamiento</b> sobre estos precios.</p>
+    </div>
+  </section>
+
   <!-- ============ WAITLIST ============ -->
   <section id="waitlist" class="waitlist-section">
     <div class="container">
@@ -990,8 +1188,8 @@
           <div class="faq-body">Subes una foto de tu tabla de tallas y la IA la escanea automáticamente con OCR. Puedes tener tablas separadas por categoría: tops, bottoms y one-pieces.</div>
         </details>
         <details class="faq-item">
-          <summary>¿Cuánto costará?</summary>
-          <div class="faq-body">Fittly funciona con planes por créditos, desde Free hasta Pro, con recarga automática opcional. Solo pagas por los try-ons que tu tienda genera. Los precios definitivos se anunciarán en el lanzamiento — y las tiendas de la waitlist tendrán descuento.</div>
+          <summary>¿Cuánto cuesta?</summary>
+          <div class="faq-body">Hay planes por créditos: Free ($0 · 10 créditos), Starter ($69 · 150), Growth ($149 · 350) y Pro ($349 · 900). 1 crédito = 1 try-on, e incluye el try-on con foto propia. Puedes recargar créditos extra cuando los necesites. Empiezas con 14 días gratis y 150 créditos, sin tarjeta — y las tiendas de la waitlist tienen descuento de lanzamiento. <a href="#precios" style="color:var(--text);text-decoration:underline;">Ver planes</a>.</div>
         </details>
       </div>
     </div>
@@ -1012,8 +1210,9 @@
         <span>fittly</span>
       </a>
       <div class="footer-links">
-        <a href="#como-funciona">Cómo funciona</a>
         <a href="#producto">Producto</a>
+        <a href="#outfit">Outfit Builder</a>
+        <a href="#precios">Precios</a>
         <a href="#waitlist">Waitlist</a>
         <a href="mailto:chemingamesdelrio@gmail.com">Contacto</a>
       </div>
