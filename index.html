@@ -300,6 +300,26 @@
     .ob-cart { flex: 1; background: #111; color: #fff; border-radius: 999px; padding: 13px; text-align: center; font-weight: 600; font-size: 14px; }
     .ob-cart small { font-weight: 500; opacity: 0.75; }
 
+    /* --- Cross-store mock --- */
+    .cs { width: 100%; max-width: 440px; padding: 24px; }
+    .cs-head { display: flex; align-items: center; gap: 10px; padding-bottom: 16px; border-bottom: 1px solid #f0f0f1; }
+    .cs-head img { width: 26px; height: 26px; border-radius: 26%; }
+    .cs-head b { font-family: var(--font-display); font-weight: 800; font-size: 16px; letter-spacing: -0.02em; color: #111; flex: 1; }
+    .cs-conn { font-size: 11px; font-weight: 700; color: #16a34a; background: rgba(22,163,74,0.1); border-radius: 999px; padding: 5px 11px; }
+    .cs-user { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+    .cs-user img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; object-position: top; }
+    .cs-user b { display: block; font-size: 14px; color: #111; font-weight: 700; }
+    .cs-user small { font-size: 12px; color: #16a34a; font-weight: 600; }
+    .cs-label { font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #a1a1aa; margin: 20px 0 10px; }
+    .cs-store { display: flex; align-items: center; gap: 12px; padding: 11px 13px; border: 1px solid #e9e9eb; border-radius: 13px; margin-bottom: 9px; }
+    .cs-store .ico { width: 34px; height: 34px; border-radius: 9px; background: #111; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+    .cs-store .t { flex: 1; min-width: 0; }
+    .cs-store .t b { font-size: 13.5px; color: #111; font-weight: 600; display: block; }
+    .cs-store .t small { font-size: 12px; color: #16a34a; font-weight: 500; }
+    .cs-store.pending .ico { background: #f0f0f1; color: #a1a1aa; }
+    .cs-store.pending .t small { color: #a1a1aa; }
+    .cs-priv { display: flex; align-items: center; gap: 9px; margin-top: 16px; background: #f4f4f5; border-radius: 12px; padding: 12px 14px; font-size: 12px; color: #52525b; line-height: 1.45; }
+
     .mock-tryon { width: 290px; position: relative; }
     .mock-tryon img { width: 100%; display: block; }
     .mock-tryon .tag {
@@ -561,6 +581,7 @@
     }
     .price-banner b { color: var(--text); font-weight: 600; }
     .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 56px; align-items: stretch; }
+    .pricing-grid--3 { grid-template-columns: repeat(3, 1fr); max-width: 920px; margin-left: auto; margin-right: auto; }
     .price-card {
       border: 1px solid var(--border); border-radius: var(--radius-lg);
       background: var(--bg-elev); padding: 30px 26px;
@@ -600,7 +621,7 @@
       .features-grid, .steps, .showcase-grid { grid-template-columns: 1fr; }
       .merchants-grid { grid-template-columns: 1fr; gap: 50px; }
       .shopify-grid { grid-template-columns: repeat(2, 1fr); }
-      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid, .pricing-grid--3 { grid-template-columns: repeat(2, 1fr); }
       .hero-visual { flex-direction: column; align-items: center; }
       .mock-tryon { display: none; }
     }
@@ -616,7 +637,7 @@
       .waitlist-card { padding: 32px 24px; }
       .mock-widget { width: 100%; max-width: 400px; }
       .shopify-grid { grid-template-columns: 1fr; }
-      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-grid, .pricing-grid--3 { grid-template-columns: 1fr; }
       .ob-body { grid-template-columns: 110px 1fr; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
     }
@@ -781,7 +802,7 @@
             </div>
             <div class="uia-note">Stored data: email, photo, generated model, height/weight and size history. Never shared with third parties.</div>
           </div>
-          <div class="showcase-caption"><b>Una cuenta. Todas las tiendas.</b> El shopper inicia sesión en cualquier tienda con Fittly y su foto, modelo y medidas cargan al instante — sin volver a subir nada. Las tiendas nunca ven su foto ni sus medidas, solo el resultado.</div>
+          <div class="showcase-caption"><b>Tu perfil, siempre contigo.</b> Medidas, historial de tallas y try-ons guardados en la cuenta del shopper — listos para reutilizar en cualquier producto.</div>
         </div>
 
       </div>
@@ -926,6 +947,58 @@
     </div>
   </section>
 
+  <!-- ============ CROSS-STORE ============ -->
+  <section id="cross-store">
+    <div class="container">
+      <div class="showcase-grid">
+        <div class="showcase-item reveal" style="align-items: flex-start; text-align: left;">
+          <div class="section-label">Cuenta Fittly · Cross-store</div>
+          <h2 class="section-title" style="font-size: clamp(2rem, 4.5vw, 3.4rem);">Una cuenta.<br />Todas las tiendas.</h2>
+          <p class="section-sub" style="margin-top: 14px;">El shopper se registra una vez y su modelo lo acompaña a cualquier tienda con Fittly. Cero fricción la segunda vez que compra.</p>
+          <ul class="feature-list" style="margin-top: 28px; gap: 16px;">
+            <li><span><strong>Login una sola vez</strong> — su foto, modelo, medidas e historial de tallas cargan al instante en cualquier tienda Fittly.</span></li>
+            <li><span><strong>Sin volver a subir nada</strong> — la segunda tienda ya lo conoce; prueba y compra en segundos.</span></li>
+            <li><span><strong>Privacidad real</strong> — las tiendas nunca ven su foto ni sus medidas, solo el resultado del try-on.</span></li>
+            <li><span><strong>Bajo su control</strong> — exporta o borra su cuenta y todos sus datos cuando quiera. Nunca se comparten con terceros.</span></li>
+          </ul>
+          <p class="section-sub" style="font-size: 15px; margin-top: 22px;">Cada tienda nueva que instala Fittly hereda una red de shoppers que ya tienen su modelo listo. <b style="color:var(--text);">Más Fittly hay, mejor convierte para todos.</b></p>
+        </div>
+
+        <div class="showcase-item reveal">
+          <div class="mock-card cs">
+            <div class="cs-head">
+              <img src="assets/fittly-icon.png" alt="Fittly" />
+              <b>Cuenta Fittly</b>
+              <span class="cs-conn">✓ Conectada</span>
+            </div>
+            <div class="cs-user">
+              <img src="assets/modelo-hombre-regular.webp" alt="" loading="lazy" />
+              <div>
+                <b>diego@gmail.com</b>
+                <small>✦ Modelo guardado</small>
+              </div>
+            </div>
+            <div class="cs-label">Te reconoce en</div>
+            <div class="cs-store">
+              <span class="ico">🛍️</span>
+              <span class="t"><b>Tienda Streetwear</b><small>✓ Modelo y medidas cargados</small></span>
+            </div>
+            <div class="cs-store">
+              <span class="ico">👕</span>
+              <span class="t"><b>Tienda Basics</b><small>✓ Talla L recomendada al instante</small></span>
+            </div>
+            <div class="cs-store pending">
+              <span class="ico">＋</span>
+              <span class="t"><b>Cualquier tienda nueva</b><small>⚡ Listo en 1 click</small></span>
+            </div>
+            <div class="cs-priv">🔒 Las tiendas nunca ven tu foto ni tus medidas, solo el resultado del try-on.</div>
+          </div>
+          <div class="showcase-caption"><b>El probador que viaja contigo.</b> Tu modelo y tus tallas, listos en cada tienda Fittly desde el primer segundo.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ MERCHANTS ============ -->
   <section id="merchants">
     <div class="container">
@@ -1047,24 +1120,12 @@
     <div class="container">
       <div class="center reveal">
         <div class="section-label">Precios</div>
-        <h2 class="section-title">Paga por lo que usas.<br />Nada más.</h2>
-        <p class="section-sub">Planes por créditos: 1 crédito = 1 try-on, incluido el try-on con foto propia.</p>
+        <h2 class="section-title">Empieza gratis.<br />Paga por lo que usas.</h2>
+        <p class="section-sub">14 días de prueba con 150 créditos. Al terminar, Fittly te recomienda el plan exacto según cómo usaron tus clientes el probador — sin que adivines nada.</p>
         <div class="price-banner">🎁 <span><b>14 días gratis</b> con 150 créditos · sin tarjeta</span></div>
       </div>
 
-      <div class="pricing-grid">
-        <div class="price-card reveal">
-          <div class="price-name">Free</div>
-          <div class="price-amt">$0<span class="per"> / mes</span></div>
-          <div class="price-credits">10 créditos <span>/ mes</span></div>
-          <ul class="price-feats">
-            <li>1 crédito por try-on</li>
-            <li>Try-on con foto propia</li>
-            <li>Todos los tipos de cuerpo</li>
-          </ul>
-          <a href="#waitlist" class="btn btn-ghost">Empezar gratis</a>
-        </div>
-
+      <div class="pricing-grid pricing-grid--3">
         <div class="price-card reveal">
           <div class="price-name">Starter</div>
           <div class="price-amt">$69<span class="per"> / mes</span></div>
@@ -1109,7 +1170,7 @@
         </div>
       </div>
 
-      <p class="pricing-foot">🏷️ Las tiendas de la waitlist obtienen un <b style="color:var(--text);">descuento exclusivo de lanzamiento</b> sobre estos precios.</p>
+      <p class="pricing-foot">📊 Sin compromiso: <b style="color:var(--text);">empiezas con el trial</b> y al final te recomendamos el plan ideal según el consumo real de tu tienda. 🏷️ Las tiendas de la waitlist obtienen un <b style="color:var(--text);">descuento exclusivo de lanzamiento</b> sobre estos precios.</p>
     </div>
   </section>
 
@@ -1189,7 +1250,7 @@
         </details>
         <details class="faq-item">
           <summary>¿Cuánto cuesta?</summary>
-          <div class="faq-body">Hay planes por créditos: Free ($0 · 10 créditos), Starter ($69 · 150), Growth ($149 · 350) y Pro ($349 · 900). 1 crédito = 1 try-on, e incluye el try-on con foto propia. Puedes recargar créditos extra cuando los necesites. Empiezas con 14 días gratis y 150 créditos, sin tarjeta — y las tiendas de la waitlist tienen descuento de lanzamiento. <a href="#precios" style="color:var(--text);text-decoration:underline;">Ver planes</a>.</div>
+          <div class="faq-body">Empiezas con <strong>14 días gratis y 150 créditos</strong>, sin tarjeta. Al terminar la prueba, Fittly te recomienda el plan ideal según cómo usaron tus clientes el probador: Starter ($69 · 150 créditos), Growth ($149 · 350) o Pro ($349 · 900). 1 crédito = 1 try-on, e incluye el try-on con foto propia, y puedes recargar créditos extra cuando los necesites. Las tiendas de la waitlist tienen descuento de lanzamiento. <a href="#precios" style="color:var(--text);text-decoration:underline;">Ver planes</a>.</div>
         </details>
       </div>
     </div>
@@ -1212,6 +1273,7 @@
       <div class="footer-links">
         <a href="#producto">Producto</a>
         <a href="#outfit">Outfit Builder</a>
+        <a href="#cross-store">Cross-store</a>
         <a href="#precios">Precios</a>
         <a href="#waitlist">Waitlist</a>
         <a href="mailto:chemingamesdelrio@gmail.com">Contacto</a>
