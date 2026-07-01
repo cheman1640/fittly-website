@@ -91,13 +91,57 @@
     .hero-disc { margin-top: 26px; font-size: 13.5px; color: var(--faint); font-weight: 500; }
     .hero-disc b { color: #fff; font-weight: 700; }
 
+    /* ---------- Split hero + compare slider ---------- */
+    .xhero { position: relative; max-width: 1180px; margin: 0 auto; padding: 58px 28px 78px; }
+    .xhero::before {
+      content: ""; position: absolute; left: 30%; top: -60px; transform: translateX(-50%);
+      width: 100%; max-width: 900px; height: 560px; pointer-events: none; z-index: 0;
+      background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(255,255,255,0.09), rgba(255,255,255,0) 70%);
+    }
+    .xhero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 56px; align-items: center; }
+    .xhero h1 { font-size: clamp(40px, 5.2vw, 74px); margin-bottom: 24px; }
+    .xhero h1 u { text-decoration: none; box-shadow: inset 0 -0.14em 0 rgba(255,255,255,0.22); }
+    .xhero .sub2 { font-size: 18px; line-height: 1.55; color: var(--muted); font-weight: 500; max-width: 500px; }
+    .xhero-ctas { display: flex; gap: 13px; margin-top: 34px; flex-wrap: wrap; }
+    .xhero-ctas .btn { font-size: 16px; padding: 16px 28px; }
+    .xhero-disc { margin-top: 22px; font-size: 13.5px; color: var(--faint); font-weight: 500; }
+    .xhero-disc b { color: #fff; font-weight: 700; }
+    .xhero-pilots { display: flex; align-items: center; gap: 14px 20px; margin-top: 34px; flex-wrap: wrap; }
+    .xhero-pilots .pl { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint-2); }
+    .xhero-pilots .wm { font-size: 15px; color: var(--muted); white-space: nowrap; }
+    .xhero-pilots .wm1 { font-weight: 800; letter-spacing: -0.02em; color: var(--text-2); }
+    .xhero-pilots .wm2 { font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; font-size: 13px; }
+    .xhero-pilots .wm3 { font-weight: 700; font-style: italic; }
+    .xhero-pilots .wm4 { font-weight: 800; letter-spacing: -0.03em; }
+
+    .compare { position: relative; border-radius: 22px; overflow: hidden; aspect-ratio: 4/5; background: #eef1f5; box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06); touch-action: none; user-select: none; -webkit-user-select: none; }
+    .compare .cmp-img { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .cmp-after .cmp-img { object-fit: cover; object-position: center 10%; }
+    .cmp-before { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--p, 52%)) 0 0); background: #f4f5f7; }
+    .cmp-before .cmp-img { object-fit: cover; object-position: center 10%; }
+    .cmp-thumb { width: 42px; height: 50px; border-radius: 8px; object-fit: cover; border: 1.5px solid rgba(0,0,0,0.08); flex: none; }
+    .cmp-bar .meta { display: flex; align-items: center; gap: 11px; }
+    .cmp-line { position: absolute; top: 0; bottom: 0; left: var(--p, 52%); width: 2px; background: #fff; transform: translateX(-1px); box-shadow: 0 0 8px rgba(0,0,0,0.25); z-index: 3; }
+    .cmp-handle { position: absolute; top: 50%; left: var(--p, 52%); transform: translate(-50%,-50%); width: 46px; height: 46px; border-radius: 50%; background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; color: #161d2e; cursor: ew-resize; z-index: 4; font-size: 15px; }
+    .cmp-tag { position: absolute; top: 14px; z-index: 3; font-size: 10.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; padding: 6px 11px; border-radius: 20px; }
+    .cmp-tag.l { left: 14px; background: rgba(255,255,255,0.88); color: #161d2e; }
+    .cmp-tag.r { right: 14px; background: #161d2e; color: #fff; display: flex; align-items: center; gap: 5px; }
+    .cmp-bar { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; padding: 16px; background: linear-gradient(0deg, rgba(255,255,255,0.96), rgba(255,255,255,0)); display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+    .cmp-bar .meta small { font-size: 11px; color: #8b93a3; font-weight: 700; display: block; }
+    .cmp-bar .meta b { font-size: 16px; color: #161d2e; font-weight: 800; }
+    .cmp-sizes { display: flex; gap: 6px; margin-top: 9px; }
+    .cmp-sizes span { width: 30px; height: 30px; border-radius: 8px; border: 1.5px solid #d7dbe2; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #161d2e; background: #fff; }
+    .cmp-sizes span.on { background: #161d2e; color: #fff; border-color: #161d2e; }
+    .cmp-add { background: #161d2e; color: #fff; font-size: 13px; font-weight: 700; padding: 11px 16px; border-radius: 11px; white-space: nowrap; }
+    .cmp-hint { text-align: center; font-size: 12.5px; color: var(--faint); margin-top: 16px; font-weight: 600; }
+
     /* ---------- Social proof ---------- */
     .social { max-width: 1180px; margin: 0 auto; padding: 8px 28px 64px; text-align: center; }
     .social .label { display: block; margin-bottom: 24px; }
-    .social-logos { display: flex; align-items: center; justify-content: center; gap: 30px 48px; flex-wrap: wrap; opacity: 0.62; margin-bottom: 38px; }
-    .social-logos .wm { font-size: 22px; color: var(--text-2); white-space: nowrap; }
+    .social-logos { display: flex; align-items: center; justify-content: center; gap: 26px 54px; flex-wrap: wrap; opacity: 0.9; margin-bottom: 42px; }
+    .social-logos .wm { font-size: 30px; color: #fff; white-space: nowrap; }
     .social-logos .wm1 { font-weight: 800; letter-spacing: -0.03em; }
-    .social-logos .wm2 { font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; font-size: 19px; }
+    .social-logos .wm2 { font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; font-size: 24px; }
     .social-logos .wm3 { font-weight: 700; letter-spacing: 0.02em; font-style: italic; }
     .social-logos .wm4 { font-weight: 800; letter-spacing: -0.04em; }
     .social-stats { display: flex; align-items: center; justify-content: center; gap: 14px 40px; flex-wrap: wrap; }
@@ -304,6 +348,10 @@
 
     /* ---------- Responsive ---------- */
     @media (max-width: 900px) {
+      .xhero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .xhero-grid > * { min-width: 0; }
+      .compare { max-width: 440px; margin: 0 auto; }
+      .xhero h1 { font-size: clamp(38px, 9vw, 58px); }
       .demo-card { grid-template-columns: 1fr; gap: 28px; }
       .demo-card > * { min-width: 0; }
       .pillar { grid-template-columns: 1fr; gap: 36px; }
@@ -343,21 +391,51 @@
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <header class="hero">
-    <div class="hero-badge"><span class="dot"></span><span>App de Shopify · Próximamente</span></div>
-    <h1 class="h">Tus clientes lo ven<br />puesto. <span class="dim">Antes de comprar.</span></h1>
-    <p class="sub">Fittly es el probador virtual con IA para tiendas Shopify. Try-on realista, recomendación de talla exacta y outfits completos — directo en tu página de producto.</p>
-    <div class="hero-ctas">
-      <a href="#waitlist" class="btn btn-primary">Unirse a la waitlist</a>
-      <a href="#producto" class="btn btn-secondary">Ver cómo funciona</a>
+  <!-- ===== HERO (split + compare) ===== -->
+  <header class="xhero">
+    <div class="xhero-grid">
+      <div class="xhero-copy">
+        <div class="hero-badge"><span class="dot"></span><span>Probador virtual con IA · App de Shopify</span></div>
+        <h1 class="h">Que se lo prueben<br /><u>antes de comprarlo.</u></h1>
+        <p class="sub2">Try-on realista, talla exacta y outfits completos — directo en tu ficha de producto. Menos dudas, menos devoluciones, más carritos.</p>
+        <div class="xhero-ctas">
+          <a href="#waitlist" class="btn btn-primary">Unirse a la waitlist</a>
+          <a href="#producto" class="btn btn-secondary">Ver cómo funciona →</a>
+        </div>
+        <div class="xhero-disc">🏷️ Las tiendas en la waitlist obtienen un <b>descuento exclusivo de lanzamiento.</b></div>
+        <div class="xhero-pilots">
+          <span class="pl">Pilotos</span>
+          <span class="wm wm1">Hug</span>
+          <span class="wm wm2">Auroras</span>
+          <span class="wm wm3">Atmósfera</span>
+          <span class="wm wm4">HoodHouse</span>
+        </div>
+      </div>
+
+      <div class="xhero-visual">
+        <div class="compare" id="compare" style="--p:52%;">
+          <div class="cmp-after"><img class="cmp-img" src="assets/tryon-despues.jpg" alt="La prenda vista puesta con Fittly" /></div>
+          <div class="cmp-before"><img class="cmp-img" src="assets/tryon-antes.jpg" alt="El shopper antes de probarse la prenda" /></div>
+          <span class="cmp-tag l">Antes</span>
+          <span class="cmp-tag r">✦ Con Fittly</span>
+          <div class="cmp-bar">
+            <div class="meta">
+              <img class="cmp-thumb" src="assets/product-crewneck.webp" alt="Crewneck hoodhouse" />
+              <div><small>hoodhouse · Crewneck</small><b>Talla M</b></div>
+            </div>
+            <div class="cmp-sizes"><span>S</span><span class="on">M</span><span>L</span></div>
+          </div>
+          <div class="cmp-line"></div>
+          <div class="cmp-handle" id="cmp-handle">⟷</div>
+        </div>
+        <div class="cmp-hint">← Arrastra para comparar →</div>
+      </div>
     </div>
-    <div class="hero-disc">🏷️ Las tiendas en la waitlist obtienen un <b>descuento exclusivo de lanzamiento.</b></div>
   </header>
 
   <!-- ===== SOCIAL PROOF ===== -->
   <section class="social reveal">
-    <span class="label">Ya corriendo en tiendas piloto</span>
+    <span class="label">Tiendas piloto que ya usan Fittly</span>
     <div class="social-logos">
       <span class="wm wm1">Hug</span>
       <span class="wm wm2">Auroras</span>
@@ -370,44 +448,6 @@
       <div class="social-stat"><b id="stat-tryons">1.679</b><span>try-ons generados</span></div>
       <div class="social-sep"></div>
       <div class="social-stat"><b id="stat-cyber">+1.000</b><span>en 3 días durante el Cyber</span></div>
-    </div>
-  </section>
-
-  <!-- ===== HERO WIDGET DEMO ===== -->
-  <section class="demo reveal">
-    <div class="demo-card">
-      <!-- try-on card -->
-      <div class="wcard w-tryon">
-        <div class="w-head">
-          <span class="ic"><img src="assets/fittly-icon.png" alt="Fittly" /></span>
-          <div><b>Try it on</b><small>See how it looks before you buy</small></div>
-        </div>
-        <div class="w-row dark">
-          <span class="av"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a6 6 0 0 1 11 0"/><path d="M18 7v6M21 10h-6"/></svg></span>
-          <div class="t"><b>✨ Try it on yourself</b><small>Use your own photo</small></div>
-          <span class="chev">›</span>
-        </div>
-        <div class="w-row lite">
-          <span class="av"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#161d2e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M2.5 19a5.5 5.5 0 0 1 11 0"/></svg></span>
-          <div class="t"><b>Browse models</b><small>See available models</small></div>
-          <span class="chev">›</span>
-        </div>
-        <div class="w-row lite">
-          <span class="av"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#161d2e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v8H3z"/><path d="M7 8v3M11 8v4M15 8v3"/></svg></span>
-          <div class="t"><b>Find my size</b><small>Get a size recommendation</small></div>
-          <span class="chev">›</span>
-        </div>
-        <div class="w-priv">🛡️ Your photos are private and secure</div>
-      </div>
-      <!-- result preview -->
-      <div class="wcard w-result">
-        <div class="tag">✦ Generado con IA</div>
-        <div class="photo"><img src="assets/modelo-hombre-regular.webp" alt="Resultado del try-on" loading="lazy" /></div>
-        <div class="bar">
-          <span class="sz">Talla M</span>
-          <span class="add">Añadir al carrito</span>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -672,6 +712,39 @@
       es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
     }, { threshold: 0.12 });
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    // ===== Compare slider (antes/después) =====
+    const compare = document.getElementById("compare");
+    if (compare) {
+      let dragging = false;
+      const setP = (clientX) => {
+        const r = compare.getBoundingClientRect();
+        let p = ((clientX - r.left) / r.width) * 100;
+        p = Math.max(3, Math.min(97, p));
+        compare.style.setProperty("--p", p + "%");
+      };
+      const start = (e) => { dragging = true; setP(e.clientX); if (e.pointerId != null) compare.setPointerCapture(e.pointerId); e.preventDefault(); };
+      const move = (e) => { if (dragging) setP(e.clientX); };
+      const end = () => { dragging = false; };
+      compare.addEventListener("pointerdown", start);
+      compare.addEventListener("pointermove", move);
+      compare.addEventListener("pointerup", end);
+      compare.addEventListener("pointercancel", end);
+      // Nudge on load so the handle is discoverable
+      let hinted = false;
+      const hintIO = new IntersectionObserver((es) => {
+        if (es[0].isIntersecting && !hinted) {
+          hinted = true; hintIO.disconnect();
+          let x = 52;
+          const anim = (to, ms, then) => {
+            const from = x, t0 = performance.now();
+            (function step(now){ const k = Math.min((now - t0)/ms, 1); x = from + (to - from)*(1 - Math.pow(1-k,3)); compare.style.setProperty("--p", x + "%"); if (k < 1) requestAnimationFrame(step); else then && then(); })(performance.now());
+          };
+          setTimeout(() => anim(66, 550, () => anim(40, 650, () => anim(52, 550))), 500);
+        }
+      }, { threshold: 0.5 });
+      hintIO.observe(compare);
+    }
 
     // ===== Stats reales (social proof) =====
     const fmt = (n) => Math.round(n).toLocaleString("es-ES");
