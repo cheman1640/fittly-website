@@ -1,2 +1,5 @@
 .DS_Store
 Thumbs.db
+
+# Exports crudos de Claude Design (bundles pesados, no se despliegan)
+website-export/

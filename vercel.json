@@ -1,4 +1,11 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/r/:code",
+      "destination": "https://fittly-production.up.railway.app/r/:code",
+      "statusCode": 307
+    }
+  ]
 }

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fittly Partners — Gana recomendando el probador que vende</title>
+  <meta name="description" content="Programa de partners de Fittly: comparte el probador virtual con IA con tiendas Shopify y gana comisión recurrente de hasta 30% por cada tienda que instala y paga, hasta 12 meses por tienda." />
+  <meta property="og:title" content="Fittly Partners — Gana recomendando el probador que vende" />
+  <meta property="og:description" content="Comisión recurrente de 20–30% por cada tienda Shopify que instala y paga con tu link. Hasta 12 meses por tienda." />
+  <meta property="og:image" content="assets/fittly-icon.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="assets/fittly-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --surface: #121214;
+      --surface-2: #15161a;
+      --surface-3: #1c1c20;
+      --border: rgba(255, 255, 255, 0.07);
+      --border-2: rgba(255, 255, 255, 0.12);
+      --border-strong: rgba(255, 255, 255, 0.18);
+      --white: #ffffff;
+      --text-2: #cdd2db;
+      --text-3: #b6bcc7;
+      --muted: #9aa1ad;
+      --faint: #7e8696;
+      --faint-2: #5b5e66;
+      --green: #3aa775;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: "Manrope", -apple-system, "Helvetica Neue", Arial, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: #fff; color: var(--bg); }
+    a { text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    input::placeholder, textarea::placeholder { color: #5f6672; }
+
+    .wrap { max-width: 1180px; margin: 0 auto; padding-left: 28px; padding-right: 28px; }
+    .h { font-weight: 800; letter-spacing: -0.04em; line-height: 0.98; color: #fff; }
+
+    /* ---------- Nav ---------- */
+    .nav { position: sticky; top: 0; z-index: 40; background: rgba(10,10,11,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding-top: 15px; padding-bottom: 15px; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 9px; color: #fff; }
+    .brand img { width: 30px; height: 30px; border-radius: 26%; }
+    .brand span { font-size: 21px; font-weight: 800; letter-spacing: -0.03em; }
+    .brand-chip { font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; color: var(--faint); background: #17171a; border: 1px solid rgba(255,255,255,0.09); border-radius: 20px; padding: 5px 12px; margin-left: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links a:not(.nav-cta) { font-size: 14.5px; font-weight: 600; color: var(--text-3); transition: color 0.2s; }
+    .nav-links a:not(.nav-cta):hover { color: #fff; }
+    .nav-cta { background: #fff; color: var(--bg); font-size: 14px; font-weight: 700; padding: 10px 18px; border-radius: 30px; white-space: nowrap; }
+
+    /* ---------- Hero ---------- */
+    .hero { text-align: center; padding: 90px 28px 46px; max-width: 820px; margin: 0 auto; position: relative; }
+    .hero::before {
+      content: ""; position: absolute; left: 50%; top: -120px; transform: translateX(-50%);
+      width: 100%; max-width: 1100px; height: 620px; pointer-events: none; z-index: 0;
+      background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(255,255,255,0.10), rgba(255,255,255,0) 70%);
+    }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: #17171a; border: 1px solid rgba(255,255,255,0.09); border-radius: 30px; padding: 8px 16px; margin-bottom: 30px; }
+    .hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px rgba(58,167,117,0.2); }
+    .hero-badge span:last-child { font-size: 13px; font-weight: 600; color: var(--text-2); }
+    .hero h1 { font-size: clamp(38px, 6.5vw, 64px); }
+    .hero .lead { max-width: 560px; margin: 24px auto 0; font-size: 18px; line-height: 1.55; color: var(--muted); font-weight: 500; }
+    .hero-ctas { display: flex; gap: 13px; justify-content: center; margin-top: 34px; flex-wrap: wrap; }
+    .btn-primary { background: #fff; color: var(--bg); font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 32px; transition: transform 0.16s ease; }
+    .btn-primary:hover { transform: translateY(-1px); }
+    .btn-secondary { background: #1a1a1e; color: #fff; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 32px; border: 1px solid rgba(255,255,255,0.1); transition: background 0.16s ease; }
+    .btn-secondary:hover { background: #232329; }
+
+    /* ---------- Stats ---------- */
+    .stats { max-width: 900px; margin: 0 auto; padding: 20px 28px 60px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+    .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 22px; text-align: center; min-width: 0; }
+    .stat .n { font-size: 34px; font-weight: 800; letter-spacing: -0.03em; }
+    .stat .d { font-size: 13px; font-weight: 600; color: var(--muted); margin-top: 4px; }
+
+    /* ---------- Cómo funciona ---------- */
+    .como { max-width: 1180px; margin: 0 auto; padding: 40px 28px 30px; }
+    .como h2, .tracks h2 { font-size: clamp(30px, 4.5vw, 48px); text-align: center; margin-bottom: 44px; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; }
+    .step { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 28px; min-width: 0; }
+    .step .num { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; margin-bottom: 16px; }
+    .step .t { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 9px; }
+    .step .d { font-size: 14px; color: var(--muted); font-weight: 500; line-height: 1.6; }
+    .milestone { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 16px 22px; margin-top: 18px; flex-wrap: wrap; }
+    .milestone span { font-size: 14px; font-weight: 600; color: var(--text-2); }
+
+    /* ---------- Tracks ---------- */
+    .tracks { max-width: 1180px; margin: 0 auto; padding: 50px 28px 30px; }
+    .tracks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+    .track { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 32px; min-width: 0; }
+    .track .label { font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: var(--faint); }
+    .track .t { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; margin-top: 10px; }
+    .track ul { font-size: 14px; color: var(--muted); font-weight: 500; line-height: 1.9; margin: 14px 0 0; padding-left: 20px; }
+
+    /* ---------- Reglas ---------- */
+    .reglas { max-width: 760px; margin: 0 auto; padding: 30px 28px 50px; }
+    .reglas-card { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 28px 30px; }
+    .reglas-card .t { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 14px; }
+    .reglas-card .row { display: flex; gap: 10px; font-size: 13.5px; font-weight: 500; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+    .reglas-card .row:last-child { margin-bottom: 0; }
+    .reglas-card .row b { color: #fff; font-weight: 800; }
+
+    /* ---------- Form ---------- */
+    .aplicar { max-width: 620px; margin: 0 auto; padding: 40px 28px 90px; }
+    .form-card { background: linear-gradient(180deg, #121214, #0d0d0f); border: 1px solid var(--border); border-radius: 26px; padding: 34px 30px; }
+    .form-card h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.03em; }
+    .form-card .sub { font-size: 14px; font-weight: 500; color: var(--muted); line-height: 1.55; margin-top: 8px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+    .form-grid .full { grid-column: 1 / -1; }
+    .seg { display: flex; gap: 8px; }
+    .seg button { flex: 1; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 800; padding: 12px 0; border-radius: 24px; border: 1.5px solid rgba(255,255,255,0.14); background: transparent; color: var(--muted); transition: all 0.15s ease; }
+    .seg button.on { border-color: #fff; background: #fff; color: var(--bg); }
+    .form-grid input, .form-grid select, .form-grid textarea {
+      background: #17171a; border: 1px solid rgba(255,255,255,0.1); border-radius: 13px; padding: 14px 16px;
+      font-family: inherit; font-size: 14px; font-weight: 600; color: #fff; outline: none; width: 100%;
+    }
+    .form-grid select { color: var(--text-2); padding: 14px 12px; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237e8696' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+    .form-grid input:focus, .form-grid select:focus, .form-grid textarea:focus { border-color: rgba(255,255,255,0.28); }
+    .form-grid textarea { resize: vertical; }
+    .form-submit { width: 100%; border: none; cursor: pointer; background: #fff; color: var(--bg); font-family: inherit; font-size: 16px; font-weight: 800; padding: 16px 0; border-radius: 32px; margin-top: 16px; transition: transform 0.16s ease; }
+    .form-submit:hover:not(:disabled) { transform: translateY(-1px); }
+    .form-submit:disabled { opacity: 0.6; cursor: default; }
+    .form-note { text-align: center; font-size: 11.5px; font-weight: 600; color: var(--faint-2); margin-top: 12px; line-height: 1.6; }
+    .form-note a { color: var(--muted); text-decoration: underline; }
+    .form-note a:hover { color: #fff; }
+    .form-error { display: none; text-align: center; font-size: 13px; font-weight: 600; color: #e07a7a; margin-top: 12px; }
+
+    .success-card { display: none; background: linear-gradient(180deg, #121214, #0d0d0f); border: 1px solid var(--border); border-radius: 26px; padding: 50px 30px; text-align: center; }
+    .success-card .check { width: 54px; height: 54px; border-radius: 50%; background: rgba(58,167,117,0.15); border: 1px solid rgba(58,167,117,0.4); display: flex; align-items: center; justify-content: center; margin: 0 auto; color: var(--green); font-size: 24px; font-weight: 800; }
+    .success-card .t { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-top: 18px; }
+    .success-card .d { font-size: 14.5px; font-weight: 500; color: var(--muted); line-height: 1.6; margin-top: 10px; max-width: 380px; margin-left: auto; margin-right: auto; }
+
+    /* ---------- Footer ---------- */
+    .footer { border-top: 1px solid var(--border); padding: 26px 28px; text-align: center; }
+    .footer span { font-size: 12.5px; font-weight: 600; color: var(--faint-2); }
+    .footer a { color: var(--muted); }
+    .footer a:hover { color: #fff; }
+
+    @media (max-width: 560px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-grid .full { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="brand">
+        <img src="assets/fittly-icon.png" alt="Fittly" />
+        <span>fittly</span>
+        <span class="brand-chip">PARTNERS</span>
+      </a>
+      <div class="nav-links">
+        <a href="#como">Cómo funciona</a>
+        <a href="/">El producto</a>
+        <a href="#aplicar" class="nav-cta">Aplicar al programa</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span>Programa de partners · Cupos founding</span>
+    </div>
+    <h1 class="h">Gana recomendando el probador que vende.</h1>
+    <p class="lead">Comparte Fittly con tiendas Shopify. Cada tienda que instala y paga con tu link te deja comisión recurrente — hasta 12 meses por tienda.</p>
+    <div class="hero-ctas">
+      <a href="#aplicar" class="btn-primary">Aplicar al programa</a>
+      <a href="#como" class="btn-secondary">Cómo funciona →</a>
+    </div>
+  </header>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats">
+    <div class="stats-grid">
+      <div class="stat"><div class="n">20%</div><div class="d">comisión recurrente base</div></div>
+      <div class="stat"><div class="n">30%</div><div class="d">tope según tiendas activas</div></div>
+      <div class="stat"><div class="n">12 meses</div><div class="d">de comisión por tienda</div></div>
+      <div class="stat"><div class="n">$0</div><div class="d">mínimo de pago · sale solo</div></div>
+    </div>
+  </section>
+
+  <!-- ===== CÓMO FUNCIONA ===== -->
+  <section id="como" class="como">
+    <h2 class="h">Tres pasos, cero fricción.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div class="t">Comparte tu link</div>
+        <div class="d">Te damos un código único (fittlyapp.com/r/TU-CÓDIGO) con atribución incluida y una demo compartible del widget para tu audiencia.</div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="t">La tienda instala y paga</div>
+        <div class="d">Instalación sin código en ~2 minutos. Tu link atribuye la tienda y queda ligada a ti.</div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="t">Cobras cada mes</div>
+        <div class="d">20% de todo lo que paga la tienda, vía PayPal o Wise. Pago a 45 días del cierre de mes, sin mínimo y sin pedir nada.</div>
+      </div>
+    </div>
+    <div class="milestone">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3aa775" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+      <span>Al llegar a <strong>10 tiendas activas</strong> eliges tu premio: <strong>Fittly Pro gratis</strong> para tu tienda o <strong>100 créditos de contenido al mes</strong>.</span>
+    </div>
+  </section>
+
+  <!-- ===== TRACKS ===== -->
+  <section class="tracks">
+    <h2 class="h">Dos formas de ser partner.</h2>
+    <div class="tracks-grid">
+      <div class="track">
+        <div class="label">TRACK CREATOR</div>
+        <div class="t">Creas contenido de moda o e-commerce</div>
+        <ul>
+          <li>Assets aprobados: videos, slideshow, screenshots</li>
+          <li>Tu demo compartible con atribución incluida</li>
+          <li>Claims y números listos para citar</li>
+          <li>50 créditos Fittly al mes para crear contenido de try-on</li>
+        </ul>
+      </div>
+      <div class="track">
+        <div class="label">TRACK AGENCY</div>
+        <div class="t">Manejas tiendas Shopify de clientes</div>
+        <ul>
+          <li>Guías de implementación e instalación en volumen</li>
+          <li>Materiales client-facing con claims aprobados</li>
+          <li>Canal directo de feature feedback</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REGLAS ===== -->
+  <section class="reglas">
+    <div class="reglas-card">
+      <div class="t">Las reglas, claras desde el día uno</div>
+      <div class="row"><b>·</b><span>Solo assets y cifras aprobadas — te damos la lista, nada de inventar números.</span></div>
+      <div class="row"><b>·</b><span>Declara la relación de partner en tus posts (disclosure visible).</span></div>
+      <div class="row"><b>·</b><span>Nada de pedir reseñas en el App Store ni brand bidding con "Fittly".</span></div>
+    </div>
+  </section>
+
+  <!-- ===== FORM ===== -->
+  <section id="aplicar" class="aplicar">
+    <div class="form-card" id="form-card">
+      <h2>Aplica al programa</h2>
+      <p class="sub">Cupos founding limitados. Revisamos cada aplicación a mano y te respondemos en menos de 48 h.</p>
+      <form id="partner-form" novalidate>
+        <div class="form-grid">
+          <div class="full seg">
+            <button type="button" id="seg-creator" class="on">Creator</button>
+            <button type="button" id="seg-agency">Agency</button>
+          </div>
+          <input type="text" id="pf-name" placeholder="Nombre" required autocomplete="name" />
+          <input type="email" id="pf-email" placeholder="Email" required autocomplete="email" />
+          <input type="text" id="pf-handle" class="full" placeholder="Handle o URL de tu canal (ej. @tucuenta)" />
+          <select id="pf-channel">
+            <option value="" selected>Canal principal</option>
+            <option>Instagram</option>
+            <option>TikTok</option>
+            <option>YouTube</option>
+            <option>Newsletter</option>
+            <option>Agencia / consultora</option>
+            <option>Otro</option>
+          </select>
+          <select id="pf-audience">
+            <option value="" selected id="pf-audience-label">Tamaño de audiencia</option>
+            <option>&lt; 10k</option>
+            <option>10k – 50k</option>
+            <option>50k – 200k</option>
+            <option>200k+</option>
+          </select>
+          <textarea id="pf-message" class="full" rows="3" placeholder="Cuéntanos de tu audiencia o tus clientes (opcional)"></textarea>
+        </div>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
+        <button type="submit" class="form-submit" id="pf-submit">Enviar aplicación</button>
+        <div class="form-error" id="pf-error">No se pudo enviar la aplicación. Inténtalo de nuevo en unos segundos.</div>
+        <div class="form-note">Al aplicar aceptas los <a href="/partners/terms">Program Terms</a>. Debes ser mayor de 18 años. Sin spam.</div>
+      </form>
+    </div>
+    <div class="success-card" id="success-card">
+      <div class="check">✓</div>
+      <div class="t">¡Aplicación recibida!</div>
+      <div class="d">Te respondemos en menos de 48 h. Si te aprobamos, llega tu código único + la carpeta de recursos.</div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <span>© 2026 Fittly · <a href="/partners/terms">Program Terms</a> · <a href="https://fittly-production.up.railway.app/privacy">Privacy</a> · <a href="mailto:hello@fittlyapp.com">hello@fittlyapp.com</a></span>
+  </footer>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script>
+    const { createClient } = supabase;
+    const sb = createClient(
+      "https://oaotoxzrftwrstcvevjs.supabase.co",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9hb3RveHpyZnR3cnN0Y3ZldmpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3Mjk1ODcsImV4cCI6MjA5MDMwNTU4N30.N83UswzOHIx8D4fuhUO8fHOnlopxki3UKRnl6_6NYcU"
+    );
+
+    // ===== Track segmentado (Creator / Agency) =====
+    let track = "creator";
+    const segCreator = document.getElementById("seg-creator");
+    const segAgency = document.getElementById("seg-agency");
+    const handleInput = document.getElementById("pf-handle");
+    const audienceLabel = document.getElementById("pf-audience-label");
+
+    function setTrack(t) {
+      track = t;
+      segCreator.classList.toggle("on", t === "creator");
+      segAgency.classList.toggle("on", t === "agency");
+      handleInput.placeholder = t === "creator" ? "Handle o URL de tu canal (ej. @tucuenta)" : "Web de tu agencia";
+      audienceLabel.textContent = t === "creator" ? "Tamaño de audiencia" : "Nº de tiendas que manejas";
+    }
+    segCreator.addEventListener("click", () => setTrack("creator"));
+    segAgency.addEventListener("click", () => setTrack("agency"));
+
+    // ===== Aplicación → Supabase =====
+    const form = document.getElementById("partner-form");
+    const pfSubmit = document.getElementById("pf-submit");
+    const pfError = document.getElementById("pf-error");
+
+    form.addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+      if (!form.reportValidity()) return;
+      if (form._gotcha.value) return;
+      pfError.style.display = "none";
+      pfSubmit.disabled = true;
+      pfSubmit.textContent = "Enviando…";
+      try {
+        const { error } = await sb.from("partner_applications").insert({
+          track,
+          name: document.getElementById("pf-name").value.trim(),
+          email: document.getElementById("pf-email").value.trim(),
+          handle: document.getElementById("pf-handle").value.trim() || null,
+          channel: document.getElementById("pf-channel").value || null,
+          audience_size: document.getElementById("pf-audience").value || null,
+          message: document.getElementById("pf-message").value.trim() || null,
+        });
+        if (error) throw error;
+        document.getElementById("form-card").style.display = "none";
+        document.getElementById("success-card").style.display = "block";
+      } catch (err) {
+        pfSubmit.disabled = false;
+        pfSubmit.textContent = "Enviar aplicación";
+        pfError.style.display = "block";
+      }
+    });
+  </script>
+
+  <!-- Vercel Web Analytics (sitio estático) -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
