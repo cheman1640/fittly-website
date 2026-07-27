@@ -284,7 +284,7 @@
             <option>Otro</option>
           </select>
           <select id="pf-audience">
-            <option value="" selected id="pf-audience-label">Tamaño de audiencia</option>
+            <option value="" selected>Tamaño de audiencia</option>
             <option>&lt; 10k</option>
             <option>10k – 50k</option>
             <option>50k – 200k</option>
@@ -324,14 +324,29 @@
     const segCreator = document.getElementById("seg-creator");
     const segAgency = document.getElementById("seg-agency");
     const handleInput = document.getElementById("pf-handle");
-    const audienceLabel = document.getElementById("pf-audience-label");
+    const audienceSel = document.getElementById("pf-audience");
+
+    const AUDIENCE = {
+      creator: { label: "Tamaño de audiencia", opts: ["< 10k", "10k – 50k", "50k – 200k", "200k+"] },
+      agency:  { label: "Nº de tiendas que manejas", opts: ["1 – 5", "6 – 20", "21 – 50", "50+"] },
+    };
 
     function setTrack(t) {
       track = t;
       segCreator.classList.toggle("on", t === "creator");
       segAgency.classList.toggle("on", t === "agency");
       handleInput.placeholder = t === "creator" ? "Handle o URL de tu canal (ej. @tucuenta)" : "Web de tu agencia";
-      audienceLabel.textContent = t === "creator" ? "Tamaño de audiencia" : "Nº de tiendas que manejas";
+      const a = AUDIENCE[t];
+      audienceSel.innerHTML = "";
+      const ph = document.createElement("option");
+      ph.value = "";
+      ph.textContent = a.label;
+      audienceSel.appendChild(ph);
+      for (const o of a.opts) {
+        const el = document.createElement("option");
+        el.textContent = o;
+        audienceSel.appendChild(el);
+      }
     }
     segCreator.addEventListener("click", () => setTrack("creator"));
     segAgency.addEventListener("click", () => setTrack("agency"));
