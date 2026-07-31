@@ -286,8 +286,9 @@
     .precios { max-width: 1180px; margin: 0 auto; padding: 60px 28px 96px; }
     .price-banner { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border-2); border-radius: 30px; padding: 9px 18px; font-size: 14px; color: var(--muted); margin-top: 18px; }
     .price-banner b { color: #fff; font-weight: 700; }
-    .pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; max-width: 980px; margin: 0 auto; }
-    .pcard { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 32px; display: flex; flex-direction: column; position: relative; }
+    .pricing { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; max-width: 1180px; margin: 0 auto; }
+    @media (max-width: 1080px) { .pricing { grid-template-columns: repeat(2, 1fr); max-width: 720px; } }
+    .pcard { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 26px; display: flex; flex-direction: column; position: relative; }
     .pcard.featured { background: linear-gradient(180deg,#1d1e23,#141418); border: 1.5px solid var(--border-strong); }
     .pcard .pop { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #fff; color: var(--bg); font-size: 11px; font-weight: 800; letter-spacing: 0.04em; padding: 5px 13px; border-radius: 20px; white-space: nowrap; }
     .pcard .pname { font-size: 15px; font-weight: 700; color: var(--text-2); }
@@ -578,7 +579,7 @@
       <div class="icard reveal">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
         <h3>Créditos eficientes</h3>
-        <p>Los try-ons estándar se cachean 30 días. Cambiar una prenda del outfit cuesta 1 crédito; el resto sale de caché.</p>
+        <p>Los try-ons estándar se cachean. Cambiar una prenda del outfit usa 1 prueba; el resto sale de caché.</p>
       </div>
     </div>
   </section>
@@ -588,49 +589,60 @@
     <div class="center-head reveal">
       <span class="label">Precios</span>
       <h2 class="h">Empieza gratis.<br />Paga por lo que usas.</h2>
-      <p class="sub" style="max-width:600px;margin-left:auto;margin-right:auto;">14 días de prueba con 150 créditos. Al terminar, Fittly te recomienda el plan ideal según cómo usaron tus clientes el probador — sin que adivines nada.</p>
-      <div class="price-banner">🎁 <span><b>14 días gratis</b> con 150 créditos · sin tarjeta</span></div>
+      <p class="sub" style="max-width:600px;margin-left:auto;margin-right:auto;">14 días de prueba con 75 try-ons incluidos. Al terminar, Fittly te recomienda el plan ideal según cómo usaron tus clientes el probador — sin que adivines nada.</p>
+      <div class="price-banner">🎁 <span><b>14 días gratis</b> con 75 try-ons · sin tarjeta</span></div>
     </div>
     <div class="pricing">
       <div class="pcard reveal">
-        <div class="pname">Starter</div>
-        <div class="amt"><span class="n">$69</span><span class="per">/mes</span></div>
-        <div class="desc">Para tiendas que empiezan.</div>
+        <div class="pname">Lite</div>
+        <div class="amt"><span class="n">$19</span><span class="per">/mes</span></div>
+        <div class="desc">Para partir con clientes reales.</div>
         <div class="pf">
-          <div>✓ 150 créditos / mes</div>
-          <div>✓ 1 crédito por try-on</div>
-          <div>✓ Try-on con foto propia</div>
+          <div>✓ 50 pruebas / mes (~25 clientes)</div>
+          <div>✓ Foto propia + talla con IA</div>
+          <div>✓ Cuentas de comprador cross-store</div>
           <div>✓ Soporte por email</div>
         </div>
         <a href="#waitlist" class="pbtn ghost">Unirse a la waitlist</a>
-        <div class="pextra">Créditos extra: $0,60 c/u</div>
+        <div class="pextra">Pruebas extra: $0,65 c/u</div>
+      </div>
+      <div class="pcard reveal">
+        <div class="pname">Starter</div>
+        <div class="amt"><span class="n">$49</span><span class="per">/mes</span></div>
+        <div class="desc">Para tiendas que empiezan.</div>
+        <div class="pf">
+          <div>✓ 105 pruebas / mes (~53 clientes)</div>
+          <div>✓ Todo lo de Lite</div>
+        </div>
+        <a href="#waitlist" class="pbtn ghost">Unirse a la waitlist</a>
+        <div class="pextra">Pruebas extra: $0,60 c/u</div>
       </div>
       <div class="pcard featured reveal">
         <div class="pop">MÁS POPULAR</div>
         <div class="pname">Growth</div>
-        <div class="amt"><span class="n">$149</span><span class="per">/mes</span></div>
+        <div class="amt"><span class="n">$99</span><span class="per">/mes</span></div>
         <div class="desc">Para tiendas en crecimiento.</div>
         <div class="pf">
-          <div>✓ 350 créditos / mes</div>
-          <div>✓ Outfit Builder completo</div>
-          <div>✓ Try-on con foto propia</div>
+          <div>✓ 230 pruebas / mes (~115 clientes)</div>
+          <div>✓ Todo lo de Starter</div>
+          <div>✓ Outfit Builder — looks completos</div>
           <div>✓ Soporte prioritario</div>
         </div>
         <a href="#waitlist" class="pbtn solid">Unirse a la waitlist</a>
-        <div class="pextra">Créditos extra: $0,55 c/u</div>
+        <div class="pextra">Pruebas extra: $0,55 c/u</div>
       </div>
       <div class="pcard reveal">
         <div class="pname">Pro</div>
-        <div class="amt"><span class="n">$349</span><span class="per">/mes</span></div>
+        <div class="amt"><span class="n">$199</span><span class="per">/mes</span></div>
         <div class="desc">Para alto volumen.</div>
         <div class="pf">
-          <div>✓ 900 créditos / mes</div>
-          <div>✓ Outfit Builder completo</div>
-          <div>✓ Cuenta cross-store</div>
+          <div>✓ 520 pruebas / mes (~260 clientes)</div>
+          <div>✓ Todo lo de Growth</div>
+          <div>✓ Calidad máxima opcional</div>
           <div>✓ Soporte prioritario 24/7</div>
         </div>
         <a href="#waitlist" class="pbtn ghost">Unirse a la waitlist</a>
-        <div class="pextra">Créditos extra: $0,50 c/u</div>
+        <div class="pextra">Pruebas extra: $0,50 c/u</div>
       </div>
     </div>
     <p class="pricing-foot">📊 Empiezas con el trial y al final te recomendamos el plan ideal según el uso real de tu tienda. 🏷️ Las tiendas de la waitlist obtienen un <b>descuento exclusivo de lanzamiento</b>.</p>
@@ -654,7 +666,7 @@
       </details>
       <details class="faq-item">
         <summary><span class="q">¿Cuánto cuesta?</span><span class="pl">+</span></summary>
-        <div class="a">Empiezas con 14 días gratis y 150 créditos, sin tarjeta. Al terminar la prueba, Fittly te recomienda el plan ideal según el uso real: Starter ($69 · 150 créditos), Growth ($149 · 350) o Pro ($349 · 900). 1 crédito = 1 try-on, e incluye el try-on con foto propia. Los try-ons estándar se cachean 30 días, así que se sirven sin costo extra.</div>
+        <div class="a">Empiezas con 14 días gratis y 75 try-ons, sin tarjeta. Al terminar la prueba, Fittly te recomienda el plan ideal según el uso real: Lite ($19 · 50 pruebas), Starter ($49 · 105), Growth ($99 · 230) o Pro ($199 · 520). 1 prueba = 1 try-on, e incluye el try-on con foto propia. Los try-ons estándar se cachean, así que los resultados repetidos se sirven sin costo extra.</div>
       </details>
       <details class="faq-item">
         <summary><span class="q">¿Qué pasa con la privacidad de los datos?</span><span class="pl">+</span></summary>
