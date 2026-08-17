@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Probador virtual con IA para Shopify: cómo funciona</title>
+  <meta name="description" content="Qué es un probador virtual con IA, cómo se instala en Shopify, cuánto cuesta y en qué se diferencia de una tabla de tallas. Guía para tiendas de ropa." />
+  <link rel="canonical" href="https://www.fittlyapp.com/probador-virtual-shopify" />
+  <meta property="og:title" content="Probador virtual con IA para Shopify: cómo funciona" />
+  <meta property="og:description" content="Qué es un probador virtual con IA, cómo se instala en Shopify, cuánto cuesta y en qué se diferencia de una tabla de tallas. Guía para tiendas de ropa." />
+  <meta property="og:image" content="https://www.fittlyapp.com/assets/fittly-icon.png" />
+  <meta property="og:url" content="https://www.fittlyapp.com/probador-virtual-shopify" />
+  <meta property="og:type" content="article" />
+  <link rel="icon" type="image/png" href="../assets/fittly-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0a0b; --surface: #121214; --border: rgba(255,255,255,0.07); --border-2: rgba(255,255,255,0.12);
+      --white: #fff; --text-2: #cdd2db; --text-3: #b6bcc7; --muted: #9aa1ad; --faint: #7e8696; --faint-2: #5b5e66; --green: #3aa775;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--white); font-family: "Manrope", -apple-system, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #fff; color: var(--bg); }
+    a { color: #fff; }
+    a:hover { color: var(--text-2); }
+    img { display: block; max-width: 100%; }
+    .nav { position: sticky; top: 0; z-index: 40; background: rgba(10,10,11,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 860px; margin: 0 auto; padding: 15px 28px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 9px; color: #fff; text-decoration: none; }
+    .brand img { width: 28px; height: 28px; border-radius: 26%; }
+    .brand span { font-size: 19px; font-weight: 800; letter-spacing: -0.03em; }
+    .nav-cta { background: #fff; color: var(--bg); font-size: 13.5px; font-weight: 700; padding: 9px 16px; border-radius: 30px; text-decoration: none; white-space: nowrap; }
+    .doc { max-width: 760px; margin: 0 auto; padding: 56px 28px 70px; }
+    .doc h1 { font-size: clamp(30px, 5vw, 44px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; }
+    .doc .intro { font-size: 17px; font-weight: 500; color: var(--muted); line-height: 1.65; margin-top: 18px; }
+    .doc h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin: 42px 0 12px; }
+    .doc p { font-size: 15.5px; font-weight: 500; color: var(--text-3); line-height: 1.75; margin-bottom: 13px; }
+    .doc strong { color: #fff; }
+    .doc ul { margin: 0 0 13px; padding-left: 22px; }
+    .doc li { font-size: 15.5px; font-weight: 500; color: var(--text-3); line-height: 1.75; margin-bottom: 6px; }
+    .cta-card { background: linear-gradient(180deg, #121214, #0d0d0f); border: 1px solid var(--border); border-radius: 22px; padding: 32px; text-align: center; margin-top: 46px; }
+    .cta-card .t { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; }
+    .cta-card .d { font-size: 14.5px; font-weight: 500; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .cta-card a.btn { display: inline-block; background: #fff; color: var(--bg); font-size: 15px; font-weight: 800; padding: 14px 26px; border-radius: 30px; text-decoration: none; margin-top: 18px; }
+    .related { border-top: 1px solid var(--border); margin-top: 46px; padding-top: 24px; }
+    .related .rl { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: var(--faint-2); text-transform: uppercase; }
+    .related a { display: block; font-size: 15px; font-weight: 700; color: var(--text-2); text-decoration: none; margin-top: 10px; }
+    .related a:hover { color: #fff; }
+    .footer { border-top: 1px solid var(--border); padding: 26px 28px; text-align: center; }
+    .footer span { font-size: 12.5px; font-weight: 600; color: var(--faint-2); }
+    .footer a { color: var(--muted); text-decoration: none; }
+    .footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <img src="../assets/fittly-icon.png" alt="Fittly" />
+        <span>fittly</span>
+      </a>
+      <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="nav-cta">Instalar en Shopify</a>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <h1>Probador virtual con IA para Shopify</h1>
+    <p class="intro">Un probador virtual le muestra al cliente cómo se ve una prenda puesta antes de comprarla. Esta guía explica qué ve el cliente, cómo se instala en una tienda Shopify, cuánto cuesta en el mercado y en qué se diferencia de una tabla de tallas.</p>
+
+    <h2>Qué es y qué ve el cliente</h2>
+    <p>En la página de producto aparece un botón para probarse la prenda. Al abrirlo, el cliente elige entre dos caminos: <strong>usar uno de 8 tipos de cuerpo de referencia</strong> (slim, regular, athletic y plus size, en hombre y mujer) o <strong>subir su propia foto</strong> y verse a sí mismo con la prenda puesta.</p>
+    <p>En unos segundos la IA genera la imagen de la prenda sobre el cuerpo elegido. El cliente pasa de imaginar cómo le quedaría a verlo.</p>
+    <p>Sobre la privacidad, que es la primera pregunta de todo comerciante: en Fittly la foto del cliente se elimina automáticamente en un máximo de 72 horas y <strong>la tienda nunca la ve</strong>, ni la foto ni ningún dato del cuerpo del cliente. La tienda solo ve el resultado generado.</p>
+
+    <h2>Cómo se instala en Shopify</h2>
+    <p>La instalación es desde el App Store de Shopify y no requiere código. El único paso es activar la app en el editor de temas de la tienda, y el probador aparece en las páginas de producto. No hay que configurar bloque por bloque ni tocar el theme.</p>
+
+    <h2>Cuánto cuesta</h2>
+    <p>El mercado de probadores virtuales para Shopify va desde planes gratis limitados hasta suscripciones por volumen de uso:</p>
+    <ul>
+      <li><strong>GenLook</strong> tiene un plan gratis de 10 pruebas al mes y planes pagados desde $19,99.</li>
+      <li><strong>STILARO</strong> tiene un plan gratis de 30 pruebas al mes y planes desde $33.</li>
+      <li><strong>Fittly</strong> no tiene plan gratis permanente: tiene 14 días de prueba con 75 try-ons incluidos y planes desde $19 al mes.</li>
+      <li>Las apps que solo hacen recomendación de talla, como <strong>Kiwi</strong>, parten desde $0.</li>
+    </ul>
+    <p>Los precios cambian, así que lo honesto es mirarlos en la ficha de cada app. Tenemos una <a href="/comparativa-apps-probador-virtual-shopify">comparativa con los datos verificados</a> de las principales opciones.</p>
+
+    <h2>En qué se diferencia de una tabla de tallas</h2>
+    <p>Son respuestas a preguntas distintas. La tabla de tallas describe la prenda con números que el cliente tiene que interpretar. El probador le muestra cómo se ve puesta. Y una <a href="/recomendacion-de-tallas-shopify">recomendación de talla</a> le dice directamente qué talla pedir según su altura y peso.</p>
+    <p>Las dos últimas juntas responden lo que el cliente realmente quiere saber antes de pagar: cómo me queda, y cuál me llevo. Fittly incluye ambas en el mismo widget.</p>
+
+    <h2>Qué tienda le saca provecho, y cuál no</h2>
+    <p>El probador rinde más donde la duda de compra es visual y de calce:</p>
+    <ul>
+      <li>Catálogos con <strong>calces variados</strong>: oversize, baggy, mom fit, donde el cliente no sabe cómo cae la prenda.</li>
+      <li>Tiendas <strong>multimarca</strong>, donde cada marca talla distinto.</li>
+      <li>Ropa <strong>importada</strong>, con tallaje de origen distinto al local.</li>
+    </ul>
+    <p>Y hay tiendas donde aporta menos: accesorios, productos sin talla, o catálogos de un solo básico con calce único que el cliente ya conoce. Si la duda de compra no es "cómo me queda", el probador no es la herramienta.</p>
+
+    <h2>Para probarlo en tu tienda</h2>
+    <p>Fittly une el probador virtual y la recomendación de talla en un solo widget para Shopify. La talla está incluida sin límite de uso en todos los planes.</p>
+
+    <div class="cta-card">
+      <div class="t">Pruébalo con tus propias prendas</div>
+      <div class="d">14 días de prueba gratis con 75 try-ons incluidos, sin tarjeta. Planes desde $19 al mes.</div>
+      <a class="btn" href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Instalar Fittly en Shopify</a>
+    </div>
+
+    <div class="related">
+      <span class="rl">Seguir leyendo</span>
+      <a href="/recomendacion-de-tallas-shopify">Recomendación de tallas para Shopify: cómo reducir devoluciones</a>
+      <a href="/comparativa-apps-probador-virtual-shopify">Comparativa de apps de probador virtual para Shopify en 2026</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Fittly · <a href="/">fittlyapp.com</a> · <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">App Store</a> · <a href="mailto:hello@fittlyapp.com">hello@fittlyapp.com</a></span>
+  </footer>
+
+  <!-- Vercel Web Analytics (sitio estático) -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
