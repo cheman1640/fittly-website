@@ -14,6 +14,17 @@
   <link rel="alternate" hreflang="es" href="https://www.fittlyapp.com/" />
   <link rel="alternate" hreflang="en" href="https://www.fittlyapp.com/en" />
   <link rel="alternate" hreflang="x-default" href="https://www.fittlyapp.com/" />
+  <script>
+    // Auto-detección de idioma: solo en la home, solo humanos, y la elección manual siempre gana.
+    (function () {
+      try {
+        if (/bot|crawler|spider|crawling/i.test(navigator.userAgent)) return;
+        var pref = localStorage.getItem("fittly-lang");
+        if (pref === "es") return;
+        if (pref === "en" || !/^es/i.test(navigator.language || "")) location.replace("/en");
+      } catch (e) {}
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -398,7 +409,7 @@
         <a href="#outfit">Outfit Builder</a>
         <a href="#tiendas">Para tiendas</a>
         <a href="#precios">Precios</a>
-        <a href="/en">EN</a>
+        <a href="/en" onclick="try{localStorage.setItem('fittly-lang','en')}catch(e){}">EN</a>
         <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="nav-cta">Instalar en Shopify</a>
       </div>
     </div>
