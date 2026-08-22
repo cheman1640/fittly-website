@@ -7,5 +7,11 @@
       "destination": "https://fittly-production.up.railway.app/r/:code",
       "statusCode": 307
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/g/:path*",
+      "destination": "https://fittly-production.up.railway.app/g/:path*"
+    }
   ]
 }
