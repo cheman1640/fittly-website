@@ -171,6 +171,31 @@ const D = {
      "Narré en anglais, avec sous-titres. Ne se charge depuis YouTube que lorsque vous appuyez sur lecture.",
      "Narrado em inglês, com legendas. Só carrega do YouTube quando você dá play."],
 
+  // analíticas de demanda
+  "Demand analytics": ["Nachfrage-Analytics", "Analytique de la demande", "Analytics de demanda"],
+  ">Analytics<": [">Analytics<", ">Analytique<", ">Analytics<"],
+  "What you sold is not<br />what they asked for.": ["Was du verkauft hast, ist nicht<br />was sie gebraucht haben.", "Ce que vous avez vendu n'est pas<br />ce qu'ils ont demandé.", "O que você vendeu não é<br />o que pediram."],
+  "Your sales data comes filtered by your own stock. If you are always out of XL, your sales say nobody wears XL, and you restock what was already sitting there. Fittly records the size each shopper actually needed, available or not.":
+    ["Deine Verkaufsdaten sind durch deinen eigenen Bestand gefiltert. Wenn XL immer ausverkauft ist, sagen deine Verkäufe, dass niemand XL trägt, und du bestellst wieder das nach, was ohnehin liegen blieb. Fittly erfasst die Größe, die jeder Kunde wirklich brauchte, verfügbar oder nicht.",
+     "Vos données de vente sont filtrées par votre propre stock. Si vous êtes toujours en rupture de XL, vos ventes disent que personne ne porte du XL, et vous réapprovisionnez ce qui restait déjà. Fittly enregistre la taille dont chaque client avait réellement besoin, disponible ou non.",
+     "Seus dados de venda vêm filtrados pelo seu próprio estoque. Se você está sempre sem XL, suas vendas dizem que ninguém usa XL, e você repõe o que já estava parado. A Fittly registra o tamanho que cada cliente realmente precisava, disponível ou não."],
+  "PANEL 1": ["PANEL 1", "PANNEAU 1", "PAINEL 1"],
+  "PANEL 2": ["PANEL 2", "PANNEAU 2", "PAINEL 2"],
+  "Which sizes get asked for, and on which products": ["Welche Größen gefragt sind, und bei welchen Produkten", "Quelles tailles sont demandées, et sur quels produits", "Quais tamanhos pedem, e em quais produtos"],
+  "Your store's size curve straight from the real recommendations, by scale and by product. Not what sold: what your shoppers are.":
+    ["Die Größenkurve deines Shops direkt aus den echten Empfehlungen, nach Skala und nach Produkt. Nicht was verkauft wurde: was deine Kunden sind.",
+     "La courbe des tailles de votre boutique directement issue des recommandations réelles, par échelle et par produit. Pas ce qui s'est vendu : ce que sont vos clients.",
+     "A curva de tamanhos da sua loja direto das recomendações reais, por escala e por produto. Não o que vendeu: o que seus clientes são."],
+  "How many times you did not have it": ["Wie oft du sie nicht hattest", "Combien de fois vous ne l'aviez pas", "Quantas vezes você não tinha"],
+  "On which products, and how many times, the ideal size was out of stock and Fittly offered the closest one instead. That is demand that leaves no trace anywhere else, because nothing happened to record.":
+    ["Bei welchen Produkten und wie oft die ideale Größe ausverkauft war und Fittly stattdessen die nächstliegende angeboten hat. Das ist Nachfrage, die sonst nirgends eine Spur hinterlässt, weil nichts passiert ist, das man erfassen könnte.",
+     "Sur quels produits, et combien de fois, la taille idéale était en rupture et Fittly a proposé la plus proche à la place. C'est une demande qui ne laisse de trace nulle part ailleurs, parce qu'il ne s'est rien passé à enregistrer.",
+     "Em quais produtos, e quantas vezes, o tamanho ideal estava esgotado e a Fittly ofereceu o mais próximo. É demanda que não deixa rastro em nenhum outro lugar, porque não chegou a acontecer nada para registrar."],
+  "And the products that break the pattern are worth watching: if one garment consistently comes back a size up from the rest of its scale, it <b>runs small</b>. That is usually the piece quietly generating your returns.":
+    ["Und die Produkte, die aus dem Muster fallen, lohnen einen Blick: kommt ein Kleidungsstück immer eine Größe höher zurück als der Rest seiner Skala, <b>fällt es klein aus</b>. Das ist meist das Teil, das im Stillen deine Retouren erzeugt.",
+     "Et les produits qui sortent du schéma méritent votre attention : si un vêtement revient toujours une taille au-dessus du reste de son échelle, il <b>taille petit</b>. C'est souvent la pièce qui génère vos retours en silence.",
+     "E vale a pena olhar os produtos que fogem do padrão: se uma peça volta sempre um tamanho acima do resto da sua escala, ela <b>veste pequeno</b>. Essa costuma ser a que gera suas devoluções em silêncio."],
+
   // cross-store
   "Fittly account · Cross-store": ["Fittly-Konto · Shop-übergreifend", "Compte Fittly · Multi-boutique", "Conta Fittly · Cross-store"],
   "One model. Every store.": ["Ein Modell. Alle Shops.", "Un modèle. Toutes les boutiques.", "Um modelo. Todas as lojas."],

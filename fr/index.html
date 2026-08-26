@@ -392,6 +392,21 @@
     .vid-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
     .vid-note { text-align: center; margin-top: 12px; font-size: 12.5px; color: var(--faint-2); font-weight: 600; margin-top: 14px; }
 
+
+    /* ---------- Analíticas de demanda ---------- */
+    .dem { max-width: 1180px; margin: 0 auto; padding: 40px 28px 80px; }
+    .dem-card { background: linear-gradient(135deg,#1a1b20,#0d0d0f); border: 1px solid var(--border-2); border-radius: 28px; padding: 54px 44px; }
+    .dem-card h2 { font-size: clamp(30px, 4.6vw, 52px); margin-bottom: 18px; }
+    .dem-card .lead { max-width: 620px; font-size: 17px; color: var(--muted); font-weight: 500; line-height: 1.65; }
+    .dem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px; }
+    @media (max-width: 780px) { .dem-grid { grid-template-columns: 1fr; } .dem-card { padding: 36px 24px; } }
+    .dem-panel { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 18px; padding: 24px; min-width: 0; }
+    .dem-panel .n { font-size: 11px; font-weight: 800; letter-spacing: 0.12em; color: var(--faint-2); }
+    .dem-panel h3 { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; margin: 9px 0 10px; color: #fff; }
+    .dem-panel p { font-size: 14.5px; color: var(--text-3); font-weight: 500; line-height: 1.65; }
+    .dem-foot { margin-top: 26px; font-size: 14.5px; color: var(--muted); font-weight: 500; line-height: 1.65; max-width: 660px; }
+    .dem-foot b { color: #fff; font-weight: 700; }
+
     /* ---------- Responsive ---------- */
     @media (max-width: 900px) {
       .xhero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -570,6 +585,7 @@
       <div class="nav-links">
         <a href="#producto">Produit</a>
         <a href="#instalacion">Installation</a>
+        <a href="#demanda">Analytique</a>
         <a href="#tiendas">Pour les boutiques</a>
         <a href="#precios">Tarifs</a>
         <div class="langsel">
@@ -736,6 +752,28 @@
         <div class="vid-badge">▶ Comment l'installer · 36 s</div>
       </div>
       <p class="vid-note">Narré en anglais, avec sous-titres. Ne se charge depuis YouTube que lorsque vous appuyez sur lecture.</p>
+    </div>
+  </section>
+
+  <!-- ===== ANALÍTICAS DE DEMANDA ===== -->
+  <section id="demanda" class="dem reveal">
+    <div class="dem-card">
+      <span class="label">Analytique de la demande</span>
+      <h2 class="h">Ce que vous avez vendu n'est pas<br />ce qu'ils ont demandé.</h2>
+      <p class="lead">Vos données de vente sont filtrées par votre propre stock. Si vous êtes toujours en rupture de XL, vos ventes disent que personne ne porte du XL, et vous réapprovisionnez ce qui restait déjà. Fittly enregistre la taille dont chaque client avait réellement besoin, disponible ou non.</p>
+      <div class="dem-grid">
+        <div class="dem-panel">
+          <span class="n">PANNEAU 1</span>
+          <h3>Quelles tailles sont demandées, et sur quels produits</h3>
+          <p>La courbe des tailles de votre boutique directement issue des recommandations réelles, par échelle et par produit. Pas ce qui s'est vendu : ce que sont vos clients.</p>
+        </div>
+        <div class="dem-panel">
+          <span class="n">PANNEAU 2</span>
+          <h3>Combien de fois vous ne l'aviez pas</h3>
+          <p>Sur quels produits, et combien de fois, la taille idéale était en rupture et Fittly a proposé la plus proche à la place. C'est une demande qui ne laisse de trace nulle part ailleurs, parce qu'il ne s'est rien passé à enregistrer.</p>
+        </div>
+      </div>
+      <p class="dem-foot">Et les produits qui sortent du schéma méritent votre attention : si un vêtement revient toujours une taille au-dessus du reste de son échelle, il <b>taille petit</b>. C'est souvent la pièce qui génère vos retours en silence.</p>
     </div>
   </section>
 
