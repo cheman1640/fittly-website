@@ -1,41 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fittly — El probador virtual con IA para Shopify</title>
-  <meta name="description" content="Fittly es el probador virtual con IA para tiendas Shopify: try-on realista, recomendación de talla exacta y widget en 5 idiomas en tu página de producto. Instálalo desde la Shopify App Store y pruébalo gratis." />
-  <meta property="og:title" content="Fittly — El probador virtual con IA para Shopify" />
-  <meta property="og:description" content="Tus clientes lo ven puesto antes de comprar. Instálalo desde la Shopify App Store y pruébalo gratis." />
-  <meta property="og:image" content="https://www.fittlyapp.com/assets/og-es.jpg" />
+  <title>Fittly — O provador virtual com IA para Shopify</title>
+  <meta name="description" content="Fittly é o provador virtual com IA para lojas Shopify: provador realista, recomendação de tamanho exata e um widget em 5 idiomas na sua página de produto. Instale grátis pela Shopify App Store." />
+  <meta property="og:title" content="Fittly — O provador virtual com IA para Shopify" />
+  <meta property="og:description" content="Seus clientes veem a peça vestida antes de comprar. Instale grátis pela Shopify App Store." />
+  <meta property="og:image" content="https://www.fittlyapp.com/assets/og-en.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://www.fittlyapp.com/" />
+  <meta property="og:url" content="https://www.fittlyapp.com/pt" />
   <meta property="og:site_name" content="Fittly" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.fittlyapp.com/assets/og-es.jpg" />
+  <meta name="twitter:image" content="https://www.fittlyapp.com/assets/og-en.jpg" />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/png" href="assets/fittly-icon.png" />
-  <link rel="canonical" href="https://www.fittlyapp.com/" />
+  <link rel="icon" type="image/png" href="/assets/fittly-icon.png" />
+  <link rel="canonical" href="https://www.fittlyapp.com/pt" />
   <link rel="alternate" hreflang="es" href="https://www.fittlyapp.com/" />
   <link rel="alternate" hreflang="en" href="https://www.fittlyapp.com/en" />
   <link rel="alternate" hreflang="de" href="https://www.fittlyapp.com/de" />
   <link rel="alternate" hreflang="fr" href="https://www.fittlyapp.com/fr" />
   <link rel="alternate" hreflang="pt" href="https://www.fittlyapp.com/pt" />
   <link rel="alternate" hreflang="x-default" href="https://www.fittlyapp.com/" />
-  <script>
-    // Auto-detección de idioma: solo en la home, solo humanos, y la elección manual siempre gana.
-    (function () {
-      try {
-        if (/bot|crawler|spider|crawling/i.test(navigator.userAgent)) return;
-        var rutas = { es: "/", en: "/en", de: "/de", fr: "/fr", pt: "/pt" };
-        var pref = localStorage.getItem("fittly-lang");
-        var idioma = pref || (navigator.language || "en").slice(0, 2).toLowerCase();
-        if (!rutas[idioma]) idioma = "en";
-        if (idioma !== "es") location.replace(rutas[idioma]);
-      } catch (e) {}
-    })();
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -428,11 +415,11 @@
     "@type": "SoftwareApplication",
     "name": "Fittly: Try-On & Size Guide",
     "applicationCategory": "BusinessApplication",
-    "applicationSubCategory": "App de Shopify",
+    "applicationSubCategory": "app Shopify",
     "operatingSystem": "Web (Shopify)",
-    "url": "https://www.fittlyapp.com/",
+    "url": "https://www.fittlyapp.com/pt",
     "installUrl": "https://apps.shopify.com/fittly",
-    "description": "Probador virtual con IA y recomendación de talla para tiendas Shopify, en 5 idiomas. Instalación gratuita y pago por try-on usado.",
+    "description": "Provador virtual com IA e recomendação de tamanho para lojas Shopify, em 5 idiomas. Instalação gratuita, pagamento por prova usada.",
     "publisher": {
       "@type": "Organization",
       "name": "Fittly SpA"
@@ -443,21 +430,21 @@
         "name": "Free",
         "price": "0",
         "priceCurrency": "USD",
-        "description": "$0,35 por try-on usado, sin fee mensual"
+        "description": "US$ 0,35 por prova used, sem taxa mensal"
       },
       {
         "@type": "Offer",
         "name": "Starter",
         "price": "9",
         "priceCurrency": "USD",
-        "description": "$0,22 por try-on usado"
+        "description": "US$ 0,22 por prova used"
       },
       {
         "@type": "Offer",
         "name": "Growth",
         "price": "19",
         "priceCurrency": "USD",
-        "description": "$0,18 por try-on usado"
+        "description": "US$ 0,18 por prova used"
       }
     ],
     "availableLanguage": [
@@ -476,50 +463,50 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "¿El shopper tiene que subir una foto?",
+        "name": "O cliente precisa enviar uma foto?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No es obligatorio. Puede elegir entre 8 modelos de referencia (slim, regular, athletic y plus-size, en hombre y mujer) o subir su propia foto para verse a sí mismo. Las fotos propias se eliminan en 72 horas."
+          "text": "Não, é opcional. Ele pode escolher entre 8 modelos de referência (slim, regular, athletic e plus size, masculino e feminino) ou enviar a própria foto para se ver. Fotos próprias são apagadas em até 72 horas."
         }
       },
       {
         "@type": "Question",
-        "name": "¿Qué tan realista es el try-on?",
+        "name": "Quão realista é a prova?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "La IA viste la prenda real sobre el cuerpo elegido respetando caída, largo y proporción. No es un overlay plano: es una generación que refleja cómo queda puesta."
+          "text": "A IA veste a peça real no corpo escolhido, respeitando caimento, comprimento e proporção. Não é uma sobreposição plana: é uma geração que reflete como fica vestida."
         }
       },
       {
         "@type": "Question",
-        "name": "¿Funciona con cualquier tema de Shopify?",
+        "name": "Funciona com qualquer tema da Shopify?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sí. Fittly es una app nativa de Shopify que se instala desde el App Store y aparece en tu página de producto sin tocar código, compatible con cualquier tema."
+          "text": "Sim. A Fittly é um app nativo da Shopify que instala pela App Store e aparece na sua página de produto sem tocar em código, compatível com qualquer tema."
         }
       },
       {
         "@type": "Question",
-        "name": "¿Cuánto cuesta?",
+        "name": "Quanto custa?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "La instalación es gratuita y no hay fee mensual obligatorio: en el plan Free pagas $0,35 por try-on usado, con un tope de gasto mensual que tú defines. Si tu volumen crece, Starter ($9/mes) baja la tarifa a $0,22 y Growth ($19/mes) a $0,18, sin límites de try-ons. La recomendación de talla nunca se cobra por uso, y los try-ons estándar se cachean, así que los resultados repetidos se sirven sin costo extra."
+          "text": "A instalação é gratuita e não há taxa mensal obrigatória: no plano Free você paga US$ 0,35 por prova usada, com um limite de gasto que você define. Conforme seu volume cresce, o Starter (US$ 9/mês) reduz a tarifa para US$ 0,22 e o Growth (US$ 19/mês) para US$ 0,18, sem limite de provas. A recomendação de tamanho nunca é cobrada, e as provas padrão ficam em cache, então resultados repetidos são entregues sem custo extra."
         }
       },
       {
         "@type": "Question",
-        "name": "¿En qué idiomas está el probador?",
+        "name": "Em quais idiomas está o provador?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "El widget está en español, inglés, portugués, alemán y francés, incluido en todos los planes. Toma automáticamente el idioma que tu tienda Shopify le muestra a cada visitante, así que un cliente en Alemania ve el probador en alemán sin que configures nada."
+          "text": "O widget está em espanhol, inglês, português, alemão e francês, incluído em todos os planos. Ele segue automaticamente o idioma que sua loja Shopify mostra a cada visitante, então um cliente na Alemanha vê o provador em alemão sem você configurar nada."
         }
       },
       {
         "@type": "Question",
-        "name": "¿Qué pasa con la privacidad de los datos?",
+        "name": "E a privacidade dos dados?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Las fotos del shopper se borran automáticamente a las 72 horas y nunca se comparten con la tienda. La cuenta cross-store guarda solo el modelo y las medidas que el usuario decide guardar, y puede exportarlos o borrarlos cuando quiera."
+          "text": "As fotos dos clientes são apagadas automaticamente após 72 horas e nunca são compartilhadas com a loja. A conta cross-store guarda apenas o modelo e as medidas que o usuário decide salvar, e ele pode exportá-los ou apagá-los quando quiser."
         }
       }
     ]
@@ -531,14 +518,14 @@
   <!-- ===== NAV ===== -->
   <nav class="nav">
     <div class="wrap nav-inner">
-      <a href="#" class="brand"><img src="assets/fittly-icon.png" alt="Fittly" /><span>fittly</span></a>
+      <a href="#" class="brand"><img src="/assets/fittly-icon.png" alt="Fittly" /><span>fittly</span></a>
       <div class="nav-links">
-        <a href="#producto">Producto</a>
+        <a href="#producto">Produto</a>
         <a href="#idiomas">Idiomas</a>
-        <a href="#tiendas">Para tiendas</a>
-        <a href="#precios">Precios</a>
-        <span style="font-size:13px;font-weight:800;color:#fff">ES</span><span style="color:var(--faint-2);font-size:11px">·</span><a href="/en" onclick="try{localStorage.setItem('fittly-lang','en')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">EN</a><span style="color:var(--faint-2);font-size:11px">·</span><a href="/de" onclick="try{localStorage.setItem('fittly-lang','de')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">DE</a><span style="color:var(--faint-2);font-size:11px">·</span><a href="/fr" onclick="try{localStorage.setItem('fittly-lang','fr')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">FR</a><span style="color:var(--faint-2);font-size:11px">·</span><a href="/pt" onclick="try{localStorage.setItem('fittly-lang','pt')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">PT</a>
-        <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="nav-cta">Instalar en Shopify</a>
+        <a href="#tiendas">Para lojas</a>
+        <a href="#precios">Preços</a>
+        <a href="/" onclick="try{localStorage.setItem('fittly-lang','es')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">ES</a><span style="color:var(--faint-2);font-size:11px">·</span><a href="/en" onclick="try{localStorage.setItem('fittly-lang','en')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">EN</a><span style="color:var(--faint-2);font-size:11px">·</span><a href="/de" onclick="try{localStorage.setItem('fittly-lang','de')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">DE</a><span style="color:var(--faint-2);font-size:11px">·</span><a href="/fr" onclick="try{localStorage.setItem('fittly-lang','fr')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">FR</a><span style="color:var(--faint-2);font-size:11px">·</span><span style="font-size:13px;font-weight:800;color:#fff">PT</span>
+        <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="nav-cta">Instalar no Shopify</a>
       </div>
     </div>
   </nav>
@@ -547,16 +534,16 @@
   <header class="xhero">
     <div class="xhero-grid">
       <div class="xhero-copy">
-        <div class="hero-badge"><span class="dot"></span><span>Probador virtual con IA · App de Shopify</span></div>
-        <h1 class="h">Que se lo prueben<br /><u>antes de comprarlo.</u></h1>
-        <p class="sub2">Try-on realista, talla exacta y widget en 5 idiomas, directo en tu ficha de producto. Menos dudas, menos devoluciones, más carritos.</p>
+        <div class="hero-badge"><span class="dot"></span><span>Provador virtual com IA · app Shopify</span></div>
+        <h1 class="h">Deixe provarem<br /><u>antes de comprar.</u></h1>
+        <p class="sub2">Provador realista, tamanho exato e um widget em 5 idiomas, direto na sua página de produto. Menos dúvidas, menos devoluções, mais carrinhos.</p>
         <div class="xhero-ctas">
-          <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="btn btn-primary">Instalar en Shopify</a>
-          <a href="#producto" class="btn btn-secondary">Ver cómo funciona →</a>
+          <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="btn btn-primary">Instalar no Shopify</a>
+          <a href="#producto" class="btn btn-secondary">Veja como funciona →</a>
         </div>
-        <div class="xhero-disc">✨ Instalación gratuita: <b>sin fee mensual</b>, pagas solo por try-on usado.</div>
+        <div class="xhero-disc">✨ Instalação gratuita: <b>sem taxa mensal</b>, você paga só por prova usada.</div>
         <div class="xhero-pilots">
-          <span class="pl">Confiaron primero</span>
+          <span class="pl">Confiaram primeiro</span>
           <span class="wm wm1">HÜG</span>
           <span class="wm wm2">Auroras</span>
           <span class="wm wm3">Atmosfera</span>
@@ -566,28 +553,28 @@
 
       <div class="xhero-visual">
         <div class="compare" id="compare" style="--p:52%;">
-          <div class="cmp-after"><img class="cmp-img" src="assets/tryon-despues.jpg" alt="La prenda vista puesta con Fittly" /></div>
-          <div class="cmp-before"><img class="cmp-img" src="assets/tryon-antes.jpg" alt="El shopper antes de probarse la prenda" /></div>
+          <div class="cmp-after"><img class="cmp-img" src="/assets/tryon-despues.jpg" alt="A peça vestida, gerada com Fittly" /></div>
+          <div class="cmp-before"><img class="cmp-img" src="/assets/tryon-antes.jpg" alt="O cliente antes de provar" /></div>
           <span class="cmp-tag l">Antes</span>
-          <span class="cmp-tag r">✦ Con Fittly</span>
+          <span class="cmp-tag r">✦ Com Fittly</span>
           <div class="cmp-bar">
             <div class="meta">
-              <img class="cmp-thumb" src="assets/product-crewneck.webp" alt="Crewneck hoodhouse" />
-              <div><small>hoodhouse · Crewneck</small><b>Talla M</b></div>
+              <img class="cmp-thumb" src="/assets/product-crewneck.webp" alt="Crewneck hoodhouse" />
+              <div><small>hoodhouse · Crewneck</small><b>Tamanho M</b></div>
             </div>
             <div class="cmp-sizes"><span>S</span><span class="on">M</span><span>L</span></div>
           </div>
           <div class="cmp-line"></div>
           <div class="cmp-handle" id="cmp-handle">⟷</div>
         </div>
-        <div class="cmp-hint">← Arrastra para comparar →</div>
+        <div class="cmp-hint">← Arraste para comparar →</div>
       </div>
     </div>
   </header>
 
   <!-- ===== SOCIAL PROOF ===== -->
   <section class="social reveal">
-    <span class="label">Tiendas que han usado Fittly y nos han ayudado a crecer</span>
+    <span class="label">Lojas que usaram a Fittly e nos ajudaram a crescer</span>
     <div class="social-logos">
       <span class="wm wm1">HÜG</span>
       <span class="wm wm2">Auroras</span>
@@ -595,51 +582,51 @@
       <span class="wm wm4">HOODHOUSE.</span>
     </div>
     <div class="social-stats">
-      <div class="social-stat"><b id="stat-shops">4</b><span>tiendas nos han ayudado a crecer</span></div>
+      <div class="social-stat"><b id="stat-shops">4</b><span>lojas nos ajudaram a crescer</span></div>
       <div class="social-sep"></div>
-      <div class="social-stat"><b id="stat-tryons">1.679</b><span>pruebas generadas</span></div>
+      <div class="social-stat"><b id="stat-tryons">1,679</b><span>provas geradas</span></div>
       <div class="social-sep"></div>
-      <div class="social-stat"><b id="stat-cyber">+1.000</b><span>en 3 días durante el Cyber</span></div>
+      <div class="social-stat"><b id="stat-cyber">+1,000</b><span>em 3 dias durante a Cyber Week</span></div>
     </div>
     <div class="review-card">
       <div class="stars">★★★★★</div>
-      <p class="rq">"Aplicación muy útil para ecommerce de moda, gran cantidad de clientes hacen uso de ella y mejora la tasa de conversión de la marca considerablemente."</p>
-      <div class="ra">Hood House Clothing · Chile · <a href="https://apps.shopify.com/fittly#adp-reviews" target="_blank" rel="noopener">Reseña en el App Store de Shopify</a></div>
+      <p class="rq">"Um aplicativo muito útil para e-commerce de moda, boa parte dos clientes usa e melhora consideravelmente a taxa de conversão da marca."</p>
+      <div class="ra">Hood House Clothing · Chile · <a href="https://apps.shopify.com/fittly#adp-reviews" target="_blank" rel="noopener">Avaliação na Shopify App Store</a> · traduzido do espanhol</div>
     </div>
   </section>
 
   <!-- ===== CÓMO FUNCIONA ===== -->
   <section class="steps-wrap wrap">
     <div class="steps-head reveal">
-      <span class="label">Cómo funciona</span>
-      <h2 class="h">Del producto al cuerpo<br />en segundos.</h2>
+      <span class="label">Como funciona</span>
+      <h2 class="h">Do produto ao corpo<br />em segundos.</h2>
     </div>
     <div class="steps">
-      <div class="step reveal"><div class="num">01</div><h3>Elige un modelo o sube tu foto</h3><p>8 cuerpos de referencia — slim, regular, athletic y plus-size, en hombre y mujer. O el shopper sube su propia foto y se ve a sí mismo.</p></div>
-      <div class="step reveal"><div class="num">02</div><h3>La IA viste al modelo con tu prenda</h3><p>Fittly genera un try-on realista de la prenda sobre el cuerpo elegido. Los try-ons estándar se cachean 30 días para entrega instantánea.</p></div>
-      <div class="step reveal"><div class="num">03</div><h3>Compra con la talla exacta</h3><p>La IA analiza altura, peso y preferencia de fit, y recomienda la talla correcta. Menos dudas, menos devoluciones, más conversión.</p></div>
+      <div class="step reveal"><div class="num">01</div><h3>Escolha um modelo ou envie sua foto</h3><p>8 corpos de referência: slim, regular, athletic e plus size, masculino e feminino. Ou o cliente envia a própria foto e se vê.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>A IA veste o modelo com sua peça</h3><p>A Fittly gera uma prova realista da peça no corpo escolhido. As provas padrão ficam em cache por 30 dias para entrega instantânea.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Compre no tamanho certo</h3><p>A IA analisa altura, peso e preferência de caimento e recomenda o tamanho certo. Menos dúvidas, menos devoluções, mais conversão.</p></div>
     </div>
   </section>
 
   <!-- ===== PILLAR 1: TRY-ON ===== -->
   <section id="producto" class="section pillar reveal">
     <div class="pillar-copy">
-      <span class="label">Virtual Try-On</span>
-      <h2 class="h">Cualquier prenda,<br />sobre cualquier cuerpo.</h2>
-      <p class="lead">El núcleo de Fittly. El shopper se ve la prenda puesta — en su propia foto o en uno de los 8 modelos — antes de decidir.</p>
+      <span class="label">Provador virtual</span>
+      <h2 class="h">Qualquer peça,<br />em qualquer corpo.</h2>
+      <p class="lead">O núcleo da Fittly. O cliente vê a peça vestida, na própria foto ou em um dos 8 modelos, antes de decidir.</p>
       <div class="feat-list">
-        <div class="feat"><span class="ck">✓</span><div><strong>8 modelos predefinidos</strong> — slim, regular, athletic y plus-size, hombre y mujer.</div></div>
-        <div class="feat"><span class="ck">✓</span><div><strong>Try-on con foto propia</strong> — el shopper se ve a sí mismo. Fotos eliminadas en 72 h.</div></div>
-        <div class="feat"><span class="ck">✓</span><div><strong>Modelo guardado</strong> — se reutiliza en cualquier tienda con Fittly.</div></div>
+        <div class="feat"><span class="ck">✓</span><div><strong>8 modelos predefinidos</strong>: slim, regular, athletic e plus size, masculino e feminino.</div></div>
+        <div class="feat"><span class="ck">✓</span><div><strong>Prova com foto própria</strong>: o cliente se vê. Fotos apagadas em até 72 h.</div></div>
+        <div class="feat"><span class="ck">✓</span><div><strong>Modelo salvo</strong>: reutilizado em qualquer loja com Fittly.</div></div>
       </div>
     </div>
     <div class="pillar-widget">
       <div class="pw-result">
-        <div class="tag">✦ Generado con IA</div>
-        <div class="photo"><img src="assets/modelo-hombre-atletico.webp" alt="Try-on generado" loading="lazy" /></div>
+        <div class="tag">✦ Gerado por IA</div>
+        <div class="photo"><img src="/assets/mêsdelo-hombre-atletico.webp" alt="Prova gerada" loading="lazy" /></div>
         <div class="bar">
-          <div><small>Tu tienda · Polerón Classy</small><b>Así te queda 🔥</b></div>
-          <span class="add">Agregar</span>
+          <div><small>Sua loja · Classy Hoodie</small><b>Fica assim 🔥</b></div>
+          <span class="add">Adicionar</span>
         </div>
       </div>
     </div>
@@ -649,26 +636,26 @@
   <section class="section pillar alt reveal">
     <div class="pillar-widget">
       <div class="wcard w-size">
-        <div class="top"><span class="l">SIZE RECOMMENDATION</span><span class="u">cm / kg</span></div>
+        <div class="top"><span class="l">RECOMENDAÇÃO DE TAMANHO</span><span class="u">cm / kg</span></div>
         <div class="inputs">
           <div class="f"><small>Height (cm)</small><b>181</b></div>
           <div class="f"><small>Weight (kg)</small><b>78</b></div>
         </div>
         <div class="res">
-          <div><div class="lab">YOUR SIZE</div><div class="big">L</div></div>
-          <div class="conf"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7fe3b0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>High confidence</span></div>
+          <div><div class="lab">SEU TAMANHO</div><div class="big">L</div></div>
+          <div class="conf"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7fe3b0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Alta confiança</span></div>
         </div>
-        <div class="why"><b>Why size L?</b><p>A 181 cm con fit regular, la L da el largo justo sin apretar en hombros ni pecho.</p></div>
+        <div class="why"><b>Por que tamanho L?</b><p>Com 181 cm e caimento regular, o L dá o comprimento certo sem apertar nos ombros nem no peito.</p></div>
       </div>
     </div>
     <div class="pillar-copy">
-      <span class="label">Recomendación de talla</span>
-      <h2 class="h">Talla exacta,<br />sin tablas confusas.</h2>
-      <p class="lead">La IA cruza altura, peso y fit preferido con la guía de tallas real del producto. Menos "¿me quedará?", menos devoluciones.</p>
+      <span class="label">Recomendação de tamanho</span>
+      <h2 class="h">Tamanho exato,<br />sem tabelas confusas.</h2>
+      <p class="lead">A IA cruza altura, peso e caimento preferido com a tabela de medidas real do produto. Menos "será que serve?", menos devoluções.</p>
       <div class="feat-list">
-        <div class="feat"><span class="ck">✓</span><div><strong>IA de tallas</strong> — analiza altura, peso y preferencia de fit del shopper.</div></div>
-        <div class="feat"><span class="ck">✓</span><div><strong>OCR de guías de talla</strong> — lee la tabla real de cada producto.</div></div>
-        <div class="feat"><span class="ck">✓</span><div><strong>Nivel de confianza</strong> — el shopper sabe qué tan segura es la recomendación.</div></div>
+        <div class="feat"><span class="ck">✓</span><div><strong>IA de tamanho</strong>: analisa altura, peso e preferência de caimento do cliente.</div></div>
+        <div class="feat"><span class="ck">✓</span><div><strong>OCR da tabela de medidas</strong>: lê a tabela real de cada produto.</div></div>
+        <div class="feat"><span class="ck">✓</span><div><strong>Nível de confiança</strong>: o cliente sabe o quanto a recomendação é sólida.</div></div>
       </div>
     </div>
   </section>
@@ -677,18 +664,18 @@
   <section id="idiomas" class="section pillar reveal">
     <div class="pillar-copy">
       <span class="label">Multi-idioma</span>
-      <h2 class="h">Tu tienda vende afuera.<br />El probador también.</h2>
-      <p class="lead">El widget habla el idioma de tu cliente, no el tuyo. Cinco idiomas incluidos en todos los planes, sin configurar nada.</p>
+      <h2 class="h">Sua loja vende para fora.<br />O provador também.</h2>
+      <p class="lead">O widget fala o idioma do seu cliente, não o seu. Cinco idiomas incluídos em todos os planos, sem configurar nada.</p>
       <div class="feat-list">
-        <div class="feat"><span class="ck">✓</span><div><strong>5 idiomas</strong>: español, inglés, portugués, alemán y francés.</div></div>
-        <div class="feat"><span class="ck">✓</span><div><strong>Sigue a tu tienda</strong>: toma el idioma que Shopify ya le muestra a cada visitante.</div></div>
-        <div class="feat"><span class="ck">✓</span><div><strong>Traducción completa</strong>: cada pantalla del probador y de la talla, no solo los botones.</div></div>
+        <div class="feat"><span class="ck">✓</span><div><strong>5 idiomas</strong>: espanhol, inglês, português, alemão e francês.</div></div>
+        <div class="feat"><span class="ck">✓</span><div><strong>Segue sua loja</strong>: usa o idioma que a Shopify já mostra para cada visitante.</div></div>
+        <div class="feat"><span class="ck">✓</span><div><strong>Totalmente traduzido</strong>: cada tela do provador e do tamanho, não só os botões.</div></div>
       </div>
     </div>
     <div class="pillar-widget">
       <div class="wcard" style="padding:22px;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
-          <span style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--w-gray);">MISMO BOTÓN, 5 IDIOMAS</span>
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--w-gray);">MESMO BOTÃO, 5 IDIOMAS</span>
           <span style="font-size:11px;font-weight:700;color:var(--w-gray);background:var(--w-light);border-radius:7px;padding:5px 9px;">auto</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:9px;">
@@ -720,13 +707,13 @@
   <!-- ===== CROSS-STORE ===== -->
   <section class="cross reveal">
     <div class="cross-card">
-      <span class="label">Cuenta Fittly · Cross-store</span>
-      <h2 class="h">Un modelo. Todas las tiendas.</h2>
-      <p class="lead">El shopper guarda su modelo y sus medidas una vez. En la siguiente tienda con Fittly se prueba sin volver a subir nada — y las tiendas nunca ven sus fotos ni sus try-ons: sus datos son totalmente privados. Un efecto red que crece con cada tienda.</p>
+      <span class="label">Conta Fittly · Cross-store</span>
+      <h2 class="h">Um modelo. Todas as lojas.</h2>
+      <p class="lead">O cliente salva seu modelo e medidas uma vez. Na próxima loja com Fittly ele prova sem enviar nada de novo, e as lojas nunca veem suas fotos nem suas provas: os dados ficam totalmente privados. Um efeito de rede que cresce a cada loja.</p>
       <div class="cross-stats">
-        <div class="cross-stat"><b>1 perfil</b><span>guardado para siempre</span></div>
-        <div class="cross-stat"><b>0 fricción</b><span>en la 2ª tienda</span></div>
-        <div class="cross-stat"><b>72 h</b><span>y las fotos se borran</span></div>
+        <div class="cross-stat"><b>1 perfil</b><span>salvo para sempre</span></div>
+        <div class="cross-stat"><b>0 atrito</b><span>na 2ª loja</span></div>
+        <div class="cross-stat"><b>72 h</b><span>e as fotos são apagadas</span></div>
       </div>
     </div>
   </section>
@@ -734,24 +721,24 @@
   <!-- ===== PARA TIENDAS ===== -->
   <section id="tiendas" class="tiendas">
     <div class="center-head reveal">
-      <span class="label">Para tiendas</span>
-      <h2 class="h">Instalas, y listo.</h2>
+      <span class="label">Para lojas</span>
+      <h2 class="h">Instalou, pronto.</h2>
     </div>
     <div class="cards-3">
       <div class="icard reveal">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg></div>
-        <h3>App nativa de Shopify</h3>
-        <p>Se instala desde el App Store y aparece en tu PDP sin tocar código. Compatible con cualquier tema.</p>
+        <h3>App nativo da Shopify</h3>
+        <p>Instala pela App Store e aparece na sua página de produto sem tocar em código. Funciona com qualquer tema.</p>
       </div>
       <div class="icard reveal">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
-        <h3>Panel de control</h3>
-        <p>Activa el try-on y la recomendación de talla por producto. Métricas de uso y conversión en un dashboard.</p>
+        <h3>Painel de controle</h3>
+        <p>Ative o provador e a recomendação de tamanho por produto. Métricas de uso e conversão em um dashboard.</p>
       </div>
       <div class="icard reveal">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
-        <h3>Pruebas eficientes</h3>
-        <p>Los try-ons estándar se cachean 30 días: si otro cliente prueba la misma prenda en el mismo modelo, el resultado sale de caché sin costo.</p>
+        <h3>Provas eficientes</h3>
+        <p>As provas padrão ficam em cache por 30 dias: se outro cliente provar a mesma peça no mesmo modelo, o resultado vem do cache sem custo.</p>
       </div>
     </div>
   </section>
@@ -759,81 +746,81 @@
   <!-- ===== PRECIOS ===== -->
   <section id="precios" class="precios">
     <div class="center-head reveal">
-      <span class="label">Precios</span>
-      <h2 class="h">Instalación gratuita.<br />Pagas solo lo que usan.</h2>
-      <p class="sub" style="max-width:600px;margin-left:auto;margin-right:auto;">Sin cupos que adivinar: cada plan paga por try-on usado, y el fee mensual solo baja la tarifa. El tope de gasto mensual lo defines tú.</p>
-      <div class="price-banner">🎁 <span><b>Instalación gratuita</b> · sin fee mensual · pagas por uso</span></div>
+      <span class="label">Preços</span>
+      <h2 class="h">Instalação gratuita.<br />Pague só o que usarem.</h2>
+      <p class="sub" style="max-width:600px;margin-left:auto;margin-right:auto;">Sem cotas para adivinhar: todo plano paga por prova usada, e a taxa mensal só reduz sua tarifa. Você define seu próprio limite de gasto mensal.</p>
+      <div class="price-banner">🎁 <span><b>Instalação gratuita</b> · sem taxa mensal · pague pelo uso</span></div>
     </div>
     <div class="pricing">
       <div class="pcard reveal">
         <div class="pname">Free</div>
-        <div class="amt"><span class="n">$0</span><span class="per">/mes</span></div>
-        <div class="desc">$0,35 por try-on. Sin fee mensual ni límites: pagas solo lo que usan tus clientes.</div>
+        <div class="amt"><span class="n">$0</span><span class="per">/mês</span></div>
+        <div class="desc">US$ 0,35 por prova. Sem taxa mensal e sem limites: você paga só o que seus clientes usarem.</div>
         <div class="pf">
-          <div>✓ Pago por try-on, sin fee mensual</div>
-          <div>✓ Try-on con foto propia</div>
-          <div>✓ 8 tipos de cuerpo</div>
-          <div>✓ Tú fijas tu tope de gasto mensual</div>
+          <div>✓ Pague por prova, sem taxa mensal</div>
+          <div>✓ Prova com a foto do próprio cliente</div>
+          <div>✓ 8 tipos de corpo para escolher</div>
+          <div>✓ Você define seu limite de gasto mensal</div>
         </div>
-        <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="pbtn ghost">Instalar gratis</a>
-        <div class="pextra">$0,35 por try-on</div>
+        <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="pbtn ghost">Instalar grátis</a>
+        <div class="pextra">US$ 0,35 por prova</div>
       </div>
       <div class="pcard featured reveal">
         <div class="pname">Starter</div>
-        <div class="amt"><span class="n">$9</span><span class="per">/mes</span></div>
-        <div class="desc">$0,22 por try-on, sin límites.</div>
+        <div class="amt"><span class="n">$9</span><span class="per">/mês</span></div>
+        <div class="desc">US$ 0,22 por prova, sem limites.</div>
         <div class="pf">
-          <div>✓ Todo lo de Free, a menor tarifa</div>
-          <div>✓ Talla con IA gratis, nunca se cobra</div>
-          <div>✓ Guías de talla leídas de tu catálogo</div>
-          <div>✓ Soporte por email</div>
+          <div>✓ Tudo do Free, com tarifa menor</div>
+          <div>✓ Sugestão de tamanho por IA: grátis, nunca cobrada</div>
+          <div>✓ Tabelas de medidas lidas do seu catálogo</div>
+          <div>✓ Suporte por e-mail</div>
         </div>
-        <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="pbtn solid">Empezar con Starter</a>
-        <div class="pextra">$0,22 por try-on</div>
+        <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="pbtn solid">Começar com o Starter</a>
+        <div class="pextra">US$ 0,22 por prova</div>
       </div>
       <div class="pcard reveal">
         <div class="pname">Growth</div>
-        <div class="amt"><span class="n">$19</span><span class="per">/mes</span></div>
-        <div class="desc">$0,18 por try-on, la tarifa más baja.</div>
+        <div class="amt"><span class="n">$19</span><span class="per">/mês</span></div>
+        <div class="desc">US$ 0,18 por prova, a menor tarifa.</div>
         <div class="pf">
-          <div>✓ Todo lo de Starter, tarifa mínima</div>
-          <div>✓ Mejor valor desde ~250 try-ons/mes</div>
-          <div>✓ Soporte prioritario</div>
+          <div>✓ Tudo do Starter, menor tarifa</div>
+          <div>✓ Melhor custo a partir de ~250 provas/mês</div>
+          <div>✓ Suporte prioritário</div>
         </div>
-        <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="pbtn ghost">Empezar con Growth</a>
-        <div class="pextra">$0,18 por try-on</div>
+        <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="pbtn ghost">Começar com o Growth</a>
+        <div class="pextra">US$ 0,18 por prova</div>
       </div>
     </div>
-    <p class="pricing-foot">📊 Empiezas gratis pagando por uso; cuando tu volumen crece, el fee mensual baja tu tarifa por try-on.</p>
+    <p class="pricing-foot">📊 Você começa grátis pagando pelo uso; conforme seu volume cresce, a taxa mensal reduz sua tarifa por prova.</p>
   </section>
 
   <!-- ===== FAQ ===== -->
   <section class="faq reveal">
-    <h2 class="h">Preguntas frecuentes</h2>
+    <h2 class="h">Perguntas frequentes</h2>
     <div class="faq-list">
       <details class="faq-item">
-        <summary><span class="q">¿El shopper tiene que subir una foto?</span><span class="pl">+</span></summary>
-        <div class="a">No es obligatorio. Puede elegir entre 8 modelos de referencia (slim, regular, athletic y plus-size, en hombre y mujer) o subir su propia foto para verse a sí mismo. Las fotos propias se eliminan en 72 horas.</div>
+        <summary><span class="q">O cliente precisa enviar uma foto?</span><span class="pl">+</span></summary>
+        <div class="a">Não, é opcional. Ele pode escolher entre 8 modelos de referência (slim, regular, athletic e plus size, masculino e feminino) ou enviar a própria foto para se ver. Fotos próprias são apagadas em até 72 horas.</div>
       </details>
       <details class="faq-item">
-        <summary><span class="q">¿Qué tan realista es el try-on?</span><span class="pl">+</span></summary>
-        <div class="a">La IA viste la prenda real sobre el cuerpo elegido respetando caída, largo y proporción. No es un overlay plano: es una generación que refleja cómo queda puesta.</div>
+        <summary><span class="q">Quão realista é a prova?</span><span class="pl">+</span></summary>
+        <div class="a">A IA veste a peça real no corpo escolhido, respeitando caimento, comprimento e proporção. Não é uma sobreposição plana: é uma geração que reflete como fica vestida.</div>
       </details>
       <details class="faq-item">
-        <summary><span class="q">¿Funciona con cualquier tema de Shopify?</span><span class="pl">+</span></summary>
-        <div class="a">Sí. Fittly es una app nativa de Shopify que se instala desde el App Store y aparece en tu página de producto sin tocar código, compatible con cualquier tema.</div>
+        <summary><span class="q">Funciona com qualquer tema da Shopify?</span><span class="pl">+</span></summary>
+        <div class="a">Sim. A Fittly é um app nativo da Shopify que instala pela App Store e aparece na sua página de produto sem tocar em código, compatível com qualquer tema.</div>
       </details>
       <details class="faq-item">
-        <summary><span class="q">¿Cuánto cuesta?</span><span class="pl">+</span></summary>
-        <div class="a">La instalación es gratuita y no hay fee mensual obligatorio: en el plan Free pagas $0,35 por try-on usado, con un tope de gasto mensual que tú defines. Si tu volumen crece, Starter ($9/mes) baja la tarifa a $0,22 y Growth ($19/mes) a $0,18, sin límites de try-ons. La recomendación de talla nunca se cobra por uso, y los try-ons estándar se cachean, así que los resultados repetidos se sirven sin costo extra.</div>
+        <summary><span class="q">Quanto custa?</span><span class="pl">+</span></summary>
+        <div class="a">A instalação é gratuita e não há taxa mensal obrigatória: no plano Free você paga US$ 0,35 por prova usada, com um limite de gasto que você define. Conforme seu volume cresce, o Starter (US$ 9/mês) reduz a tarifa para US$ 0,22 e o Growth (US$ 19/mês) para US$ 0,18, sem limite de provas. A recomendação de tamanho nunca é cobrada, e as provas padrão ficam em cache, então resultados repetidos são entregues sem custo extra.</div>
       </details>
       <details class="faq-item">
-        <summary><span class="q">¿En qué idiomas está el probador?</span><span class="pl">+</span></summary>
-        <div class="a">El widget está en español, inglés, portugués, alemán y francés, incluido en todos los planes. Toma automáticamente el idioma que tu tienda Shopify le muestra a cada visitante, así que un cliente en Alemania ve el probador en alemán sin que configures nada.</div>
+        <summary><span class="q">Em quais idiomas está o provador?</span><span class="pl">+</span></summary>
+        <div class="a">O widget está em espanhol, inglês, português, alemão e francês, incluído em todos os planos. Ele segue automaticamente o idioma que sua loja Shopify mostra a cada visitante, então um cliente na Alemanha vê o provador em alemão sem você configurar nada.</div>
       </details>
       <details class="faq-item">
-        <summary><span class="q">¿Qué pasa con la privacidad de los datos?</span><span class="pl">+</span></summary>
-        <div class="a">Las fotos del shopper se borran automáticamente a las 72 horas y nunca se comparten con la tienda. La cuenta cross-store guarda solo el modelo y las medidas que el usuario decide guardar, y puede exportarlos o borrarlos cuando quiera.</div>
+        <summary><span class="q">E a privacidade dos dados?</span><span class="pl">+</span></summary>
+        <div class="a">As fotos dos clientes são apagadas automaticamente após 72 horas e nunca são compartilhadas com a loja. A conta cross-store guarda apenas o modelo e as medidas que o usuário decide salvar, e ele pode exportá-los ou apagá-los quando quiser.</div>
       </details>
     </div>
   </section>
@@ -841,28 +828,28 @@
   <!-- ===== CTA FINAL ===== -->
   <section id="instalar" class="waitlist">
     <div class="waitlist-card reveal">
-      <h2 class="h">Pruébalo en tu tienda hoy.</h2>
-      <p class="lead">Instala Fittly desde la Shopify App Store y haz tu primer try-on en minutos. Instalación gratuita, sin fee mensual.</p>
-      <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="btn btn-primary">Instalar en Shopify →</a>
+      <h2 class="h">Experimente hoje na sua loja.</h2>
+      <p class="lead">Instale a Fittly pela Shopify App Store e faça sua primeira prova em minutos. Instalação gratuita, sem taxa mensal.</p>
+      <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="btn btn-primary">Instalar no Shopify →</a>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-inner">
-      <a href="#" class="brand"><img src="assets/fittly-icon.png" alt="Fittly" style="width:26px;height:26px;" /><span style="font-size:18px;">fittly</span></a>
+      <a href="#" class="brand"><img src="/assets/fittly-icon.png" alt="Fittly" style="width:26px;height:26px;" /><span style="font-size:18px;">fittly</span></a>
       <div class="footer-links">
-        <a href="#producto">Producto</a>
+        <a href="#producto">Produto</a>
         <a href="#idiomas">Idiomas</a>
-        <a href="#tiendas">Para tiendas</a>
-        <a href="#precios">Precios</a>
+        <a href="#tiendas">Para lojas</a>
+        <a href="#precios">Preços</a>
         <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Instalar</a>
         <a href="/partners">Partners</a>
-        <a href="/probador-virtual-shopify">Probador virtual</a>
-        <a href="/recomendacion-de-tallas-shopify">Tallas para Shopify</a>
-        <a href="/comparativa-apps-probador-virtual-shopify">Comparativa 2026</a>
+        <a href="/probador-virtual-shopify">Guia do provador (ES)</a>
+        <a href="/recomendacion-de-tallas-shopify">Guia de tamanhos (ES)</a>
+        <a href="/comparativa-apps-probador-virtual-shopify">Comparativo 2026 (ES)</a>
       </div>
-      <div class="footer-meta">© 2026 Fittly · Hecho para Shopify</div>
+      <div class="footer-meta">© 2026 Fittly · Feito para Shopify</div>
     </div>
   </footer>
 
@@ -915,7 +902,7 @@
     }
 
     // ===== Stats reales (social proof) =====
-    const fmt = (n) => Math.round(n).toLocaleString("es-ES");
+    const fmt = (n) => Math.round(n).toLocaleString("en-US");
     const TRYONS_FALLBACK = 1679, PILOT_SHOPS = 4, CYBER_PEAK = 1000;
 
     function countUp(el, target, dur, prefix = "") {
