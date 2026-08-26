@@ -227,7 +227,9 @@ const D = {
     ["📊 Du startest kostenlos und zahlst nach Nutzung; wächst dein Volumen, senkt die Monatsgebühr deinen Tarif pro Anprobe.",
      "📊 Vous commencez gratuitement en payant à l'usage ; quand votre volume grandit, l'abonnement mensuel baisse votre tarif par essayage.",
      "📊 Você começa grátis pagando pelo uso; conforme seu volume cresce, a taxa mensal reduz sua tarifa por prova."],
-  "/mo": ["/Mon.", "/mois", "/mês"],
+  // OJO: la clave lleva las etiquetas a propósito. Como "/mo" suelto, el
+  // reemplazo global mordía dentro de /assets/modelo-hombre.webp.
+  ">/mo<": [">/Mon.<", ">/mois<", ">/mês<"],
 
   // FAQ
   "Frequently asked questions": ["Häufige Fragen", "Questions fréquentes", "Perguntas frequentes"],
