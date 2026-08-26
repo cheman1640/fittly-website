@@ -51,10 +51,10 @@ const D = {
   "AI virtual try-on · Shopify app": ["KI-Anprobe · Shopify-App", "Essayage virtuel IA · app Shopify", "Provador virtual com IA · app Shopify"],
   "Let them try it on": ["Lass sie es anprobieren", "Laissez-les l'essayer", "Deixe provarem"],
   "before they buy it.": ["bevor sie kaufen.", "avant de l'acheter.", "antes de comprar."],
-  "Realistic try-on, exact sizing and a widget in 5 languages, right on your product page. Fewer doubts, fewer returns, more carts.":
-    ["Realistische Anprobe, genaue Größe und ein Widget in 5 Sprachen, direkt auf deiner Produktseite. Weniger Zweifel, weniger Retouren, mehr Warenkörbe.",
-     "Essayage réaliste, taille exacte et un widget en 5 langues, directement sur votre fiche produit. Moins de doutes, moins de retours, plus de paniers.",
-     "Provador realista, tamanho exato e um widget em 5 idiomas, direto na sua página de produto. Menos dúvidas, menos devoluções, mais carrinhos."],
+  "Realistic try-on and exact sizing from each garment's real measurements, right on your product page. Fewer doubts, fewer returns, more carts.":
+    ["Realistische Anprobe und genaue Größe nach den echten Maßen jedes Kleidungsstücks, direkt auf deiner Produktseite. Weniger Zweifel, weniger Retouren, mehr Warenkörbe.",
+     "Essayage réaliste et taille exacte selon les vraies mesures de chaque vêtement, directement sur votre fiche produit. Moins de doutes, moins de retours, plus de paniers.",
+     "Provador realista e tamanho exato com as medidas reais de cada peça, direto na sua página de produto. Menos dúvidas, menos devoluções, mais carrinhos."],
   "See how it works →": ["So funktioniert es →", "Voir comment ça marche →", "Veja como funciona →"],
   "Free to install:": ["Kostenlos installieren:", "Installation gratuite :", "Instalação gratuita:"],
   "no monthly fee": ["keine Monatsgebühr", "sans frais mensuels", "sem taxa mensal"],
@@ -142,21 +142,34 @@ const D = {
      "À 181 cm avec une coupe regular, le L donne la bonne longueur sans tirer aux épaules ni à la poitrine.",
      "Com 181 cm e caimento regular, o L dá o comprimento certo sem apertar nos ombros nem no peito."],
 
-  // pilar 3 idiomas
-  "Multi-language": ["Mehrsprachig", "Multilingue", "Multi-idioma"],
-  "Your store sells abroad.": ["Dein Shop verkauft ins Ausland.", "Votre boutique vend à l'étranger.", "Sua loja vende para fora."],
-  "So does the try-on.": ["Die Anprobe auch.", "L'essayage aussi.", "O provador também."],
-  "The widget speaks your customer's language, not yours. Five languages included in every plan, nothing to configure.":
-    ["Das Widget spricht die Sprache deines Kunden, nicht deine. Fünf Sprachen in jedem Plan enthalten, nichts zu konfigurieren.",
-     "Le widget parle la langue de votre client, pas la vôtre. Cinq langues incluses dans tous les plans, rien à configurer.",
-     "O widget fala o idioma do seu cliente, não o seu. Cinco idiomas incluídos em todos os planos, sem configurar nada."],
-  "5 languages": ["5 Sprachen", "5 langues", "5 idiomas"],
-  ": Spanish, English, Portuguese, German and French.": [": Spanisch, Englisch, Portugiesisch, Deutsch und Französisch.", " : espagnol, anglais, portugais, allemand et français.", ": espanhol, inglês, português, alemão e francês."],
-  "Follows your store": ["Folgt deinem Shop", "Suit votre boutique", "Segue sua loja"],
-  ": it uses the language Shopify already shows each visitor.": [": es nutzt die Sprache, die Shopify jedem Besucher bereits zeigt.", " : il utilise la langue que Shopify montre déjà à chaque visiteur.", ": usa o idioma que a Shopify já mostra para cada visitante."],
-  "Fully translated": ["Vollständig übersetzt", "Entièrement traduit", "Totalmente traduzido"],
-  ": every screen of the try-on and the sizing, not just the buttons.": [": jeder Bildschirm der Anprobe und der Größenempfehlung, nicht nur die Buttons.", " : chaque écran de l'essayage et de la taille, pas seulement les boutons.", ": cada tela do provador e do tamanho, não só os botões."],
-  "SAME BUTTON, 5 LANGUAGES": ["DERSELBE BUTTON, 5 SPRACHEN", "MÊME BOUTON, 5 LANGUES", "MESMO BOTÃO, 5 IDIOMAS"],
+  // pilar 3: instalación
+  "Zero setup": ["Keine Einrichtung", "Zéro configuration", "Zero configuração"],
+  "One step from you.": ["Ein Schritt von dir.", "Une étape de votre part.", "Um passo seu."],
+  "Fittly does the rest.": ["Den Rest macht Fittly.", "Fittly fait le reste.", "O resto a Fittly faz."],
+  "No uploading size charts, no picking photos, no touching your theme. You enable the app in the theme editor, hit save, and Fittly handles the rest by reading your own catalog.":
+    ["Keine Größentabellen hochladen, keine Fotos auswählen, kein Theme anfassen. Du aktivierst die App im Theme-Editor, speicherst, und Fittly erledigt den Rest, indem es deinen eigenen Katalog liest.",
+     "Aucun guide des tailles à envoyer, aucune photo à choisir, aucun thème à toucher. Vous activez l'app dans l'éditeur de thème, vous enregistrez, et Fittly fait le reste en lisant votre propre catalogue.",
+     "Sem subir tabelas de medidas, sem escolher fotos, sem mexer no tema. Você ativa o app no editor de temas, salva, e a Fittly faz o resto lendo o seu próprio catálogo."],
+  "A single step": ["Ein einziger Schritt", "Une seule étape", "Um único passo"],
+  ": enable the app embed and save. No code, no developer.": [": App-Embed aktivieren und speichern. Kein Code, kein Entwickler.", " : activez l'app embed et enregistrez. Sans code, sans développeur.", ": ativar o app embed e salvar. Sem código, sem desenvolvedor."],
+  "Reads your size charts": ["Liest deine Größentabellen", "Lit vos guides des tailles", "Lê suas tabelas de medidas"],
+  ": it finds them in your product photos and activates them on its own, so you never re-upload anything.":
+    [": es findet sie in deinen Produktfotos und aktiviert sie von selbst, du lädst nie wieder etwas hoch.",
+     " : il les trouve dans vos photos produit et les active tout seul, vous ne renvoyez jamais rien.",
+     ": encontra nas suas fotos de produto e ativa sozinha, você nunca sobe nada de novo."],
+  "Picks the best photo": ["Wählt das beste Foto", "Choisit la meilleure photo", "Escolhe a melhor foto"],
+  ": it reviews each product's images and keeps the one that works for the try-on.":
+    [": es prüft die Bilder jedes Produkts und behält das, was für die Anprobe funktioniert.",
+     " : il examine les images de chaque produit et garde celle qui fonctionne pour l'essayage.",
+     ": revisa as imagens de cada produto e fica com a que serve para a prova."],
+  "YOUR PART": ["DEIN TEIL", "VOTRE PART", "SUA PARTE"],
+  "1 step": ["1 Schritt", "1 étape", "1 passo"],
+  "Enable the app embed and save": ["App-Embed aktivieren und speichern", "Activez l'app embed et enregistrez", "Ativar o app embed e salvar"],
+  "FITTLY'S PART (automatic)": ["FITTLYS TEIL (automatisch)", "LA PART DE FITTLY (automatique)", "A PARTE DA FITTLY (automática)"],
+  "Scans your whole catalog": ["Scannt deinen ganzen Katalog", "Analyse tout votre catalogue", "Escaneia todo o seu catálogo"],
+  "Finds and activates your size charts": ["Findet und aktiviert deine Größentabellen", "Trouve et active vos guides des tailles", "Encontra e ativa suas tabelas de medidas"],
+  "Picks the best photo of each product": ["Wählt das beste Foto jedes Produkts", "Choisit la meilleure photo de chaque produit", "Escolhe a melhor foto de cada produto"],
+  "Sizes with each garment's real measurements": ["Größe nach den echten Maßen jedes Kleidungsstücks", "Taille selon les vraies mesures de chaque vêtement", "Tamanho com as medidas reais de cada peça"],
 
   // cross-store
   "Fittly account · Cross-store": ["Fittly-Konto · Shop-übergreifend", "Compte Fittly · Multi-boutique", "Conta Fittly · Cross-store"],
@@ -272,7 +285,7 @@ const D = {
      "Instale a Fittly pela Shopify App Store e faça sua primeira prova em minutos. Instalação gratuita, sem taxa mensal."],
   "Install on Shopify →": ["Auf Shopify installieren →", "Installer sur Shopify →", "Instalar no Shopify →"],
   "Product": ["Produkt", "Produit", "Produto"],
-  "Languages": ["Sprachen", "Langues", "Idiomas"],
+  ">Setup<": [">Einrichtung<", ">Installation<", ">Instalação<"],
   "Install</a>": ["Installieren</a>", "Installer</a>", "Instalar</a>"],
   "Virtual try-on guide (ES)": ["Anprobe-Guide (ES)", "Guide de l'essayage (ES)", "Guia do provador (ES)"],
   "Size guide (ES)": ["Größen-Guide (ES)", "Guide des tailles (ES)", "Guia de tamanhos (ES)"],
