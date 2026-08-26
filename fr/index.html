@@ -712,7 +712,7 @@
         <div class="vid-play"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="#0a0a0b"><path d="M8 5v14l11-7z"/></svg></span></div>
         <div class="vid-badge">▶ Comment l'installer · 36 s</div>
       </div>
-      <p class="vid-note">La vidéo ne se charge depuis YouTube que lorsque vous appuyez sur lecture.</p>
+      <p class="vid-note">Narré en anglais, avec sous-titres. Ne se charge depuis YouTube que lorsque vous appuyez sur lecture.</p>
     </div>
   </section>
 
@@ -891,7 +891,8 @@
         if (vidFrame.dataset.on) return;
         vidFrame.dataset.on = "1";
         var f = document.createElement("iframe");
-        f.src = "https://www.youtube-nocookie.com/embed/fx1G4DqC1mE?autoplay=1&rel=0&playsinline=1&modestbranding=1";
+        var hl = document.documentElement.lang || "en";
+        f.src = "https://www.youtube-nocookie.com/embed/fx1G4DqC1mE?autoplay=1&rel=0&playsinline=1&modestbranding=1&cc_load_policy=1&cc_lang_pref=" + hl + "&hl=" + hl;
         f.title = vidFrame.dataset.title || "Fittly";
         f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
         f.allowFullscreen = true;

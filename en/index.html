@@ -891,7 +891,8 @@
         if (vidFrame.dataset.on) return;
         vidFrame.dataset.on = "1";
         var f = document.createElement("iframe");
-        f.src = "https://www.youtube-nocookie.com/embed/fx1G4DqC1mE?autoplay=1&rel=0&playsinline=1&modestbranding=1";
+        var hl = document.documentElement.lang || "en";
+        f.src = "https://www.youtube-nocookie.com/embed/fx1G4DqC1mE?autoplay=1&rel=0&playsinline=1&modestbranding=1&cc_load_policy=1&cc_lang_pref=" + hl + "&hl=" + hl;
         f.title = vidFrame.dataset.title || "Fittly";
         f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
         f.allowFullscreen = true;

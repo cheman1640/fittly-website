@@ -166,7 +166,10 @@ const D = {
   "Video: how to install Fittly on a Shopify store": ["Video: So installierst du Fittly in einem Shopify-Shop", "Vidéo : comment installer Fittly sur une boutique Shopify", "Vídeo: como instalar a Fittly em uma loja Shopify"],
   "Play the installation video": ["Installationsvideo abspielen", "Lire la vidéo d'installation", "Reproduzir o vídeo de instalação"],
   "▶ How to install · 36 s": ["▶ So wird installiert · 36 s", "▶ Comment l'installer · 36 s", "▶ Como instalar · 36 s"],
-  "The video loads from YouTube only when you hit play.": ["Das Video wird erst von YouTube geladen, wenn du auf Play drückst.", "La vidéo ne se charge depuis YouTube que lorsque vous appuyez sur lecture.", "O vídeo só carrega do YouTube quando você dá play."],
+  "The video loads from YouTube only when you hit play.":
+    ["Auf Englisch gesprochen, mit Untertiteln. Wird erst von YouTube geladen, wenn du auf Play drückst.",
+     "Narré en anglais, avec sous-titres. Ne se charge depuis YouTube que lorsque vous appuyez sur lecture.",
+     "Narrado em inglês, com legendas. Só carrega do YouTube quando você dá play."],
 
   // cross-store
   "Fittly account · Cross-store": ["Fittly-Konto · Shop-übergreifend", "Compte Fittly · Multi-boutique", "Conta Fittly · Cross-store"],
