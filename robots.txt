@@ -1,4 +1,41 @@
 User-agent: *
 Allow: /
 
+# Rastreadores de asistentes de IA: permitidos a propósito.
+# Que puedan leer el sitio es lo que hace posible que citen o recomienden
+# Fittly cuando alguien les pregunta por apps de probador virtual o por
+# cómo armar una curva de tallas.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://www.fittlyapp.com/sitemap.xml
