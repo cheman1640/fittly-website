@@ -392,6 +392,23 @@
     .langsel-menu a:hover { color: #fff; background: rgba(255,255,255,0.06); }
     .langsel-menu a.on { color: #fff; background: rgba(255,255,255,0.09); }
 
+
+    /* ---------- Video con fachada (YouTube solo al hacer click) ---------- */
+    .vid { max-width: 1180px; margin: 0 auto; padding: 10px 28px 90px; }
+    .vid-head { text-align: center; margin-bottom: 26px; }
+    .vid-head h2 { font-size: clamp(28px, 4.2vw, 44px); }
+    .vid-head p { max-width: 540px; margin: 14px auto 0; font-size: 16px; color: var(--muted); font-weight: 500; line-height: 1.55; }
+    .vid-frame { position: relative; max-width: 900px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-2); box-shadow: 0 30px 80px rgba(0,0,0,0.5); background: #000; cursor: pointer; }
+    .vid-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease, opacity 0.3s; }
+    .vid-frame:hover img { transform: scale(1.02); opacity: 0.85; }
+    .vid-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+    .vid-play span { width: 74px; height: 74px; border-radius: 50%; background: rgba(255,255,255,0.95); display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 34px rgba(0,0,0,0.45); transition: transform 0.2s ease; }
+    .vid-frame:hover .vid-play span { transform: scale(1.08); }
+    .vid-play svg { margin-left: 4px; }
+    .vid-badge { position: absolute; left: 16px; bottom: 14px; background: rgba(10,10,11,0.8); backdrop-filter: blur(8px); color: #fff; font-size: 12px; font-weight: 700; padding: 7px 13px; border-radius: 20px; pointer-events: none; }
+    .vid-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .vid-note { text-align: center; font-size: 12.5px; color: var(--faint-2); font-weight: 600; margin-top: 14px; }
+
     /* ---------- Responsive ---------- */
     @media (max-width: 900px) {
       .xhero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -739,6 +756,21 @@
     </div>
   </section>
 
+  <!-- ===== VIDEO: instalación real ===== -->
+  <section class="vid reveal">
+    <div class="vid-head">
+      <span class="label">Instalación real</span>
+      <h2 class="h">Míralo instalarse, sin cortes.</h2>
+      <p>El proceso completo en la tienda de demostración: instalar desde el App Store, activar el embed, guardar, y Fittly leyendo las guías de talla del catálogo por su cuenta.</p>
+    </div>
+    <div class="vid-frame" id="vid-frame" data-title="Video: instalación completa de Fittly en una tienda Shopify" role="button" tabindex="0" aria-label="Reproducir el video de instalación">
+      <img src="/assets/video-instalacion-poster.jpg" alt="Video: instalación completa de Fittly en una tienda Shopify" loading="lazy" width="1280" height="720" />
+      <div class="vid-play"><span><svg width="26" height="26" viewBox="0 0 24 24" fill="#0a0a0b"><path d="M8 5v14l11-7z"/></svg></span></div>
+      <div class="vid-badge">36 segundos · sin cortes</div>
+    </div>
+    <p class="vid-note">El video se carga desde YouTube recién cuando le das play. Hasta entonces esta página no le pide nada a Google.</p>
+  </section>
+
   <!-- ===== CROSS-STORE ===== -->
   <section class="cross reveal">
     <div class="cross-card">
@@ -905,6 +937,24 @@
       if (e.target.closest(".langsel-btn")) sel.classList.toggle("open");
       else if (!e.target.closest(".langsel-menu")) sel.classList.remove("open");
     });
+
+
+    // ===== Video: la fachada carga YouTube recien al hacer click =====
+    var vidFrame = document.getElementById("vid-frame");
+    if (vidFrame) {
+      vidFrame.addEventListener("click", function () {
+        if (vidFrame.dataset.on) return;
+        vidFrame.dataset.on = "1";
+        var f = document.createElement("iframe");
+        f.src = "https://www.youtube-nocookie.com/embed/fx1G4DqC1mE?autoplay=1&rel=0&playsinline=1&modestbranding=1";
+        f.title = vidFrame.dataset.title || "Fittly";
+        f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
+        f.allowFullscreen = true;
+        vidFrame.innerHTML = "";
+        vidFrame.appendChild(f);
+        vidFrame.style.cursor = "default";
+      });
+    }
 
     // ===== Reveal =====
     const io = new IntersectionObserver((es) => {
