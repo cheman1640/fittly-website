@@ -381,11 +381,7 @@
 
 
     /* ---------- Video con fachada (YouTube solo al hacer click) ---------- */
-    .vid { max-width: 1180px; margin: 0 auto; padding: 10px 28px 90px; }
-    .vid-head { text-align: center; margin-bottom: 26px; }
-    .vid-head h2 { font-size: clamp(28px, 4.2vw, 44px); }
-    .vid-head p { max-width: 540px; margin: 14px auto 0; font-size: 16px; color: var(--muted); font-weight: 500; line-height: 1.55; }
-    .vid-frame { position: relative; max-width: 900px; margin: 0 auto; aspect-ratio: 16/9; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-2); box-shadow: 0 30px 80px rgba(0,0,0,0.5); background: #000; cursor: pointer; }
+    .vid-frame { position: relative; aspect-ratio: 16/9; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-2); box-shadow: 0 30px 80px rgba(0,0,0,0.5); background: #000; cursor: pointer; }
     .vid-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease, opacity 0.3s; }
     .vid-frame:hover img { transform: scale(1.02); opacity: 0.85; }
     .vid-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
@@ -394,7 +390,7 @@
     .vid-play svg { margin-left: 4px; }
     .vid-badge { position: absolute; left: 16px; bottom: 14px; background: rgba(10,10,11,0.8); backdrop-filter: blur(8px); color: #fff; font-size: 12px; font-weight: 700; padding: 7px 13px; border-radius: 20px; pointer-events: none; }
     .vid-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
-    .vid-note { text-align: center; font-size: 12.5px; color: var(--faint-2); font-weight: 600; margin-top: 14px; }
+    .vid-note { text-align: center; margin-top: 12px; font-size: 12.5px; color: var(--faint-2); font-weight: 600; margin-top: 14px; }
 
     /* ---------- Responsive ---------- */
     @media (max-width: 900px) {
@@ -711,51 +707,13 @@
       </div>
     </div>
     <div class="pillar-widget">
-      <div class="wcard" style="padding:22px;">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px;">
-          <span style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--w-gray);">VOTRE PART</span>
-          <span style="font-size:11px;font-weight:800;color:#fff;background:var(--w-navy);border-radius:7px;padding:5px 10px;">1 étape</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:11px;border:1.5px solid var(--w-navy);border-radius:12px;padding:13px;margin-bottom:20px;">
-          <span style="width:24px;height:24px;border-radius:50%;background:var(--w-navy);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none;">1</span>
-          <b style="font-size:13.5px;font-weight:700;color:var(--w-navy);">Activez l'app embed et enregistrez</b>
-        </div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--w-gray);margin-bottom:11px;">LA PART DE FITTLY (automatique)</div>
-        <div style="display:flex;flex-direction:column;gap:9px;">
-          <div style="display:flex;align-items:center;gap:10px;">
-            <span style="color:#3aa775;font-weight:800;font-size:13px;flex:none;">✓</span>
-            <span style="font-size:13px;font-weight:600;color:var(--w-navy);">Analyse tout votre catalogue</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:10px;">
-            <span style="color:#3aa775;font-weight:800;font-size:13px;flex:none;">✓</span>
-            <span style="font-size:13px;font-weight:600;color:var(--w-navy);">Trouve et active vos guides des tailles</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:10px;">
-            <span style="color:#3aa775;font-weight:800;font-size:13px;flex:none;">✓</span>
-            <span style="font-size:13px;font-weight:600;color:var(--w-navy);">Choisit la meilleure photo de chaque produit</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:10px;">
-            <span style="color:#3aa775;font-weight:800;font-size:13px;flex:none;">✓</span>
-            <span style="font-size:13px;font-weight:600;color:var(--w-navy);">Taille selon les vraies mesures de chaque vêtement</span>
-          </div>
-        </div>
+      <div class="vid-frame" id="vid-frame" data-title="Vidéo : comment installer Fittly sur une boutique Shopify" role="button" tabindex="0" aria-label="Lire la vidéo d'installation">
+        <img src="/assets/video-instalacion-poster.jpg" alt="Vidéo : comment installer Fittly sur une boutique Shopify" loading="lazy" width="1280" height="720" />
+        <div class="vid-play"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="#0a0a0b"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <div class="vid-badge">▶ Comment l'installer · 36 s</div>
       </div>
+      <p class="vid-note">La vidéo ne se charge depuis YouTube que lorsque vous appuyez sur lecture.</p>
     </div>
-  </section>
-
-  <!-- ===== VIDEO: instalación real ===== -->
-  <section class="vid reveal">
-    <div class="vid-head">
-      <span class="label">Installation réelle</span>
-      <h2 class="h">Regardez l'installation, sans coupe.</h2>
-      <p>Le processus complet sur la boutique de démo : installer depuis l'App Store, activer l'embed, enregistrer, et Fittly lit les guides des tailles du catalogue tout seul.</p>
-    </div>
-    <div class="vid-frame" id="vid-frame" data-title="Vidéo : installation complète de Fittly sur une boutique Shopify" role="button" tabindex="0" aria-label="Lire la vidéo d'installation">
-      <img src="/assets/video-instalacion-poster.jpg" alt="Vidéo : installation complète de Fittly sur une boutique Shopify" loading="lazy" width="1280" height="720" />
-      <div class="vid-play"><span><svg width="26" height="26" viewBox="0 0 24 24" fill="#0a0a0b"><path d="M8 5v14l11-7z"/></svg></span></div>
-      <div class="vid-badge">36 secondes · sans coupe</div>
-    </div>
-    <p class="vid-note">La vidéo ne se charge depuis YouTube que lorsque vous appuyez sur lecture. Jusque-là, cette page ne demande rien à Google.</p>
   </section>
 
   <!-- ===== CROSS-STORE ===== -->

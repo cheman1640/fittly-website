@@ -162,29 +162,11 @@ const D = {
     [": es prüft die Bilder jedes Produkts und behält das, was für die Anprobe funktioniert.",
      " : il examine les images de chaque produit et garde celle qui fonctionne pour l'essayage.",
      ": revisa as imagens de cada produto e fica com a que serve para a prova."],
-  "YOUR PART": ["DEIN TEIL", "VOTRE PART", "SUA PARTE"],
-  "1 step": ["1 Schritt", "1 étape", "1 passo"],
-  "Enable the app embed and save": ["App-Embed aktivieren und speichern", "Activez l'app embed et enregistrez", "Ativar o app embed e salvar"],
-  "FITTLY'S PART (automatic)": ["FITTLYS TEIL (automatisch)", "LA PART DE FITTLY (automatique)", "A PARTE DA FITTLY (automática)"],
-  "Scans your whole catalog": ["Scannt deinen ganzen Katalog", "Analyse tout votre catalogue", "Escaneia todo o seu catálogo"],
-  "Finds and activates your size charts": ["Findet und aktiviert deine Größentabellen", "Trouve et active vos guides des tailles", "Encontra e ativa suas tabelas de medidas"],
-  "Picks the best photo of each product": ["Wählt das beste Foto jedes Produkts", "Choisit la meilleure photo de chaque produit", "Escolhe a melhor foto de cada produto"],
-  "Sizes with each garment's real measurements": ["Größe nach den echten Maßen jedes Kleidungsstücks", "Taille selon les vraies mesures de chaque vêtement", "Tamanho com as medidas reais de cada peça"],
-
-  // sección de video
-  "Real install": ["Echte Installation", "Installation réelle", "Instalação real"],
-  "Watch it install, uncut.": ["Sieh die Installation, ungeschnitten.", "Regardez l'installation, sans coupe.", "Veja a instalação, sem cortes."],
-  "The whole process on the demo store: install from the App Store, turn the embed on, save, and Fittly reading the catalog's size guides on its own.":
-    ["Der komplette Ablauf im Demo-Shop: aus dem App Store installieren, das Embed einschalten, speichern, und Fittly liest die Größentabellen des Katalogs von selbst.",
-     "Le processus complet sur la boutique de démo : installer depuis l'App Store, activer l'embed, enregistrer, et Fittly lit les guides des tailles du catalogue tout seul.",
-     "O processo completo na loja de demonstração: instalar pela App Store, ativar o embed, salvar, e a Fittly lendo as tabelas de medidas do catálogo sozinha."],
-  "36 seconds · uncut": ["36 Sekunden · ungeschnitten", "36 secondes · sans coupe", "36 segundos · sem cortes"],
-  "Video: full Fittly installation on a Shopify store": ["Video: komplette Fittly-Installation in einem Shopify-Shop", "Vidéo : installation complète de Fittly sur une boutique Shopify", "Vídeo: instalação completa da Fittly em uma loja Shopify"],
+  // video dentro del pilar de instalación
+  "Video: how to install Fittly on a Shopify store": ["Video: So installierst du Fittly in einem Shopify-Shop", "Vidéo : comment installer Fittly sur une boutique Shopify", "Vídeo: como instalar a Fittly em uma loja Shopify"],
   "Play the installation video": ["Installationsvideo abspielen", "Lire la vidéo d'installation", "Reproduzir o vídeo de instalação"],
-  "The video loads from YouTube only when you hit play. Until then this page asks Google for nothing.":
-    ["Das Video wird erst von YouTube geladen, wenn du auf Play drückst. Bis dahin fragt diese Seite nichts bei Google an.",
-     "La vidéo ne se charge depuis YouTube que lorsque vous appuyez sur lecture. Jusque-là, cette page ne demande rien à Google.",
-     "O vídeo só carrega do YouTube quando você dá play. Até lá esta página não pede nada ao Google."],
+  "▶ How to install · 36 s": ["▶ So wird installiert · 36 s", "▶ Comment l'installer · 36 s", "▶ Como instalar · 36 s"],
+  "The video loads from YouTube only when you hit play.": ["Das Video wird erst von YouTube geladen, wenn du auf Play drückst.", "La vidéo ne se charge depuis YouTube que lorsque vous appuyez sur lecture.", "O vídeo só carrega do YouTube quando você dá play."],
 
   // cross-store
   "Fittly account · Cross-store": ["Fittly-Konto · Shop-übergreifend", "Compte Fittly · Multi-boutique", "Conta Fittly · Cross-store"],
