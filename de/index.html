@@ -367,6 +367,18 @@
     .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22,1,0.36,1); }
     .reveal.visible { opacity: 1; transform: none; }
 
+
+    /* ---------- Selector de idioma ---------- */
+    .langsel { position: relative; }
+    .langsel-btn { display: flex; align-items: center; gap: 5px; cursor: pointer; font-family: inherit; font-size: 13.5px; font-weight: 600; color: var(--text-3); background: transparent; border: none; padding: 6px 2px; transition: color 0.2s; }
+    .langsel-btn:hover { color: #fff; }
+    .langsel-btn .chev { font-size: 10px; color: var(--faint-2); }
+    .langsel-menu { display: none; position: absolute; top: calc(100% + 10px); right: 0; background: var(--surface-2); border: 1px solid var(--border-2); border-radius: 14px; padding: 6px; min-width: 152px; box-shadow: 0 18px 44px rgba(0,0,0,0.55); z-index: 60; }
+    .langsel.open .langsel-menu { display: block; }
+    .langsel-menu a { display: block; font-size: 13.5px; font-weight: 600; color: var(--muted); padding: 9px 12px; border-radius: 9px; white-space: nowrap; }
+    .langsel-menu a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+    .langsel-menu a.on { color: #fff; background: rgba(255,255,255,0.09); }
+
     /* ---------- Responsive ---------- */
     @media (max-width: 900px) {
       .xhero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -524,7 +536,16 @@
         <a href="#idiomas">Sprachen</a>
         <a href="#tiendas">Für Shops</a>
         <a href="#precios">Preise</a>
-        <a href="/" onclick="try{localStorage.setItem('fittly-lang','es')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">ES</a><span style="color:var(--faint-2);font-size:11px">·</span><span style="font-size:13px;font-weight:800;color:#fff">EN</span><span style="color:var(--faint-2);font-size:11px">·</span><a href="/de" onclick="try{localStorage.setItem('fittly-lang','de')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">DE</a><span style="color:var(--faint-2);font-size:11px">·</span><a href="/fr" onclick="try{localStorage.setItem('fittly-lang','fr')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">FR</a><span style="color:var(--faint-2);font-size:11px">·</span><a href="/pt" onclick="try{localStorage.setItem('fittly-lang','pt')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">PT</a>
+        <div class="langsel">
+          <button type="button" class="langsel-btn" aria-label="Cambiar idioma">🌐 DE <span class="chev">▾</span></button>
+          <div class="langsel-menu">
+          <a href="/" onclick="try{localStorage.setItem('fittly-lang','es')}catch(e){}">Español</a>
+          <a href="/en" onclick="try{localStorage.setItem('fittly-lang','en')}catch(e){}">English</a>
+          <a href="/de" class="on" onclick="try{localStorage.setItem('fittly-lang','de')}catch(e){}">Deutsch</a>
+          <a href="/fr" onclick="try{localStorage.setItem('fittly-lang','fr')}catch(e){}">Français</a>
+          <a href="/pt" onclick="try{localStorage.setItem('fittly-lang','pt')}catch(e){}">Português</a>
+          </div>
+        </div>
         <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="nav-cta">Auf Shopify installieren</a>
       </div>
     </div>
@@ -861,6 +882,15 @@
       "https://oaotoxzrftwrstcvevjs.supabase.co",
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9hb3RveHpyZnR3cnN0Y3ZldmpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3Mjk1ODcsImV4cCI6MjA5MDMwNTU4N30.N83UswzOHIx8D4fuhUO8fHOnlopxki3UKRnl6_6NYcU"
     );
+
+
+    // ===== Selector de idioma =====
+    document.addEventListener("click", function (e) {
+      var sel = document.querySelector(".langsel");
+      if (!sel) return;
+      if (e.target.closest(".langsel-btn")) sel.classList.toggle("open");
+      else if (!e.target.closest(".langsel-menu")) sel.classList.remove("open");
+    });
 
     // ===== Reveal =====
     const io = new IntersectionObserver((es) => {

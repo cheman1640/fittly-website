@@ -280,14 +280,18 @@ const D = {
   "© 2026 Fittly · Made for Shopify": ["© 2026 Fittly · Gemacht für Shopify", "© 2026 Fittly · Conçu pour Shopify", "© 2026 Fittly · Feito para Shopify"],
 };
 
-// ── selector de idioma para el nav ───────────────────────────────────────────
-const TODOS = [["es", "/"], ["en", "/en"], ["de", "/de"], ["fr", "/fr"], ["pt", "/pt"]];
+// ── selector de idioma para el nav (menú compacto) ──────────────────────────
+const TODOS = [["es", "/", "Español"], ["en", "/en", "English"], ["de", "/de", "Deutsch"], ["fr", "/fr", "Français"], ["pt", "/pt", "Português"]];
 function selector(actual) {
-  return TODOS.map(([code, ruta]) =>
-    code === actual
-      ? `<span style="font-size:13px;font-weight:800;color:#fff">${code.toUpperCase()}</span>`
-      : `<a href="${ruta}" onclick="try{localStorage.setItem('fittly-lang','${code}')}catch(e){}" style="font-size:13px;font-weight:600;color:var(--faint)">${code.toUpperCase()}</a>`
-  ).join('<span style="color:var(--faint-2);font-size:11px">·</span>');
+  const items = TODOS.map(([c, r, n]) =>
+    `          <a href="${r}"${c === actual ? ' class="on"' : ""} onclick="try{localStorage.setItem('fittly-lang','${c}')}catch(e){}">${n}</a>`
+  ).join("\n");
+  return `<div class="langsel">
+          <button type="button" class="langsel-btn" aria-label="Cambiar idioma">🌐 ${actual.toUpperCase()} <span class="chev">▾</span></button>
+          <div class="langsel-menu">
+${items}
+          </div>
+        </div>`;
 }
 const hreflangs = (indent = "  ") =>
   TODOS.map(([code, ruta]) => `${indent}<link rel="alternate" hreflang="${code}" href="${BASE}${ruta === "/" ? "/" : ruta}" />`).join("\n") +
@@ -335,8 +339,12 @@ for (const [lang, meta] of Object.entries(IDIOMAS)) {
   // Sin autodetección acá a propósito: solo la raíz "/" redirige. Un link
   // compartido a /de tiene que abrir en alemán aunque el navegador esté en otro
   // idioma, o compartir una versión concreta sería imposible.
-  // selector de idioma
-  s = s.replace(/<a href="\/" onclick="[^"]*">ES<\/a>/, selector(lang));
+  // selector de idioma: reemplaza el bloque completo del componente
+  const iSel = s.indexOf('<div class="langsel">');
+  const fSel = s.indexOf("</div>", s.indexOf('class="langsel-menu"')) + "</div>".length;
+  const cierre = s.indexOf("</div>", fSel) + "</div>".length;
+  if (iSel === -1) { fallos++; console.log(`  [${lang}] no se encontró el selector en la fuente`); }
+  else s = s.slice(0, iSel) + selector(lang) + s.slice(cierre);
   // rutas de assets: la fuente EN ya usa /assets/ absolutas
   s = s.replace(/https:\/\/www\.fittlyapp\.com\/assets\/og-en\.jpg/g, `${BASE}/assets/og-en.jpg`);
   // JSON-LD: url del SoftwareApplication
