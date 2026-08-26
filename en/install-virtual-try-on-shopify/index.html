@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to install a virtual try-on on Shopify (2026 guide)</title>
+  <meta name="description" content="What installing a virtual try-on on Shopify actually takes, how much manual work is involved, and how to do it in a single step without touching code or re-uploading your size charts." />
+  <link rel="canonical" href="https://www.fittlyapp.com/en/install-virtual-try-on-shopify" />
+  <link rel="alternate" hreflang="es" href="https://www.fittlyapp.com/instalar-probador-virtual-shopify" />
+  <link rel="alternate" hreflang="en" href="https://www.fittlyapp.com/en/install-virtual-try-on-shopify" />
+  <link rel="alternate" hreflang="x-default" href="https://www.fittlyapp.com/instalar-probador-virtual-shopify" />
+  <meta property="og:title" content="How to install a virtual try-on on Shopify (2026 guide)" />
+  <meta property="og:description" content="What installing a virtual try-on on Shopify actually takes, how much manual work is involved, and how to do it in a single step without touching code or re-uploading your size charts." />
+  <meta property="og:image" content="https://www.fittlyapp.com/assets/video-instalacion-poster.jpg" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+  <meta property="og:url" content="https://www.fittlyapp.com/en/install-virtual-try-on-shopify" />
+  <meta property="og:site_name" content="Fittly" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.fittlyapp.com/assets/video-instalacion-poster.jpg" />
+  <meta property="og:type" content="article" />
+  <link rel="icon" type="image/png" href="/assets/fittly-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0a0b; --surface: #121214; --border: rgba(255,255,255,0.07); --border-2: rgba(255,255,255,0.12);
+      --white: #fff; --text-2: #cdd2db; --text-3: #b6bcc7; --muted: #9aa1ad; --faint: #7e8696; --faint-2: #5b5e66; --green: #3aa775;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--white); font-family: "Manrope", -apple-system, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #fff; color: var(--bg); }
+    a { color: #fff; }
+    a:hover { color: var(--text-2); }
+    img { display: block; max-width: 100%; }
+    .nav { position: sticky; top: 0; z-index: 40; background: rgba(10,10,11,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 860px; margin: 0 auto; padding: 15px 28px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 9px; color: #fff; text-decoration: none; }
+    .brand img { width: 28px; height: 28px; border-radius: 26%; }
+    .brand span { font-size: 19px; font-weight: 800; letter-spacing: -0.03em; }
+    .nav-cta { background: #fff; color: var(--bg); font-size: 13.5px; font-weight: 700; padding: 9px 16px; border-radius: 30px; text-decoration: none; white-space: nowrap; }
+    .doc { max-width: 760px; margin: 0 auto; padding: 56px 28px 70px; }
+    .doc h1 { font-size: clamp(30px, 5vw, 44px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; }
+    .doc .intro { font-size: 17px; font-weight: 500; color: var(--muted); line-height: 1.65; margin-top: 18px; }
+    .doc h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin: 42px 0 12px; }
+    .doc p { font-size: 15.5px; font-weight: 500; color: var(--text-3); line-height: 1.75; margin-bottom: 13px; }
+    .doc strong { color: #fff; }
+    .doc ul { margin: 0 0 13px; padding-left: 22px; }
+    .doc li { font-size: 15.5px; font-weight: 500; color: var(--text-3); line-height: 1.75; margin-bottom: 6px; }
+    .cta-card { background: linear-gradient(180deg, #121214, #0d0d0f); border: 1px solid var(--border); border-radius: 22px; padding: 32px; text-align: center; margin-top: 46px; }
+    .cta-card .t { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; }
+    .cta-card .d { font-size: 14.5px; font-weight: 500; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .cta-card a.btn { display: inline-block; background: #fff; color: var(--bg); font-size: 15px; font-weight: 800; padding: 14px 26px; border-radius: 30px; text-decoration: none; margin-top: 18px; }
+    .related { border-top: 1px solid var(--border); margin-top: 46px; padding-top: 24px; }
+    .related .rl { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: var(--faint-2); text-transform: uppercase; }
+    .related a { display: block; font-size: 15px; font-weight: 700; color: var(--text-2); text-decoration: none; margin-top: 10px; }
+    .related a:hover { color: #fff; }
+    .footer { border-top: 1px solid var(--border); padding: 26px 28px; text-align: center; }
+    .footer span { font-size: 12.5px; font-weight: 600; color: var(--faint-2); }
+    .footer a { color: var(--muted); text-decoration: none; }
+    .footer a:hover { color: #fff; }
+  
+    .vid-frame { position: relative; aspect-ratio: 16/9; border-radius: 18px; overflow: hidden; border: 1px solid var(--border-2); box-shadow: 0 24px 60px rgba(0,0,0,0.45); background: #000; cursor: pointer; margin: 18px 0 8px; }
+    .vid-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.3s; }
+    .vid-frame:hover img { opacity: 0.85; }
+    .vid-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+    .vid-play span { width: 66px; height: 66px; border-radius: 50%; background: rgba(255,255,255,0.95); display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    .vid-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .vid-note { font-size: 12.5px; color: var(--faint-2); font-weight: 600; margin-bottom: 20px; }
+    .pasos { counter-reset: p; margin: 16px 0 20px; padding: 0; list-style: none; }
+    .pasos li { counter-increment: p; position: relative; padding-left: 40px; margin-bottom: 12px; font-size: 15.5px; font-weight: 500; color: var(--text-3); line-height: 1.7; }
+    .pasos li::before { content: counter(p); position: absolute; left: 0; top: 1px; width: 26px; height: 26px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border-2); color: #fff; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .no-hacer { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px; margin: 18px 0; }
+    .no-hacer div { font-size: 14.5px; font-weight: 500; color: var(--text-3); line-height: 1.75; padding: 5px 0; }
+    .no-hacer b { color: #fff; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to install a virtual try-on on Shopify",
+    "description": "What installing a virtual try-on on Shopify actually takes, how much manual work is involved, and how to do it in a single step without touching code or re-uploading your size charts.",
+    "totalTime": "PT2M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Install from the App Store",
+        "text": "Accept the permissions Shopify shows. The app asks to view products and images, to view and edit themes for the embed, and to view orders only to attribute purchases."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Enable the app embed and save",
+        "text": "In the theme editor, switch Fittly on and save. There are no blocks to add and no position to choose: the widget shows up on every apparel product by itself."
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "How to install Fittly on a Shopify store",
+    "description": "Walkthrough of the Fittly installation process: install from the App Store, accept permissions, enable the app embed, save, and the automatic scan of the catalog's size guides.",
+    "uploadDate": "2026-08-25T19:57:37-07:00",
+    "duration": "PT36S",
+    "thumbnailUrl": [
+      "https://www.fittlyapp.com/assets/video-instalacion-poster.jpg"
+    ],
+    "embedUrl": "https://www.youtube-nocookie.com/embed/fx1G4DqC1mE",
+    "contentUrl": "https://www.youtube.com/watch?v=fx1G4DqC1mE",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fittly",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.fittlyapp.com/assets/fittly-icon.png"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Fittly",
+        "item": "https://www.fittlyapp.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "How to install a virtual try-on",
+        "item": "https://www.fittlyapp.com/en/install-virtual-try-on-shopify"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/en" class="brand">
+        <img src="/assets/fittly-icon.png" alt="Fittly" />
+        <span>fittly</span>
+      </a>
+      <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="nav-cta">Install on Shopify</a>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <h1>How to install a virtual try-on on Shopify</h1>
+    <p class="intro">Most guides in this category describe a five to seven step process that involves opening the theme editor, adding a block by hand, dragging it into place and uploading product data. This guide compares that path with Fittly's, which comes down to enabling the app and hitting save.</p>
+
+    <h2>What installing a virtual try-on usually takes</h2>
+    <p>If you read the install guides for apps in this category, the typical process looks like this:</p>
+    <ol class="pasos">
+      <li>Install the app from the Shopify App Store and accept the permissions.</li>
+      <li>Go to your admin, then Online Store, Themes, and click Customize on the active theme.</li>
+      <li>Open the product page template and click Add block.</li>
+      <li>Pick the app's block from the Apps section.</li>
+      <li>Drag the block to the position where you want it to appear.</li>
+      <li>Adjust the button text and color to match your brand, then save.</li>
+      <li>Upload product data: high quality images or 3D models, and upload your size charts.</li>
+      <li>Test on desktop and mobile that everything works.</li>
+    </ol>
+    <p>None of those steps is hard on its own. The problem is that there are eight, that two require design decisions, and that the last one, uploading product data, is manual work that grows with the size of your catalog. That is where an install gets postponed and never happens.</p>
+
+    <h2>How Fittly installs: one step</h2>
+    <p>With Fittly the process is this, in full:</p>
+    <ol class="pasos">
+      <li><strong>Install from the App Store.</strong> Accept the permissions Shopify shows. The app asks to view products and images, to view and edit themes for the embed, and to view orders only to attribute purchases.</li>
+      <li><strong>Enable the app embed and save.</strong> In the theme editor, switch Fittly on and save. There are no blocks to add and no position to choose: the widget shows up on every apparel product by itself.</li>
+    </ol>
+
+    <div class="vid-frame" id="vid-frame" role="button" tabindex="0" aria-label="Video: how to install Fittly on a Shopify store">
+      <img src="/assets/video-instalacion-poster.jpg" alt="Video: how to install Fittly on a Shopify store" loading="lazy" width="1280" height="720" />
+      <div class="vid-play"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="#0a0a0b"><path d="M8 5v14l11-7z"/></svg></span></div>
+    </div>
+    <p class="vid-note">The video loads from YouTube only when you hit play.</p>
+
+    <h2>What happens next, with no work from you</h2>
+    <p>With the app enabled, Fittly goes through your catalog on its own. It reviews each product's images and keeps the one that works for the try-on, and it looks for your size charts inside your own product photos to activate them. The result is that the size recommendation ends up running on each garment's real measurements, not on a generic store chart, and you never uploaded a single table.</p>
+
+    <h2>What you do not have to do</h2>
+    <div class="no-hacer">
+      <div><b>No</b> touching theme code and no hiring a developer.</div>
+      <div><b>No</b> adding blocks product by product and no deciding where the button goes.</div>
+      <div><b>No</b> re-uploading your size charts: they are already in your photos and Fittly reads them.</div>
+      <div><b>No</b> picking each product's try-on photo by hand.</div>
+      <div><b>No</b> per-language setup if you sell in several countries.</div>
+    </div>
+
+    <h2>If your store sells in several languages</h2>
+    <p>The widget is available in Spanish, English, Portuguese, German and French, included in every plan, and it automatically follows the language your Shopify store already shows each visitor. A shopper in Germany tries the garment on in German without you configuring anything.</p>
+
+    <div class="cta-card">
+      <div class="t">Install it and see for yourself</div>
+      <div class="d">Free to install, no monthly fee: you only pay for the try-ons your shoppers use.</div>
+      <a class="btn" href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Install on Shopify</a>
+    </div>
+
+    <div class="related">
+      <span class="rl">Keep reading</span>
+      <a href="/probador-virtual-shopify">Virtual try-on guide (ES)</a>
+      <a href="/recomendacion-de-tallas-shopify">Size recommendation guide (ES)</a>
+      <a href="/comparativa-apps-probador-virtual-shopify">2026 app comparison (ES)</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Fittly · <a href="/en">fittlyapp.com</a> · <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">App Store</a> · <a href="mailto:hello@fittlyapp.com">hello@fittlyapp.com</a></span>
+  </footer>
+
+  <script>
+    var vidFrame = document.getElementById("vid-frame");
+    if (vidFrame) vidFrame.addEventListener("click", function () {
+      if (vidFrame.dataset.on) return;
+      vidFrame.dataset.on = "1";
+      var hl = document.documentElement.lang || "en";
+      var f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/fx1G4DqC1mE?autoplay=1&rel=0&playsinline=1&modestbranding=1&cc_load_policy=1&cc_lang_pref=" + hl + "&hl=" + hl;
+      f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
+      f.allowFullscreen = true;
+      vidFrame.innerHTML = ""; vidFrame.appendChild(f); vidFrame.style.cursor = "default";
+    });
+  </script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
