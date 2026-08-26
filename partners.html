@@ -104,8 +104,25 @@
     .step .num { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; margin-bottom: 16px; }
     .step .t { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 9px; }
     .step .d { font-size: 14px; color: var(--muted); font-weight: 500; line-height: 1.6; }
-    .milestone { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 16px 22px; margin-top: 18px; flex-wrap: wrap; }
-    .milestone span { font-size: 14px; font-weight: 600; color: var(--text-2); }
+    .milestones { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin-top: 18px; }
+    .ms { display: flex; gap: 11px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 17px 19px; min-width: 0; }
+    .ms svg { flex: none; margin-top: 2px; }
+    .ms .n { font-size: 13.5px; font-weight: 800; color: #fff; }
+    .ms .d { font-size: 13px; font-weight: 500; color: var(--muted); line-height: 1.55; margin-top: 3px; }
+
+    /* ---------- Cómo se calcula ---------- */
+    .calc { max-width: 900px; margin: 0 auto; padding: 46px 28px 20px; }
+    .calc h2 { font-size: clamp(28px, 4vw, 42px); text-align: center; margin-bottom: 36px; }
+    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+    .tier { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 20px 22px; min-width: 0; }
+    .tier .lb { font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: var(--faint); }
+    .tier .pc { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; margin-top: 7px; }
+    .tier .rg { font-size: 13px; font-weight: 600; color: var(--muted); margin-top: 2px; }
+    .calc-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 24px 26px; margin-top: 12px; }
+    .calc-card p { font-size: 14px; font-weight: 500; color: var(--muted); line-height: 1.7; }
+    .calc-card p + p { margin-top: 13px; }
+    .calc-card strong { color: #fff; font-weight: 700; }
+    .calc-card .lb { font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: var(--faint); margin-bottom: 9px; }
 
     /* ---------- Tracks ---------- */
     .tracks { max-width: 1180px; margin: 0 auto; padding: 50px 28px 30px; }
@@ -158,6 +175,7 @@
     .footer span { font-size: 12.5px; font-weight: 600; color: var(--faint-2); }
     .footer a { color: var(--muted); }
     .footer a:hover { color: #fff; }
+    .footer .updated { font-size: 12px; font-weight: 600; color: var(--faint-2); margin-top: 8px; }
 
     @media (max-width: 560px) {
       .nav-links a:not(.nav-cta) { display: none; }
@@ -202,8 +220,8 @@
   <!-- ===== STATS ===== -->
   <section class="stats">
     <div class="stats-grid">
-      <div class="stat"><div class="n">20%</div><div class="d">comisión base, sobre el ingreso neto de IA</div></div>
-      <div class="stat"><div class="n">30%</div><div class="d">tope, desde 16 tiendas pagando</div></div>
+      <div class="stat"><div class="n">20 a 30%</div><div class="d">comisión recurrente, según tu tier</div></div>
+      <div class="stat"><div class="n">45 días</div><div class="d">del cierre de mes, en USD</div></div>
       <div class="stat"><div class="n">12 meses</div><div class="d">de comisión por tienda</div></div>
       <div class="stat"><div class="n">$0</div><div class="d">mínimo de pago · sale solo</div></div>
     </div>
@@ -226,12 +244,32 @@
       <div class="step">
         <div class="num">3</div>
         <div class="t">Cobras cada mes</div>
-        <div class="d">20% de lo que paga la tienda, descontando el costo de generación de IA, vía PayPal o Wise. Pago a 45 días del cierre de mes, sin mínimo y sin pedir nada. El plan Free y los trials no comisionan.</div>
+        <div class="d">20% de lo que paga la tienda, descontando la tarifa publicada de US$0,135 por generación, vía PayPal o Wise. Pago a 45 días del cierre de mes, sin mínimo y sin pedir nada. El plan Free y los trials no comisionan.</div>
       </div>
     </div>
-    <div class="milestone">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3aa775" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-      <span>Al llegar a <strong>5 tiendas activas pagando</strong>, tu cupo de contenido sube a <strong>100 generaciones al mes</strong>.</span>
+    <div class="milestones">
+      <div class="ms"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3aa775" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg><div><div class="n">5 tiendas pagando</div><div class="d">Tu cupo de contenido sube a 100 generaciones al mes.</div></div></div>
+      <div class="ms"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3aa775" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg><div><div class="n">15 tiendas pagando</div><div class="d">Acceso anticipado y beta a funciones nuevas.</div></div></div>
+      <div class="ms"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3aa775" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg><div><div class="n">30 tiendas pagando</div><div class="d">Acceso directo al equipo de Fittly, co-marketing y lanzamientos anticipados.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ===== CÓMO SE CALCULA ===== -->
+  <section class="calc">
+    <h2 class="h">Cómo se calcula tu comisión.</h2>
+    <div class="tiers">
+      <div class="tier"><div class="lb">BRONZE</div><div class="pc">20%</div><div class="rg">1 a 5 tiendas pagando</div></div>
+      <div class="tier"><div class="lb">SILVER</div><div class="pc">25%</div><div class="rg">6 a 15 tiendas pagando</div></div>
+      <div class="tier"><div class="lb">GOLD</div><div class="pc">30%</div><div class="rg">16 tiendas pagando o más</div></div>
+    </div>
+    <div class="calc-card">
+      <p>La comisión se calcula sobre lo que la tienda paga en el mes, plan más uso, descontando una <strong>tarifa fija publicada de US$0,135 por generación</strong>. Es un valor publicado, no un costo variable, y Fittly puede cambiarlo hacia adelante con aviso previo.</p>
+      <p>Tu tasa queda fija por tienda al momento en que esa tienda empieza a pagar. Subir de tier aplica la tasa nueva solo a las tiendas que empiecen a pagar después, y no cambia las que ya tenías.</p>
+      <p>La comisión se gana después del primer pago exitoso de la tienda y del cierre de su ventana de reembolso de 30 días.</p>
+    </div>
+    <div class="calc-card">
+      <div class="lb">EJEMPLO</div>
+      <p>Una tienda en plan Growth paga US$19 al mes más US$0,18 por generación. En un mes hace 500 generaciones, así que paga US$109. Se descuentan 500 × US$0,135 = US$67,50. La base de comisión queda en <strong>US$41,50</strong>, y en Bronze ganas 20% de eso: <strong>US$8,30</strong> ese mes.</p>
     </div>
   </section>
 
@@ -319,6 +357,7 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <span>© 2026 Fittly · <a href="/partners/terms">Program Terms</a> · <a href="https://fittly-production.up.railway.app/privacy">Privacy</a> · <a href="mailto:hello@fittlyapp.com">hello@fittlyapp.com</a></span>
+    <div class="updated">Última actualización: 26 de agosto de 2026</div>
   </footer>
 
   <!-- Supabase -->
