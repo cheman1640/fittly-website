@@ -196,6 +196,16 @@ const D = {
      "Et les produits qui sortent du schéma méritent votre attention : si un vêtement revient toujours une taille au-dessus du reste de son échelle, il <b>taille petit</b>. C'est souvent la pièce qui génère vos retours en silence.",
      "E vale a pena olhar os produtos que fogem do padrão: se uma peça volta sempre um tamanho acima do resto da sua escala, ela <b>veste pequeno</b>. Essa costuma ser a que gera suas devoluções em silêncio."],
 
+  // gráfico de demanda
+  "ILLUSTRATIVE EXAMPLE": ["ILLUSTRATIVES BEISPIEL", "EXEMPLE ILLUSTRATIF", "EXEMPLO ILUSTRATIVO"],
+  "What you sold": ["Was du verkauft hast", "Ce que vous avez vendu", "O que você vendeu"],
+  "What they asked for": ["Was gefragt war", "Ce qu'ils ont demandé", "O que pediram"],
+  "the missing size": ["die fehlende Größe", "la taille qui manque", "o tamanho que falta"],
+  "Read through sales, your top size is M. Read through demand, it is <b>XL</b>: you never had it, so whoever needed it took an M or an L, or did not buy at all. That gap is what gets restocked wrong season after season.":
+    ["Nach den Verkäufen gelesen ist deine Top-Größe M. Nach der Nachfrage gelesen ist es <b>XL</b>: du hattest sie nie, also nahm wer sie brauchte ein M oder ein L, oder kaufte gar nicht. Diese Lücke wird Saison für Saison falsch nachbestellt.",
+     "Lu à travers les ventes, votre taille phare est le M. Lu à travers la demande, c'est le <b>XL</b> : vous ne l'aviez jamais, donc celui qui en avait besoin a pris un M ou un L, ou n'a pas acheté. C'est cet écart qui est mal réapprovisionné saison après saison.",
+     "Lido pelas vendas, seu tamanho campeão é o M. Lido pela demanda, é o <b>XL</b>: você nunca o teve, então quem precisava levou um M ou um L, ou não comprou. Essa lacuna é o que se repõe errado temporada após temporada."],
+
   // cross-store
   "Fittly account · Cross-store": ["Fittly-Konto · Shop-übergreifend", "Compte Fittly · Multi-boutique", "Conta Fittly · Cross-store"],
   "One model. Every store.": ["Ein Modell. Alle Shops.", "Un modèle. Toutes les boutiques.", "Um modelo. Todas as lojas."],

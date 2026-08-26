@@ -407,6 +407,29 @@
     .dem-foot { margin-top: 26px; font-size: 14.5px; color: var(--muted); font-weight: 500; line-height: 1.65; max-width: 660px; }
     .dem-foot b { color: #fff; font-weight: 700; }
 
+
+    /* ---------- Gráfico de demanda ---------- */
+    .dv { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 20px; padding: 26px 28px 22px; margin-top: 32px; }
+    .dv-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 26px; }
+    .dv-t { font-size: 11px; font-weight: 800; letter-spacing: 0.12em; color: var(--faint-2); }
+    .dv-leg { display: flex; gap: 18px; flex-wrap: wrap; }
+    .dv-leg span { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 600; color: var(--muted); }
+    .dv-leg i { width: 11px; height: 11px; border-radius: 3px; display: block; }
+    .dv-leg i.s { background: rgba(255,255,255,0.22); }
+    .dv-leg i.a { background: #fff; }
+    .dv-chart { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; align-items: end; height: 190px; }
+    .dv-col { display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; gap: 9px; min-width: 0; }
+    .dv-bars { display: flex; align-items: flex-end; justify-content: center; gap: 5px; width: 100%; height: 100%; position: relative; }
+    .dv-bars span { width: 26px; max-width: 40%; border-radius: 5px 5px 0 0; display: block; transition: height 0.6s cubic-bezier(0.22,1,0.36,1); }
+    .dv-bars span.s { background: rgba(255,255,255,0.2); }
+    .dv-bars span.a { background: #fff; }
+    .dv-col b { font-size: 13px; font-weight: 800; color: var(--text-2); }
+    .dv-col.hi b { color: #fff; }
+    .dv-gap { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); font-size: 10.5px; font-weight: 800; letter-spacing: 0.04em; color: var(--bg); background: #fff; border-radius: 20px; padding: 4px 10px; white-space: nowrap; }
+    .dv-note { font-size: 13px; color: var(--muted); font-weight: 500; line-height: 1.6; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+    .dv-note b { color: #fff; font-weight: 700; }
+    @media (max-width: 560px) { .dv { padding: 20px 16px 16px; } .dv-bars span { width: 18px; } .dv-chart { height: 160px; } }
+
     /* ---------- Responsive ---------- */
     @media (max-width: 900px) {
       .xhero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -761,6 +784,38 @@
       <span class="label">Analytics de demanda</span>
       <h2 class="h">O que você vendeu não é<br />o que pediram.</h2>
       <p class="lead">Seus dados de venda vêm filtrados pelo seu próprio estoque. Se você está sempre sem XL, suas vendas dizem que ninguém usa XL, e você repõe o que já estava parado. A Fittly registra o tamanho que cada cliente realmente precisava, disponível ou não.</p>
+      <div class="dv">
+        <div class="dv-head">
+          <span class="dv-t">EXEMPLO ILUSTRATIVO</span>
+          <div class="dv-leg">
+            <span><i class="s"></i>O que você vendeu</span>
+            <span><i class="a"></i>O que pediram</span>
+          </div>
+        </div>
+        <div class="dv-chart">
+          <div class="dv-col">
+            <div class="dv-bars"><span class="s" style="height:34%"></span><span class="a" style="height:30%"></span></div>
+            <b>S</b>
+          </div>
+          <div class="dv-col">
+            <div class="dv-bars"><span class="s" style="height:100%"></span><span class="a" style="height:78%"></span></div>
+            <b>M</b>
+          </div>
+          <div class="dv-col">
+            <div class="dv-bars"><span class="s" style="height:88%"></span><span class="a" style="height:82%"></span></div>
+            <b>L</b>
+          </div>
+          <div class="dv-col hi">
+            <div class="dv-bars"><span class="dv-gap">o tamanho que falta</span><span class="s" style="height:26%"></span><span class="a" style="height:96%"></span></div>
+            <b>XL</b>
+          </div>
+          <div class="dv-col">
+            <div class="dv-bars"><span class="s" style="height:14%"></span><span class="a" style="height:34%"></span></div>
+            <b>XXL</b>
+          </div>
+        </div>
+        <div class="dv-note">Lido pelas vendas, seu tamanho campeão é o M. Lido pela demanda, é o <b>XL</b>: você nunca o teve, então quem precisava levou um M ou um L, ou não comprou. Essa lacuna é o que se repõe errado temporada após temporada.</div>
+      </div>
       <div class="dem-grid">
         <div class="dem-panel">
           <span class="n">PAINEL 1</span>
