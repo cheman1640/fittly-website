@@ -503,36 +503,47 @@
       "@type": "Organization",
       "name": "Fittly SpA"
     },
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "Free",
-        "price": "0",
-        "priceCurrency": "USD",
-        "description": "$0,35 por try-on usado, sin fee mensual"
-      },
-      {
-        "@type": "Offer",
-        "name": "Starter",
-        "price": "9",
-        "priceCurrency": "USD",
-        "description": "$0,22 por try-on usado"
-      },
-      {
-        "@type": "Offer",
-        "name": "Growth",
-        "price": "19",
-        "priceCurrency": "USD",
-        "description": "$0,18 por try-on usado"
-      }
-    ],
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "lowPrice": "0",
+      "highPrice": "19",
+      "offerCount": 3,
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "$0,35 por try-on usado, sin fee mensual",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Starter",
+          "price": "9",
+          "priceCurrency": "USD",
+          "description": "$0,22 por try-on usado",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Growth",
+          "price": "19",
+          "priceCurrency": "USD",
+          "description": "$0,18 por try-on usado",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
     "availableLanguage": [
       "es",
       "en",
       "pt",
       "de",
       "fr"
-    ]
+    ],
+    "isAccessibleForFree": true
   }
   </script>
   <script type="application/ld+json">
