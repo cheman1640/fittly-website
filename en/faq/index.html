@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fittly FAQ: virtual try-on and sizing for Shopify</title>
+  <meta name="description" content="Frequently asked questions about Fittly, the AI virtual try-on and size recommendation for Shopify: pricing, install, languages, privacy and how it is different." />
+  <link rel="canonical" href="https://www.fittlyapp.com/en/faq" />
+  <link rel="alternate" hreflang="es" href="https://www.fittlyapp.com/faq" />
+  <link rel="alternate" hreflang="en" href="https://www.fittlyapp.com/en/faq" />
+  <link rel="alternate" hreflang="x-default" href="https://www.fittlyapp.com/en/faq" />
+  <meta property="og:title" content="Fittly FAQ: virtual try-on and sizing for Shopify" />
+  <meta property="og:description" content="Frequently asked questions about Fittly, the AI virtual try-on and size recommendation for Shopify: pricing, install, languages, privacy and how it is different." />
+  <meta property="og:image" content="https://www.fittlyapp.com/assets/og-en.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://www.fittlyapp.com/en/faq" />
+  <meta property="og:site_name" content="Fittly" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.fittlyapp.com/assets/og-en.jpg" />
+  <link rel="icon" type="image/png" href="../assets/fittly-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0a0b; --surface: #121214; --border: rgba(255,255,255,0.07); --border-2: rgba(255,255,255,0.12);
+      --white: #fff; --text-2: #cdd2db; --text-3: #b6bcc7; --muted: #9aa1ad; --faint: #7e8696; --faint-2: #5b5e66; --green: #3aa775;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--white); font-family: "Manrope", -apple-system, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #fff; color: var(--bg); }
+    a { color: #fff; }
+    a:hover { color: var(--text-2); }
+    img { display: block; max-width: 100%; }
+    .nav { position: sticky; top: 0; z-index: 40; background: rgba(10,10,11,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 860px; margin: 0 auto; padding: 15px 28px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 9px; color: #fff; text-decoration: none; }
+    .brand img { width: 28px; height: 28px; border-radius: 26%; }
+    .brand span { font-size: 19px; font-weight: 800; letter-spacing: -0.03em; }
+    .nav-cta { background: #fff; color: var(--bg); font-size: 13.5px; font-weight: 700; padding: 9px 16px; border-radius: 30px; text-decoration: none; white-space: nowrap; }
+    .doc { max-width: 760px; margin: 0 auto; padding: 56px 28px 70px; }
+    .doc h1 { font-size: clamp(30px, 5vw, 44px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; }
+    .doc .intro { font-size: 17px; font-weight: 500; color: var(--muted); line-height: 1.65; margin-top: 18px; }
+    .doc h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin: 42px 0 12px; }
+    .doc h3 { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; margin: 26px 0 8px; }
+    .doc p { font-size: 15.5px; font-weight: 500; color: var(--text-3); line-height: 1.75; margin-bottom: 13px; }
+    .doc strong { color: #fff; }
+    .doc ul { margin: 0 0 13px; padding-left: 22px; }
+    .doc li { font-size: 15.5px; font-weight: 500; color: var(--text-3); line-height: 1.75; margin-bottom: 6px; }
+    .disclosure { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; font-size: 13.5px; font-weight: 500; color: var(--muted); line-height: 1.65; margin-top: 22px; }
+    .table-scroll { overflow-x: auto; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; min-width: 560px; }
+    th, td { text-align: left; font-size: 14px; padding: 11px 13px; border: 1px solid var(--border-2); }
+    th { font-weight: 800; color: #fff; background: var(--surface); white-space: nowrap; }
+    td { font-weight: 600; color: var(--text-3); }
+    .cta-card { background: linear-gradient(180deg, #121214, #0d0d0f); border: 1px solid var(--border); border-radius: 22px; padding: 32px; text-align: center; margin-top: 46px; }
+    .cta-card .t { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; }
+    .cta-card .d { font-size: 14.5px; font-weight: 500; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .cta-card a.btn { display: inline-block; background: #fff; color: var(--bg); font-size: 15px; font-weight: 800; padding: 14px 26px; border-radius: 30px; text-decoration: none; margin-top: 18px; }
+    .related { border-top: 1px solid var(--border); margin-top: 46px; padding-top: 24px; }
+    .related .rl { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: var(--faint-2); text-transform: uppercase; }
+    .related a { display: block; font-size: 15px; font-weight: 700; color: var(--text-2); text-decoration: none; margin-top: 10px; }
+    .related a:hover { color: #fff; }
+    .footer { border-top: 1px solid var(--border); padding: 26px 28px; text-align: center; }
+    .footer span { font-size: 12.5px; font-weight: 600; color: var(--faint-2); }
+    .footer a { color: var(--muted); text-decoration: none; }
+    .footer a:hover { color: #fff; }
+    .verif { font-size: 12.5px; font-weight: 700; color: var(--faint); margin-top: 14px; letter-spacing: 0.02em; }
+    .doc table a { color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--border-2); }
+    .doc table a:hover { color: #fff; }
+    .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 20px; }
+    .otro-idioma:hover { color: #fff; }
+    .verif { font-size: 12.5px; font-weight: 700; color: var(--faint); margin-top: 14px; letter-spacing: 0.02em; }
+    .doc table a { color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--border-2); }
+    .doc table a:hover { color: #fff; }
+    .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 20px; }
+    .otro-idioma:hover { color: #fff; }
+    .verif { font-size: 12.5px; font-weight: 700; color: var(--faint); margin-top: 14px; letter-spacing: 0.02em; }
+    .doc table a { color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--border-2); }
+    .doc table a:hover { color: #fff; }
+    .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 20px; }
+    .otro-idioma:hover { color: #fff; }
+    .doc td .nota { display: block; font-size: 12px; font-weight: 600; color: var(--faint); margin-top: 3px; }
+    .aviso { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; font-size: 13.5px; font-weight: 500; color: var(--muted); line-height: 1.65; margin-top: 4px; }
+    .verif { font-size: 12.5px; font-weight: 700; color: var(--faint); margin-top: 14px; letter-spacing: 0.02em; }
+    .doc table a { color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--border-2); }
+    .doc table a:hover { color: #fff; }
+    .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 20px; }
+    .otro-idioma:hover { color: #fff; }
+    .doc td .nota { display: block; font-size: 12px; font-weight: 600; color: var(--faint); margin-top: 3px; }
+    .aviso { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; font-size: 13.5px; font-weight: 500; color: var(--muted); line-height: 1.65; margin-top: 4px; }
+    .verif { font-size: 12.5px; font-weight: 700; color: var(--faint); margin-top: 14px; letter-spacing: 0.02em; }
+    .doc table a { color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--border-2); }
+    .doc table a:hover { color: #fff; }
+    .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 20px; }
+    .otro-idioma:hover { color: #fff; }
+    .doc h2 { font-size: 20px; margin: 38px 0 10px; }
+    .act { font-size: 12.5px; font-weight: 700; color: var(--faint); margin-top: 14px; }
+    .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 30px; }
+    .otro-idioma:hover { color: #fff; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Fittly",
+        "item": "https://www.fittlyapp.com/en"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQ",
+        "item": "https://www.fittlyapp.com/en/faq"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Fittly FAQ: virtual try-on and sizing for Shopify",
+    "inLanguage": "en",
+    "url": "https://www.fittlyapp.com/en/faq",
+    "dateModified": "2026-08-27",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fittly SpA",
+      "url": "https://www.fittlyapp.com/"
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does the shopper have to upload a photo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, it's optional. They can choose among 8 reference models (slim, regular, athletic and plus-size, in male and female) or upload their own photo to see themselves. Own photos are deleted within 72 hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How realistic is the try-on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The AI dresses the real garment on the chosen body, respecting drape, length and proportion. It's not a flat overlay: it's a generation that reflects how it looks on."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work with any Shopify theme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Fittly is a native Shopify app that installs from the App Store and shows on your product page without touching code, compatible with any theme."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You start with 14 days free or 75 try-ons, whichever comes first, no card. After that, installing is still free and there is no required monthly fee: on the Free plan you pay $0.35 per try-on used, with a monthly spend cap you define. As your volume grows, Starter ($9/mo) lowers the rate to $0.22 and Growth ($19/mo) to $0.18, with no try-on limits. Size recommendation comes with Starter and Growth and is never metered there, so it never costs you a generation; the Free plan is try-on only. Standard try-ons are also cached, so repeated results are served at no extra cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What languages is the try-on available in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The widget is available in Spanish, English, Portuguese, German and French, included in every plan. It automatically follows the language your Shopify store shows each visitor, so a shopper in Germany sees the try-on in German without you configuring anything."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about data privacy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Shopper photos are automatically deleted after 72 hours and are never shared with the store. The cross-store account keeps only the model and measurements the user chooses to save, and they can export or delete them anytime."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Fittly different from other virtual try-on apps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The try-on and the size recommendation are the same widget, not a main feature plus an extra. The shopper sees the garment on and gets a size computed from that garment's real measurements in the same flow. Size recommendation comes with the $9 and $19 plans and is never metered there, so advising a size never costs you a generation, the install is one step because Fittly scans your catalog on its own, and the widget ships in five languages. There is a comparison against the other apps in the category, with Shopify App Store data, at /en/shopify-virtual-try-on-apps-compared."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is behind Fittly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fittly SpA, a Chilean company founded in May 2026. Fittly is its only product. It is a new app: as of August 2026 it has 1 public review on the Shopify App Store, at 5 stars. We do not publish conversion-lift percentages because we have not measured them in a controlled way yet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I have to upload my size charts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Fittly scans your catalog on its own and reads the size charts that are already inside your own product photos, so you never upload or retype a table. The scan starts by itself, on your store's first real try-on."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to install?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One step: you enable the app embed in the Shopify theme editor and save. There is no code to touch and nothing else to configure, and from there Fittly handles the rest. There is a walkthrough of the whole process at /en/install-virtual-try-on-shopify."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I control how much I spend per month?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You set a monthly spend cap and Fittly does not go past it. Because billing is per try-on used rather than a fixed allowance you buy up front, the cap is what gives you control."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I try it before paying?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You get 14 days free or 75 try-ons, whichever comes first, with no card. When the trial ends you are not moved onto a paid plan: you land on the Free plan, which has no monthly fee and charges $0.35 per try-on used."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/en" class="brand">
+        <img src="../assets/fittly-icon.png" alt="Fittly" />
+        <span>fittly</span>
+      </a>
+      <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener" class="nav-cta">Install on Shopify</a>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <h1>Frequently asked questions</h1>
+    <p class="intro">Everything stores usually ask before installing Fittly. If something is missing, write to hello@fittlyapp.com and we will answer it.</p>
+    <p class="act">Updated on August 27, 2026</p>
+
+    <h2>Does the shopper have to upload a photo?</h2>
+    <p>No, it's optional. They can choose among 8 reference models (slim, regular, athletic and plus-size, in male and female) or upload their own photo to see themselves. Own photos are deleted within 72 hours.</p>
+
+    <h2>How realistic is the try-on?</h2>
+    <p>The AI dresses the real garment on the chosen body, respecting drape, length and proportion. It's not a flat overlay: it's a generation that reflects how it looks on.</p>
+
+    <h2>Does it work with any Shopify theme?</h2>
+    <p>Yes. Fittly is a native Shopify app that installs from the App Store and shows on your product page without touching code, compatible with any theme.</p>
+
+    <h2>How much does it cost?</h2>
+    <p>You start with 14 days free or 75 try-ons, whichever comes first, no card. After that, installing is still free and there is no required monthly fee: on the Free plan you pay $0.35 per try-on used, with a monthly spend cap you define. As your volume grows, Starter ($9/mo) lowers the rate to $0.22 and Growth ($19/mo) to $0.18, with no try-on limits. Size recommendation comes with Starter and Growth and is never metered there, so it never costs you a generation; the Free plan is try-on only. Standard try-ons are also cached, so repeated results are served at no extra cost.</p>
+
+    <h2>What languages is the try-on available in?</h2>
+    <p>The widget is available in Spanish, English, Portuguese, German and French, included in every plan. It automatically follows the language your Shopify store shows each visitor, so a shopper in Germany sees the try-on in German without you configuring anything.</p>
+
+    <h2>What about data privacy?</h2>
+    <p>Shopper photos are automatically deleted after 72 hours and are never shared with the store. The cross-store account keeps only the model and measurements the user chooses to save, and they can export or delete them anytime.</p>
+
+    <h2>How is Fittly different from other virtual try-on apps?</h2>
+    <p>The try-on and the size recommendation are the same widget, not a main feature plus an extra. The shopper sees the garment on and gets a size computed from that garment's real measurements in the same flow. Size recommendation comes with the $9 and $19 plans and is never metered there, so advising a size never costs you a generation, the install is one step because Fittly scans your catalog on its own, and the widget ships in five languages. There is a comparison against the other apps in the category, with Shopify App Store data, at <a href="/en/shopify-virtual-try-on-apps-compared">/en/shopify-virtual-try-on-apps-compared</a>.</p>
+
+    <h2>Who is behind Fittly?</h2>
+    <p>Fittly SpA, a Chilean company founded in May 2026. Fittly is its only product. It is a new app: as of August 2026 it has 1 public review on the Shopify App Store, at 5 stars. We do not publish conversion-lift percentages because we have not measured them in a controlled way yet.</p>
+
+    <h2>Do I have to upload my size charts?</h2>
+    <p>No. Fittly scans your catalog on its own and reads the size charts that are already inside your own product photos, so you never upload or retype a table. The scan starts by itself, on your store's first real try-on.</p>
+
+    <h2>How long does it take to install?</h2>
+    <p>One step: you enable the app embed in the Shopify theme editor and save. There is no code to touch and nothing else to configure, and from there Fittly handles the rest. There is a walkthrough of the whole process at <a href="/en/install-virtual-try-on-shopify">/en/install-virtual-try-on-shopify</a>.</p>
+
+    <h2>Can I control how much I spend per month?</h2>
+    <p>Yes. You set a monthly spend cap and Fittly does not go past it. Because billing is per try-on used rather than a fixed allowance you buy up front, the cap is what gives you control.</p>
+
+    <h2>Can I try it before paying?</h2>
+    <p>Yes. You get 14 days free or 75 try-ons, whichever comes first, with no card. When the trial ends you are not moved onto a paid plan: you land on the Free plan, which has no monthly fee and charges $0.35 per try-on used.</p>
+
+    <a class="otro-idioma" href="/faq">Leer estas preguntas en español →</a>
+
+    <div class="cta-card">
+      <div class="t">Try it on your own garments</div>
+      <div class="d">14 days free or 75 try-ons, no card. After that installing is still free and you pay only for the try-ons your shoppers use.</div>
+      <a class="btn" href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Install Fittly on Shopify</a>
+    </div>
+
+    <div class="related">
+      <span class="rl">Keep reading</span>
+      <a href="/en/install-virtual-try-on-shopify">How to install a virtual try-on on Shopify</a>
+      <a href="/en/shopify-virtual-try-on-apps-compared">Shopify virtual try-on apps, compared</a>
+      <a href="/en/apparel-size-curve">Size curve: how many of each size to buy</a>
+      <a href="/en">Fittly: AI virtual try-on and size recommendation for Shopify</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Fittly · <a href="/en">fittlyapp.com</a> · <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">App Store</a> · <a href="mailto:hello@fittlyapp.com">hello@fittlyapp.com</a></span>
+  </footer>
+
+  <!-- Vercel Web Analytics (sitio estático) -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

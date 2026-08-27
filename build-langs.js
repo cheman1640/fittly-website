@@ -252,6 +252,7 @@ const D = {
      "<b>14 dias grátis</b> ou 75 provas, sem cartão · depois você paga por uso"],
   // encabezados del footer en columnas
   "Guides": ["Guides", "Guides", "Guias"],
+  ">FAQ<": [">Häufige Fragen<", ">Questions fréquentes<", ">Perguntas frequentes<"],
   // Estas dos apuntan a guias en ingles: se traduce la etiqueta y se marca el
   // idioma de destino, igual que se hace con las guias en español.
   ">How to install<": [">Installationsanleitung (EN)<", ">Comment installer (EN)<", ">Como instalar (EN)<"],

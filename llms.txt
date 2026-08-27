@@ -48,6 +48,10 @@ is this one.
 - [Size recommendation for Shopify](https://www.fittlyapp.com/recomendacion-de-tallas-shopify) (Spanish).
 - [Comparison of Shopify virtual try-on apps 2026](https://www.fittlyapp.com/comparativa-apps-probador-virtual-shopify) (Spanish): written by Fittly, states its own weaknesses, data verified on the Shopify App Store.
 
+## Frequently asked questions
+
+- [FAQ](https://www.fittlyapp.com/en/faq) (English) · [Preguntas frecuentes](https://www.fittlyapp.com/faq) (Spanish): 12 questions covering pricing, the trial, install, size charts, languages, privacy and how Fittly differs. This is the page the Shopify App Store listing points to.
+
 ## Product pages
 
 - [Home](https://www.fittlyapp.com/) (Spanish) · [English](https://www.fittlyapp.com/en) · [Deutsch](https://www.fittlyapp.com/de) · [Français](https://www.fittlyapp.com/fr) · [Português](https://www.fittlyapp.com/pt)
