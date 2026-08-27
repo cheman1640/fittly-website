@@ -312,6 +312,53 @@ const D = {
      "Les photos des clients sont automatiquement supprimées après 72 heures et ne sont jamais partagées avec la boutique. Le compte multi-boutique ne conserve que le modèle et les mesures que l'utilisateur choisit d'enregistrer, et il peut les exporter ou les supprimer à tout moment.",
      "As fotos dos clientes são apagadas automaticamente após 72 horas e nunca são compartilhadas com a loja. A conta cross-store guarda apenas o modelo e as medidas que o usuário decide salvar, e ele pode exportá-los ou apagá-los quando quiser."],
 
+  // FAQ nuevas (comparación y entidad): las dos consultas que las IA hacen y
+  // que el sitio no respondía.
+  "How is Fittly different from other virtual try-on apps?":
+    ["Was unterscheidet Fittly von anderen Anprobe-Apps?",
+     "Qu'est-ce qui différencie Fittly des autres apps d'essayage virtuel ?",
+     "O que diferencia a Fittly de outros apps de provador virtual?"],
+  "The try-on and the size recommendation are the same widget, not a main feature plus an extra. The shopper sees the garment on and gets a size computed from that garment's real measurements in the same flow. Size recommendation is also never metered on any plan, the install is one step because Fittly scans your catalog on its own, and the widget ships in five languages. There is a comparison against the other apps in the category, with Shopify App Store data, at /en/shopify-virtual-try-on-apps-compared.":
+    ["Anprobe und Größenempfehlung sind dasselbe Widget, nicht eine Hauptfunktion plus ein Extra. Der Kunde sieht das Kleidungsstück getragen und bekommt im selben Ablauf eine Größe, die aus den echten Maßen genau dieses Teils berechnet wird. Die Größenempfehlung wird außerdem in keinem Plan abgerechnet, die Installation ist ein Schritt, weil Fittly deinen Katalog selbst scannt, und das Widget gibt es in fünf Sprachen. Ein Vergleich mit den anderen Apps der Kategorie, mit Daten aus dem Shopify App Store, steht unter /en/shopify-virtual-try-on-apps-compared (auf Englisch).",
+     "L'essayage et la recommandation de taille sont le même widget, pas une fonction principale plus un extra. Le client voit le vêtement porté et reçoit dans le même parcours une taille calculée à partir des mesures réelles de ce vêtement précis. La recommandation de taille n'est jamais facturée, quel que soit le plan, l'installation tient en une étape car Fittly scanne votre catalogue tout seul, et le widget existe en cinq langues. Un comparatif avec les autres apps de la catégorie, avec les données du Shopify App Store, se trouve sur /en/shopify-virtual-try-on-apps-compared (en anglais).",
+     "O provador e a recomendação de tamanho são o mesmo widget, não uma função principal mais um extra. O cliente vê a peça vestida e recebe no mesmo fluxo um tamanho calculado com as medidas reais daquela peça. A recomendação de tamanho também nunca é cobrada por uso em nenhum plano, a instalação é de um passo porque a Fittly escaneia seu catálogo sozinha, e o widget vem em cinco idiomas. Há um comparativo com os outros apps da categoria, com os dados da Shopify App Store, em /en/shopify-virtual-try-on-apps-compared (em inglês)."],
+  "Who is behind Fittly?":
+    ["Wer steckt hinter Fittly?", "Qui est derrière Fittly ?", "Quem está por trás da Fittly?"],
+  "Fittly SpA, a Chilean company founded in May 2026. Fittly is its only product. It is a new app: as of August 2026 it has 1 public review on the Shopify App Store, at 5 stars. We do not publish conversion-lift percentages because we have not measured them in a controlled way yet.":
+    ["Fittly SpA, ein chilenisches Unternehmen, gegründet im Mai 2026. Fittly ist sein einziges Produkt. Es ist eine neue App: Stand August 2026 gibt es 1 öffentliche Bewertung im Shopify App Store, mit 5 Sternen. Wir veröffentlichen keine Prozentzahlen zur Conversion-Steigerung, weil wir sie noch nicht kontrolliert gemessen haben.",
+     "Fittly SpA, une entreprise chilienne fondée en mai 2026. Fittly est son seul produit. C'est une app récente : en août 2026 elle compte 1 avis public sur le Shopify App Store, noté 5 étoiles. Nous ne publions pas de pourcentages de hausse de conversion, car nous ne les avons pas encore mesurés de façon contrôlée.",
+     "Fittly SpA, uma empresa chilena fundada em maio de 2026. A Fittly é seu único produto. É um app novo: em agosto de 2026 tem 1 avaliação pública na Shopify App Store, com 5 estrelas. Não publicamos percentuais de aumento de conversão porque ainda não os medimos de forma controlada."],
+
+  // featureList del schema: lista de capacidades lista para extraer
+  "AI virtual try-on on the shopper's own photo or on 8 body types":
+    ["KI-Anprobe auf dem eigenen Foto des Kunden oder auf 8 Körpertypen",
+     "Essayage virtuel par IA sur la photo du client ou sur 8 morphologies",
+     "Provador virtual com IA na foto do próprio cliente ou em 8 tipos de corpo"],
+  "Size recommendation computed from each garment's real measurements, never metered":
+    ["Größenempfehlung aus den echten Maßen jedes Kleidungsstücks, nie abgerechnet",
+     "Recommandation de taille calculée sur les mesures réelles de chaque vêtement, jamais facturée",
+     "Recomendação de tamanho calculada com as medidas reais de cada peça, nunca cobrada por uso"],
+  "One-step install: enable the app embed and Fittly scans the catalog on its own":
+    ["Installation in einem Schritt: App-Embed aktivieren, Fittly scannt den Katalog selbst",
+     "Installation en une étape : activez l'app embed, Fittly scanne le catalogue tout seul",
+     "Instalação em um passo: ative o app embed e a Fittly escaneia o catálogo sozinha"],
+  "Automatic reading of size charts already inside the product photos":
+    ["Automatisches Auslesen der Größentabellen, die schon in den Produktfotos stecken",
+     "Lecture automatique des guides de tailles déjà présents dans les photos produit",
+     "Leitura automática das tabelas de medidas que já estão dentro das fotos de produto"],
+  "Size demand analytics, including the ideal size that was out of stock":
+    ["Analyse der Größennachfrage, inklusive der Wunschgröße, die nicht auf Lager war",
+     "Analyse de la demande par taille, y compris la taille idéale en rupture de stock",
+     "Analítica de demanda de tamanhos, incluindo o tamanho ideal que estava sem estoque"],
+  "Widget in Spanish, English, Portuguese, German and French, following the store's language":
+    ["Widget auf Spanisch, Englisch, Portugiesisch, Deutsch und Französisch, der Shop-Sprache folgend",
+     "Widget en espagnol, anglais, portugais, allemand et français, suivant la langue de la boutique",
+     "Widget em espanhol, inglês, português, alemão e francês, seguindo o idioma da loja"],
+  "Shopper photos deleted within 72 hours, never shared with the store":
+    ["Kundenfotos werden binnen 72 Stunden gelöscht und nie mit dem Shop geteilt",
+     "Photos des clients supprimées sous 72 heures, jamais partagées avec la boutique",
+     "Fotos dos clientes apagadas em até 72 horas, nunca compartilhadas com a loja"],
+
   // cierre + footer
   "Try it on your store today.": ["Probier es heute in deinem Shop.", "Essayez-le aujourd'hui dans votre boutique.", "Experimente hoje na sua loja."],
   "Install Fittly from the Shopify App Store and run your first try-on in minutes. Free to install, no monthly fee.":
@@ -324,7 +371,7 @@ const D = {
   "Install</a>": ["Installieren</a>", "Installer</a>", "Instalar</a>"],
   "Virtual try-on guide (ES)": ["Anprobe-Guide (ES)", "Guide de l'essayage (ES)", "Guia do provador (ES)"],
   "Size guide (ES)": ["Größen-Guide (ES)", "Guide des tailles (ES)", "Guia de tamanhos (ES)"],
-  "2026 comparison (ES)": ["Vergleich 2026 (ES)", "Comparatif 2026 (ES)", "Comparativo 2026 (ES)"],
+  "2026 app comparison": ["App-Vergleich 2026 (EN)", "Comparatif des apps 2026 (EN)", "Comparativo de apps 2026 (EN)"],
   "© 2026 Fittly · Made for Shopify": ["© 2026 Fittly · Gemacht für Shopify", "© 2026 Fittly · Conçu pour Shopify", "© 2026 Fittly · Feito para Shopify"],
 };
 

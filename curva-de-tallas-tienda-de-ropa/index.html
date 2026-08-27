@@ -88,61 +88,6 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Curva de tallas: cuánto comprar de cada talla",
-    "description": "Cómo se arma la curva de tallas de una tienda de ropa, por qué el historial de ventas viene contaminado por tus propios quiebres de stock, y cómo medir la demanda real por talla.",
-    "inLanguage": "es",
-    "author": {
-      "@type": "Organization",
-      "name": "Fittly"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Fittly",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.fittlyapp.com/assets/fittly-icon.png"
-      }
-    },
-    "datePublished": "2026-08-26",
-    "dateModified": "2026-08-26"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Qué es una curva de tallas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Es la proporción en la que se reparte una compra entre las distintas tallas de un mismo modelo. Se expresa como una relación, por ejemplo 1:2:2:1, que significa una unidad de la primera talla por cada dos de la segunda y la tercera y una de la cuarta."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Sirve usar mi historial de ventas para calcular la curva?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sirve más que una curva genérica, pero arrastra un sesgo: las ventas son la intersección entre la demanda y tu stock. Cada semana con una talla agotada registra cero ventas de esa talla, y ese cero entra al cálculo como si nadie la hubiera querido."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo se mide la demanda real por talla?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Con las consultas de talla en la ficha de producto. Cuando un comprador pide su talla, declara su demanda antes de que la compra ocurra, así que ese dato no depende de tu inventario. Fittly registra la talla ideal de cada persona esté disponible o no."
-        }
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
@@ -156,6 +101,91 @@
         "position": 2,
         "name": "Curva de tallas",
         "item": "https://www.fittlyapp.com/curva-de-tallas-tienda-de-ropa"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Curva de tallas: cuánto comprar de cada talla",
+    "inLanguage": "es",
+    "datePublished": "2026-08-24",
+    "dateModified": "2026-08-27",
+    "author": {
+      "@type": "Organization",
+      "name": "Fittly",
+      "url": "https://www.fittlyapp.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fittly SpA",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.fittlyapp.com/assets/fittly-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.fittlyapp.com/curva-de-tallas-tienda-de-ropa"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "es",
+    "dateModified": "2026-08-27",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es una curva de tallas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es la proporción en la que compras cada talla de un mismo modelo. Se escribe como una relación: 1:2:2:1 significa que por cada unidad de la primera talla llevas dos de la segunda, dos de la tercera y una de la cuarta."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo se construye una curva de tallas con tus ventas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apenas tienes historial, todas las guías dicen lo mismo: calcula qué porcentaje de tus ventas fue cada talla la temporada pasada y reparte la compra siguiente con esas proporciones. Si el 35% fue M, compra 35% de M."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Por qué tu historial de ventas viene contaminado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tus ventas no son tu demanda. Tus ventas son la intersección entre lo que la gente quería y lo que tú tenías. Cada vez que una talla se agota, todas las semanas siguientes registran cero ventas de esa talla, y ese cero entra al cálculo como si nadie la hubiera querido."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué se puede medir en vez de deducir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hay un momento en que el comprador declara su talla sin que la compra haya ocurrido todavía: cuando pregunta cuál es la suya. Si tu tienda tiene una recomendación de talla en la ficha de producto, cada consulta es una declaración de demanda, y esa declaración no depende de tu inventario."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo lo hace Fittly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fittly es una app de Shopify que calcula la talla de cada comprador con las medidas reales de cada prenda. Registra la talla ideal de cada persona, esté disponible o no, así que la analítica mide demanda y no disponibilidad."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué mirar primero?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El número más accionable no es la curva, es el segundo panel: en qué productos y cuántas veces faltó la talla ideal. Eso es reposición concreta, no un ajuste de proporciones."
+        }
       }
     ]
   }
@@ -177,15 +207,15 @@
     <h1>Curva de tallas: cuánto comprar de cada talla</h1>
     <p class="intro">La curva de tallas es la proporción en que repartes tu compra entre S, M, L y el resto. Casi todas las guías coinciden en cómo calcularla: mirando tu historial de ventas. Esta guía explica por qué ese método arrastra un error que se agranda solo, y qué se puede medir en su lugar.</p>
 
-    <h2>Qué es una curva de tallas</h2>
+    <h2>¿Qué es una curva de tallas?</h2>
     <p>Es la proporción en la que compras cada talla de un mismo modelo. Se escribe como una relación: <strong>1:2:2:1</strong> significa que por cada unidad de la primera talla llevas dos de la segunda, dos de la tercera y una de la cuarta.</p>
     <p>Cuando una tienda parte sin historial, la recomendación estándar del sector es una curva de campana: pocas tallas extremas, muchas del medio. Para cinco tallas suele ser 1:2:3:2:1. Es un punto de partida razonable, pero es exactamente eso: un supuesto sobre cómo es tu clientela, no una medición.</p>
 
-    <h2>El método estándar: construirla con tus ventas</h2>
+    <h2>¿Cómo se construye una curva de tallas con tus ventas?</h2>
     <p>Apenas tienes historial, todas las guías dicen lo mismo: calcula qué porcentaje de tus ventas fue cada talla la temporada pasada y reparte la compra siguiente con esas proporciones. Si el 35% fue M, compra 35% de M.</p>
     <p>Es mejor que la curva de campana genérica, porque usa datos de tu tienda. Y es el consejo correcto si es el único dato que tienes. El problema es lo que ese dato no es.</p>
 
-    <h2>Por qué tu historial de ventas viene contaminado</h2>
+    <h2>¿Por qué tu historial de ventas viene contaminado?</h2>
     <p>Tus ventas no son tu demanda. Tus ventas son <strong>la intersección entre lo que la gente quería y lo que tú tenías</strong>. Cada vez que una talla se agota, todas las semanas siguientes registran cero ventas de esa talla, y ese cero entra al cálculo como si nadie la hubiera querido.</p>
     <p>No es una observación nueva: la propia mejor práctica del sector lo reconoce, y su solución es descartar datos.</p>
     <blockquote class="cita">Construye la curva a partir de demanda limpia, usando solo las semanas en que todas las tallas estuvieron en stock y nada estaba rebajado.<cite>Recomendación estándar de planificación de surtido en moda</cite></blockquote>
@@ -195,7 +225,7 @@
     <p>Mientras tanto pasa lo contrario con las tallas del medio: la persona que quería XL y no lo encontró se lleva una L, o una M. Esa venta se anota como demanda de M. Tu curva no solo subestima el XL, además <strong>infla la M con compradores que no eran de M</strong>.</p>
     <p>Y el filtro de las semanas con stock completo no arregla lo peor: las tallas que nunca compraste. Si nunca tuviste XXL, no hay ninguna semana que puedas mirar.</p>
 
-    <h2>Qué se puede medir en vez de deducir</h2>
+    <h2>¿Qué se puede medir en vez de deducir?</h2>
     <p>Hay un momento en que el comprador declara su talla sin que la compra haya ocurrido todavía: cuando pregunta cuál es la suya. Si tu tienda tiene una recomendación de talla en la ficha de producto, cada consulta es una declaración de demanda, y esa declaración <strong>no depende de tu inventario</strong>.</p>
     <p>Eso permite dos lecturas que el historial de ventas no puede dar. La primera es la curva de demanda real, talla por talla y producto por producto. La segunda es más específica: cuántas veces la talla ideal de alguien estaba agotada. Esa demanda no deja rastro en ningún otro sistema, porque no llegó a haber carrito ni búsqueda ni pedido: no pasó nada que registrar.</p>
     <div class="dv">
@@ -231,12 +261,12 @@
       <div class="dv-note">Leído por las ventas, la talla top es la M. Leído por la demanda, es la <b>XL</b>, que nunca estuvo disponible. La M aparece inflada justamente porque absorbió a los compradores de XL que no encontraron la suya.</div>
     </div>
 
-    <h2>Cómo lo hace Fittly</h2>
+    <h2>¿Cómo lo hace Fittly?</h2>
     <p>Fittly es una app de Shopify que calcula la talla de cada comprador con las medidas reales de cada prenda. Registra la talla <strong>ideal</strong> de cada persona, esté disponible o no, así que la analítica mide demanda y no disponibilidad.</p>
     <p>El panel muestra la curva por escala y por producto, y un segundo panel con las veces que la talla ideal estaba agotada y hubo que ofrecer la más cercana. Cada comprador cuenta una vez por producto, con su última talla, para que un indeciso no distorsione el conteo.</p>
     <div class="aviso">Un aviso honesto sobre volumen: con menos de unas 50 recomendaciones, los porcentajes se mueven mucho de una semana a otra y no sirven para decidir una compra. El panel lo advierte en pantalla. La curva se vuelve confiable cuando hay tráfico detrás, no el primer día.</div>
 
-    <h2>Qué mirar primero</h2>
+    <h2>¿Qué mirar primero?</h2>
     <p>El número más accionable no es la curva, es el segundo panel: en qué productos y cuántas veces faltó la talla ideal. Eso es reposición concreta, no un ajuste de proporciones.</p>
     <p>Después conviene mirar los productos que se salen del patrón. Si una prenda vuelve siempre una talla más arriba que el resto de su escala, esa prenda talla chico. Suele ser la que genera devoluciones sin que nadie sepa por qué.</p>
 

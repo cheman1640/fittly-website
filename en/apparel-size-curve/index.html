@@ -88,61 +88,6 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Size curve: how many of each size to buy",
-    "description": "How to build an apparel size curve, why your sales history comes contaminated by your own stockouts, and how to measure real demand size by size.",
-    "inLanguage": "en",
-    "author": {
-      "@type": "Organization",
-      "name": "Fittly"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Fittly",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.fittlyapp.com/assets/fittly-icon.png"
-      }
-    },
-    "datePublished": "2026-08-26",
-    "dateModified": "2026-08-26"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a size curve?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It is the ratio in which a buy is split across the different sizes of the same style. It is expressed as a relationship, for example 1:2:2:1, meaning one unit of the first size for every two of the second and third and one of the fourth."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is it fine to use my sales history to calculate the curve?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It beats a generic curve, but it carries a bias: sales are the intersection of demand and your stock. Every week with a size out of stock records zero sales of that size, and that zero enters the calculation as if nobody had wanted it."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you measure real demand by size?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Through size queries on the product page. When a shopper asks for their size, they declare demand before the purchase happens, so that data does not depend on your inventory. Fittly records each person's ideal size whether it is available or not."
-        }
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
@@ -156,6 +101,91 @@
         "position": 2,
         "name": "Size curve",
         "item": "https://www.fittlyapp.com/en/apparel-size-curve"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Size curve: how many of each size to buy",
+    "inLanguage": "en",
+    "datePublished": "2026-08-24",
+    "dateModified": "2026-08-27",
+    "author": {
+      "@type": "Organization",
+      "name": "Fittly",
+      "url": "https://www.fittlyapp.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fittly SpA",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.fittlyapp.com/assets/fittly-icon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.fittlyapp.com/en/apparel-size-curve"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "en",
+    "dateModified": "2026-08-27",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a size curve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is the ratio in which you buy each size of the same style. It is written as a relationship: 1:2:2:1 means that for every unit of the first size you take two of the second, two of the third and one of the fourth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you build a size curve from your sales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As soon as you have history, every guide says the same thing: work out what percentage of last season's sales each size was, and split the next buy along those shares. If 35% was M, buy 35% M."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does your sales history come contaminated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your sales are not your demand. Your sales are the intersection of what people wanted and what you had. Every time a size runs out, every following week records zero sales of that size, and that zero enters the calculation as if nobody had wanted it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What can be measured instead of inferred?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is a moment when a shopper declares their size before the purchase has happened: when they ask which one is theirs. If your store has a size recommendation on the product page, every query is a declaration of demand, and that declaration does not depend on your inventory."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Fittly do it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fittly is a Shopify app that calculates each shopper's size from the real measurements of each garment. It records each person's ideal size, available or not, so the analytics measure demand and not availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should you look at first?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most actionable number is not the curve, it is the second panel: on which products and how many times the ideal size was missing. That is concrete restocking, not a ratio adjustment."
+        }
       }
     ]
   }
@@ -177,15 +207,15 @@
     <h1>Size curve: how many of each size to buy</h1>
     <p class="intro">A size curve is the ratio in which you split a buy across S, M, L and the rest. Nearly every guide agrees on how to calculate it: look at your sales history. This guide explains why that method carries an error that compounds on itself, and what can be measured instead.</p>
 
-    <h2>What a size curve is</h2>
+    <h2>What is a size curve?</h2>
     <p>It is the ratio in which you buy each size of the same style. It is written as a relationship: <strong>1:2:2:1</strong> means that for every unit of the first size you take two of the second, two of the third and one of the fourth.</p>
     <p>When a store starts with no history, the standard advice is a bell curve: few extreme sizes, many middle ones. For five sizes it is usually 1:2:3:2:1. It is a reasonable starting point, but that is exactly what it is: an assumption about who your customers are, not a measurement.</p>
 
-    <h2>The standard method: build it from your sales</h2>
+    <h2>How do you build a size curve from your sales?</h2>
     <p>As soon as you have history, every guide says the same thing: work out what percentage of last season's sales each size was, and split the next buy along those shares. If 35% was M, buy 35% M.</p>
     <p>It beats a generic bell curve, because it uses your own store's data. And it is the right advice if that is the only data you have. The problem is what that data is not.</p>
 
-    <h2>Why your sales history comes contaminated</h2>
+    <h2>Why does your sales history come contaminated?</h2>
     <p>Your sales are not your demand. Your sales are <strong>the intersection of what people wanted and what you had</strong>. Every time a size runs out, every following week records zero sales of that size, and that zero enters the calculation as if nobody had wanted it.</p>
     <p>This is not a new observation: the industry's own best practice acknowledges it, and its solution is to discard data.</p>
     <blockquote class="cita">Build the curve from clean demand, using only weeks when every size was in stock and nothing was on markdown.<cite>Standard assortment planning advice in fashion retail</cite></blockquote>
@@ -195,7 +225,7 @@
     <p>Meanwhile the opposite happens with the middle sizes: the person who wanted XL and did not find it takes an L, or an M. That sale is recorded as M demand. Your curve does not just underestimate XL, it also <strong>inflates M with buyers who were never M</strong>.</p>
     <p>And the clean-weeks filter does not fix the worst case: the sizes you never bought. If you never stocked XXL, there is no week you can look at.</p>
 
-    <h2>What can be measured instead of inferred</h2>
+    <h2>What can be measured instead of inferred?</h2>
     <p>There is a moment when a shopper declares their size before the purchase has happened: when they ask which one is theirs. If your store has a size recommendation on the product page, every query is a declaration of demand, and that declaration <strong>does not depend on your inventory</strong>.</p>
     <p>That allows two readings sales history cannot give. The first is the real demand curve, size by size and product by product. The second is more specific: how many times someone's ideal size was out of stock. That demand leaves no trace in any other system, because there was never a cart, a search or an order: nothing happened to record.</p>
     <div class="dv">
@@ -231,12 +261,12 @@
       <div class="dv-note">Read through sales, the top size is M. Read through demand, it is <b>XL</b>, which was never available. M looks inflated precisely because it absorbed the XL buyers who could not find theirs.</div>
     </div>
 
-    <h2>How Fittly does it</h2>
+    <h2>How does Fittly do it?</h2>
     <p>Fittly is a Shopify app that calculates each shopper's size from the real measurements of each garment. It records each person's <strong>ideal</strong> size, available or not, so the analytics measure demand and not availability.</p>
     <p>The panel shows the curve by scale and by product, plus a second panel with the times the ideal size was out of stock and the closest one had to be offered. Each shopper counts once per product, with their latest size, so an indecisive visitor does not distort the count.</p>
     <div class="aviso">An honest note on volume: with fewer than about 50 recommendations, the percentages swing a lot week to week and are not fit for a buying decision. The panel warns about it on screen. The curve becomes reliable when there is traffic behind it, not on day one.</div>
 
-    <h2>What to look at first</h2>
+    <h2>What should you look at first?</h2>
     <p>The most actionable number is not the curve, it is the second panel: on which products and how many times the ideal size was missing. That is concrete restocking, not a ratio adjustment.</p>
     <p>Then it pays to look at the products that break the pattern. If one garment consistently comes back a size up from the rest of its scale, that garment runs small. It is usually the one generating returns without anyone knowing why.</p>
 
