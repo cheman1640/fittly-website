@@ -96,6 +96,13 @@
     .doc table a:hover { color: #fff; }
     .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 20px; }
     .otro-idioma:hover { color: #fff; }
+    .doc td .nota { display: block; font-size: 12px; font-weight: 600; color: var(--faint); margin-top: 3px; }
+    .aviso { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; font-size: 13.5px; font-weight: 500; color: var(--muted); line-height: 1.65; margin-top: 4px; }
+    .verif { font-size: 12.5px; font-weight: 700; color: var(--faint); margin-top: 14px; letter-spacing: 0.02em; }
+    .doc table a { color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--border-2); }
+    .doc table a:hover { color: #fff; }
+    .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 20px; }
+    .otro-idioma:hover { color: #fff; }
     .doc h2 { font-size: 20px; margin: 38px 0 10px; }
     .act { font-size: 12.5px; font-weight: 700; color: var(--faint); margin-top: 14px; }
     .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 30px; }
@@ -164,7 +171,7 @@
         "name": "¿Cuánto cuesta?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Primero tienes 14 días gratis o 75 try-ons, lo que se cumpla antes, sin tarjeta. Después la instalación sigue siendo gratuita y no hay fee mensual obligatorio: en el plan Free pagas $0,35 por try-on usado, con un tope de gasto mensual que tú defines. Si tu volumen crece, Starter ($9/mes) baja la tarifa a $0,22 y Growth ($19/mes) a $0,18, sin límites de try-ons. La recomendación de talla viene con Starter y Growth y ahí nunca se cobra por uso, así que no te gasta una generación; el plan Free es solo probador. Los try-ons estándar además se cachean, así que los resultados repetidos se sirven sin costo extra."
+          "text": "La instalación es gratuita y no hay fee mensual obligatorio. Antes de elegir plan pruebas Fittly con 15 try-ons gratis sobre tus propios productos, dentro del editor de temas. Cuando activas un plan, en el Free pagas $0,35 por try-on usado, con un tope de gasto mensual que tú defines. Si tu volumen crece, Starter ($9/mes) baja la tarifa a $0,22 y Growth ($19/mes) a $0,18, sin límites de try-ons. La recomendación de talla está incluida en todos los planes, Free incluido, y nunca se cobra por uso: aconsejar una talla no te gasta una generación. Los try-ons estándar además se cachean, así que los resultados repetidos se sirven sin costo extra."
         }
       },
       {
@@ -188,7 +195,7 @@
         "name": "¿En qué se diferencia Fittly de otras apps de probador virtual?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "En que el probador y la recomendación de talla son el mismo widget, no una función principal y un extra. El comprador ve la prenda puesta y recibe su talla calculada con las medidas reales de esa prenda en el mismo flujo. Además la recomendación de talla viene en los planes de $9 y $19 y ahí no se cobra por uso, así que aconsejar una talla no te gasta una generación, la instalación es de un paso porque Fittly escanea tu catálogo solo, y el widget viene en cinco idiomas. Hay una comparativa con las otras apps de la categoría, con los datos del App Store, en /comparativa-apps-probador-virtual-shopify."
+          "text": "En que el probador y la recomendación de talla son el mismo widget, no una función principal y un extra. El comprador ve la prenda puesta y recibe su talla calculada con las medidas reales de esa prenda en el mismo flujo. Además la recomendación de talla está incluida en todos los planes y nunca se cobra por uso, así que aconsejar una talla no te gasta una generación, la instalación es de un paso y puedes probarla con 15 try-ons gratis en el editor antes de elegir plan porque Fittly escanea tu catálogo solo, y el widget viene en cinco idiomas. Hay una comparativa con las otras apps de la categoría, con los datos del App Store, en /comparativa-apps-probador-virtual-shopify."
         }
       },
       {
@@ -204,7 +211,7 @@
         "name": "¿Tengo que subir mis guías de talla?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Fittly escanea tu catálogo por su cuenta y lee las guías de talla que ya están dentro de tus propias fotos de producto, así que no tienes que subir ni transcribir ninguna tabla. El escaneo arranca solo, con el primer try-on real de tu tienda."
+          "text": "No. Fittly escanea tu catálogo por su cuenta y lee las guías de talla que ya están dentro de tus propias fotos de producto, así que no tienes que subir ni transcribir ninguna tabla. En la prueba del editor lee el producto que estás mirando; el escaneo completo del catálogo arranca solo cuando activas un plan."
         }
       },
       {
@@ -228,7 +235,7 @@
         "name": "¿Puedo probarlo antes de pagar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sí. Tienes 14 días gratis o 75 try-ons, lo que se cumpla antes, sin tarjeta. Cuando el trial termina no te pasa a un plan pagado: caes al plan Free, que no tiene fee mensual y cobra $0,35 por try-on usado."
+          "text": "Sí, y sin tarjeta ni fecha de vencimiento. Cuando activas el app embed puedes hacer 15 try-ons gratis sobre tus propios productos, ahí mismo en el editor de temas de Shopify. Esas pruebas son privadas: solo las ves tú, y el widget aparece para tus clientes recién cuando activas un plan. Son 15 en total por tienda, no 15 al día. Antes había un trial de 14 días; lo quitamos el 27 de agosto de 2026 porque te obligaba a esperar dos semanas para ver algo que ahora ves el primer día."
         }
       }
     ]
@@ -262,7 +269,7 @@
     <p>Sí. Fittly es una app nativa de Shopify que se instala desde el App Store y aparece en tu página de producto sin tocar código, compatible con cualquier tema.</p>
 
     <h2>¿Cuánto cuesta?</h2>
-    <p>Primero tienes 14 días gratis o 75 try-ons, lo que se cumpla antes, sin tarjeta. Después la instalación sigue siendo gratuita y no hay fee mensual obligatorio: en el plan Free pagas $0,35 por try-on usado, con un tope de gasto mensual que tú defines. Si tu volumen crece, Starter ($9/mes) baja la tarifa a $0,22 y Growth ($19/mes) a $0,18, sin límites de try-ons. La recomendación de talla viene con Starter y Growth y ahí nunca se cobra por uso, así que no te gasta una generación; el plan Free es solo probador. Los try-ons estándar además se cachean, así que los resultados repetidos se sirven sin costo extra.</p>
+    <p>La instalación es gratuita y no hay fee mensual obligatorio. Antes de elegir plan pruebas Fittly con 15 try-ons gratis sobre tus propios productos, dentro del editor de temas. Cuando activas un plan, en el Free pagas $0,35 por try-on usado, con un tope de gasto mensual que tú defines. Si tu volumen crece, Starter ($9/mes) baja la tarifa a $0,22 y Growth ($19/mes) a $0,18, sin límites de try-ons. La recomendación de talla está incluida en todos los planes, Free incluido, y nunca se cobra por uso: aconsejar una talla no te gasta una generación. Los try-ons estándar además se cachean, así que los resultados repetidos se sirven sin costo extra.</p>
 
     <h2>¿En qué idiomas está el probador?</h2>
     <p>El widget está en español, inglés, portugués, alemán y francés, incluido en todos los planes. Toma automáticamente el idioma que tu tienda Shopify le muestra a cada visitante, así que un cliente en Alemania ve el probador en alemán sin que configures nada.</p>
@@ -271,13 +278,13 @@
     <p>Las fotos del shopper se borran automáticamente a las 72 horas y nunca se comparten con la tienda. La cuenta cross-store guarda solo el modelo y las medidas que el usuario decide guardar, y puede exportarlos o borrarlos cuando quiera.</p>
 
     <h2>¿En qué se diferencia Fittly de otras apps de probador virtual?</h2>
-    <p>En que el probador y la recomendación de talla son el mismo widget, no una función principal y un extra. El comprador ve la prenda puesta y recibe su talla calculada con las medidas reales de esa prenda en el mismo flujo. Además la recomendación de talla viene en los planes de $9 y $19 y ahí no se cobra por uso, así que aconsejar una talla no te gasta una generación, la instalación es de un paso porque Fittly escanea tu catálogo solo, y el widget viene en cinco idiomas. Hay una comparativa con las otras apps de la categoría, con los datos del App Store, en <a href="/comparativa-apps-probador-virtual-shopify">/comparativa-apps-probador-virtual-shopify</a>.</p>
+    <p>En que el probador y la recomendación de talla son el mismo widget, no una función principal y un extra. El comprador ve la prenda puesta y recibe su talla calculada con las medidas reales de esa prenda en el mismo flujo. Además la recomendación de talla está incluida en todos los planes y nunca se cobra por uso, así que aconsejar una talla no te gasta una generación, la instalación es de un paso y puedes probarla con 15 try-ons gratis en el editor antes de elegir plan porque Fittly escanea tu catálogo solo, y el widget viene en cinco idiomas. Hay una comparativa con las otras apps de la categoría, con los datos del App Store, en <a href="/comparativa-apps-probador-virtual-shopify">/comparativa-apps-probador-virtual-shopify</a>.</p>
 
     <h2>¿Quién está detrás de Fittly?</h2>
     <p>Fittly SpA, una empresa chilena fundada en mayo de 2026. Fittly es su único producto. Es una app nueva: a agosto de 2026 tiene 1 reseña pública en el App Store de Shopify, con 5 estrellas. No publicamos porcentajes de aumento de conversión porque todavía no los hemos medido de forma controlada.</p>
 
     <h2>¿Tengo que subir mis guías de talla?</h2>
-    <p>No. Fittly escanea tu catálogo por su cuenta y lee las guías de talla que ya están dentro de tus propias fotos de producto, así que no tienes que subir ni transcribir ninguna tabla. El escaneo arranca solo, con el primer try-on real de tu tienda.</p>
+    <p>No. Fittly escanea tu catálogo por su cuenta y lee las guías de talla que ya están dentro de tus propias fotos de producto, así que no tienes que subir ni transcribir ninguna tabla. En la prueba del editor lee el producto que estás mirando; el escaneo completo del catálogo arranca solo cuando activas un plan.</p>
 
     <h2>¿Cuánto se demora instalarlo?</h2>
     <p>Un paso: activas el app embed en el editor de temas de Shopify y guardas. No hay que tocar código ni configurar nada más, y a partir de ahí Fittly se encarga del resto. Hay una guía con el proceso completo en <a href="/instalar-probador-virtual-shopify">/instalar-probador-virtual-shopify</a>.</p>
@@ -286,13 +293,13 @@
     <p>Sí. Tú defines un tope de gasto mensual y Fittly no lo pasa. Como el cobro es por try-on usado y no por un cupo fijo que compras por adelantado, el tope es lo que te da el control.</p>
 
     <h2>¿Puedo probarlo antes de pagar?</h2>
-    <p>Sí. Tienes 14 días gratis o 75 try-ons, lo que se cumpla antes, sin tarjeta. Cuando el trial termina no te pasa a un plan pagado: caes al plan Free, que no tiene fee mensual y cobra $0,35 por try-on usado.</p>
+    <p>Sí, y sin tarjeta ni fecha de vencimiento. Cuando activas el app embed puedes hacer 15 try-ons gratis sobre tus propios productos, ahí mismo en el editor de temas de Shopify. Esas pruebas son privadas: solo las ves tú, y el widget aparece para tus clientes recién cuando activas un plan. Son 15 en total por tienda, no 15 al día. Antes había un trial de 14 días; lo quitamos el 27 de agosto de 2026 porque te obligaba a esperar dos semanas para ver algo que ahora ves el primer día.</p>
 
     <a class="otro-idioma" href="/en/faq">Read this FAQ in English →</a>
 
     <div class="cta-card">
       <div class="t">Pruébalo con tus propias prendas</div>
-      <div class="d">14 días gratis o 75 pruebas, sin tarjeta. Después la instalación sigue gratis y pagas solo los try-ons que usan tus clientes.</div>
+      <div class="d">15 try-ons gratis en el editor de temas, sin tarjeta. La instalación es gratis y después pagas solo los try-ons que usan tus clientes.</div>
       <a class="btn" href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Instalar Fittly en Shopify</a>
     </div>
 

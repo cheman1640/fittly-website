@@ -34,23 +34,23 @@ function delHome(archivo) {
 // Cada una responde algo ya publicado y verificado. Si no esta verificado, no va.
 const EXTRA_ES = [
   ["¿Tengo que subir mis guías de talla?",
-   "No. Fittly escanea tu catálogo por su cuenta y lee las guías de talla que ya están dentro de tus propias fotos de producto, así que no tienes que subir ni transcribir ninguna tabla. El escaneo arranca solo, con el primer try-on real de tu tienda."],
+   "No. Fittly escanea tu catálogo por su cuenta y lee las guías de talla que ya están dentro de tus propias fotos de producto, así que no tienes que subir ni transcribir ninguna tabla. En la prueba del editor lee el producto que estás mirando; el escaneo completo del catálogo arranca solo cuando activas un plan."],
   ["¿Cuánto se demora instalarlo?",
    "Un paso: activas el app embed en el editor de temas de Shopify y guardas. No hay que tocar código ni configurar nada más, y a partir de ahí Fittly se encarga del resto. Hay una guía con el proceso completo en /instalar-probador-virtual-shopify."],
   ["¿Puedo controlar cuánto gasto al mes?",
    "Sí. Tú defines un tope de gasto mensual y Fittly no lo pasa. Como el cobro es por try-on usado y no por un cupo fijo que compras por adelantado, el tope es lo que te da el control."],
   ["¿Puedo probarlo antes de pagar?",
-   "Sí. Tienes 14 días gratis o 75 try-ons, lo que se cumpla antes, sin tarjeta. Cuando el trial termina no te pasa a un plan pagado: caes al plan Free, que no tiene fee mensual y cobra $0,35 por try-on usado."],
+   "Sí, y sin tarjeta ni fecha de vencimiento. Cuando activas el app embed puedes hacer 15 try-ons gratis sobre tus propios productos, ahí mismo en el editor de temas de Shopify. Esas pruebas son privadas: solo las ves tú, y el widget aparece para tus clientes recién cuando activas un plan. Son 15 en total por tienda, no 15 al día. Antes había un trial de 14 días; lo quitamos el 27 de agosto de 2026 porque te obligaba a esperar dos semanas para ver algo que ahora ves el primer día."],
 ];
 const EXTRA_EN = [
   ["Do I have to upload my size charts?",
-   "No. Fittly scans your catalog on its own and reads the size charts that are already inside your own product photos, so you never upload or retype a table. The scan starts by itself, on your store's first real try-on."],
+   "No. Fittly scans your catalog on its own and reads the size charts that are already inside your own product photos, so you never upload or retype a table. During the editor preview it reads the product you are looking at; the full catalog scan starts by itself once you activate a plan."],
   ["How long does it take to install?",
    "One step: you enable the app embed in the Shopify theme editor and save. There is no code to touch and nothing else to configure, and from there Fittly handles the rest. There is a walkthrough of the whole process at /en/install-virtual-try-on-shopify."],
   ["Can I control how much I spend per month?",
    "Yes. You set a monthly spend cap and Fittly does not go past it. Because billing is per try-on used rather than a fixed allowance you buy up front, the cap is what gives you control."],
   ["Can I try it before paying?",
-   "Yes. You get 14 days free or 75 try-ons, whichever comes first, with no card. When the trial ends you are not moved onto a paid plan: you land on the Free plan, which has no monthly fee and charges $0.35 per try-on used."],
+   "Yes, with no card and no expiry date. Once you enable the app embed you can run 15 free try-ons on your own products, right there in the Shopify theme editor. Those previews are private: only you see them, and the widget appears for your shoppers only once you activate a plan. It is 15 in total per shop, not 15 a day. There used to be a 14-day trial; we removed it on August 27, 2026 because it made you wait two weeks to see something you now see on day one."],
 ];
 
 const T = {
@@ -64,7 +64,7 @@ const T = {
     cta: "Instalar en Shopify",
     otraTxt: "Read this FAQ in English →",
     ctaT: "Pruébalo con tus propias prendas",
-    ctaD: "14 días gratis o 75 pruebas, sin tarjeta. Después la instalación sigue gratis y pagas solo los try-ons que usan tus clientes.",
+    ctaD: "15 try-ons gratis en el editor de temas, sin tarjeta. La instalación es gratis y después pagas solo los try-ons que usan tus clientes.",
     ctaB: "Instalar Fittly en Shopify",
     rel: "Seguir leyendo",
     rels: [
@@ -86,7 +86,7 @@ const T = {
     cta: "Install on Shopify",
     otraTxt: "Leer estas preguntas en español →",
     ctaT: "Try it on your own garments",
-    ctaD: "14 days free or 75 try-ons, no card. After that installing is still free and you pay only for the try-ons your shoppers use.",
+    ctaD: "15 free try-ons in the theme editor, no card. Installing is free and after that you pay only for the try-ons your shoppers use.",
     ctaB: "Install Fittly on Shopify",
     rel: "Keep reading",
     rels: [

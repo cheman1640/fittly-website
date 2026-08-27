@@ -96,6 +96,13 @@
     .doc table a:hover { color: #fff; }
     .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 20px; }
     .otro-idioma:hover { color: #fff; }
+    .doc td .nota { display: block; font-size: 12px; font-weight: 600; color: var(--faint); margin-top: 3px; }
+    .aviso { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; font-size: 13.5px; font-weight: 500; color: var(--muted); line-height: 1.65; margin-top: 4px; }
+    .verif { font-size: 12.5px; font-weight: 700; color: var(--faint); margin-top: 14px; letter-spacing: 0.02em; }
+    .doc table a { color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--border-2); }
+    .doc table a:hover { color: #fff; }
+    .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 20px; }
+    .otro-idioma:hover { color: #fff; }
     .doc h2 { font-size: 20px; margin: 38px 0 10px; }
     .act { font-size: 12.5px; font-weight: 700; color: var(--faint); margin-top: 14px; }
     .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 30px; }
@@ -164,7 +171,7 @@
         "name": "How much does it cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You start with 14 days free or 75 try-ons, whichever comes first, no card. After that, installing is still free and there is no required monthly fee: on the Free plan you pay $0.35 per try-on used, with a monthly spend cap you define. As your volume grows, Starter ($9/mo) lowers the rate to $0.22 and Growth ($19/mo) to $0.18, with no try-on limits. Size recommendation comes with Starter and Growth and is never metered there, so it never costs you a generation; the Free plan is try-on only. Standard try-ons are also cached, so repeated results are served at no extra cost."
+          "text": "Installing is free and there is no required monthly fee. Before you pick a plan you try Fittly with 15 free try-ons on your own products, inside the theme editor. Once you activate a plan, on Free you pay $0.35 per try-on used, with a monthly spend cap you define. As your volume grows, Starter ($9/mo) lowers the rate to $0.22 and Growth ($19/mo) to $0.18, with no try-on limits. Size recommendation is included on every plan, Free included, and is never metered: advising a size never costs you a generation. Standard try-ons are also cached, so repeated results are served at no extra cost."
         }
       },
       {
@@ -188,7 +195,7 @@
         "name": "How is Fittly different from other virtual try-on apps?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The try-on and the size recommendation are the same widget, not a main feature plus an extra. The shopper sees the garment on and gets a size computed from that garment's real measurements in the same flow. Size recommendation comes with the $9 and $19 plans and is never metered there, so advising a size never costs you a generation, the install is one step because Fittly scans your catalog on its own, and the widget ships in five languages. There is a comparison against the other apps in the category, with Shopify App Store data, at /en/shopify-virtual-try-on-apps-compared."
+          "text": "The try-on and the size recommendation are the same widget, not a main feature plus an extra. The shopper sees the garment on and gets a size computed from that garment's real measurements in the same flow. Size recommendation is also included on every plan and never metered, so advising a size never costs you a generation, the install is one step and you can try it with 15 free try-ons in the editor before picking a plan because Fittly scans your catalog on its own, and the widget ships in five languages. There is a comparison against the other apps in the category, with Shopify App Store data, at /en/shopify-virtual-try-on-apps-compared."
         }
       },
       {
@@ -204,7 +211,7 @@
         "name": "Do I have to upload my size charts?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Fittly scans your catalog on its own and reads the size charts that are already inside your own product photos, so you never upload or retype a table. The scan starts by itself, on your store's first real try-on."
+          "text": "No. Fittly scans your catalog on its own and reads the size charts that are already inside your own product photos, so you never upload or retype a table. During the editor preview it reads the product you are looking at; the full catalog scan starts by itself once you activate a plan."
         }
       },
       {
@@ -228,7 +235,7 @@
         "name": "Can I try it before paying?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. You get 14 days free or 75 try-ons, whichever comes first, with no card. When the trial ends you are not moved onto a paid plan: you land on the Free plan, which has no monthly fee and charges $0.35 per try-on used."
+          "text": "Yes, with no card and no expiry date. Once you enable the app embed you can run 15 free try-ons on your own products, right there in the Shopify theme editor. Those previews are private: only you see them, and the widget appears for your shoppers only once you activate a plan. It is 15 in total per shop, not 15 a day. There used to be a 14-day trial; we removed it on August 27, 2026 because it made you wait two weeks to see something you now see on day one."
         }
       }
     ]
@@ -262,7 +269,7 @@
     <p>Yes. Fittly is a native Shopify app that installs from the App Store and shows on your product page without touching code, compatible with any theme.</p>
 
     <h2>How much does it cost?</h2>
-    <p>You start with 14 days free or 75 try-ons, whichever comes first, no card. After that, installing is still free and there is no required monthly fee: on the Free plan you pay $0.35 per try-on used, with a monthly spend cap you define. As your volume grows, Starter ($9/mo) lowers the rate to $0.22 and Growth ($19/mo) to $0.18, with no try-on limits. Size recommendation comes with Starter and Growth and is never metered there, so it never costs you a generation; the Free plan is try-on only. Standard try-ons are also cached, so repeated results are served at no extra cost.</p>
+    <p>Installing is free and there is no required monthly fee. Before you pick a plan you try Fittly with 15 free try-ons on your own products, inside the theme editor. Once you activate a plan, on Free you pay $0.35 per try-on used, with a monthly spend cap you define. As your volume grows, Starter ($9/mo) lowers the rate to $0.22 and Growth ($19/mo) to $0.18, with no try-on limits. Size recommendation is included on every plan, Free included, and is never metered: advising a size never costs you a generation. Standard try-ons are also cached, so repeated results are served at no extra cost.</p>
 
     <h2>What languages is the try-on available in?</h2>
     <p>The widget is available in Spanish, English, Portuguese, German and French, included in every plan. It automatically follows the language your Shopify store shows each visitor, so a shopper in Germany sees the try-on in German without you configuring anything.</p>
@@ -271,13 +278,13 @@
     <p>Shopper photos are automatically deleted after 72 hours and are never shared with the store. The cross-store account keeps only the model and measurements the user chooses to save, and they can export or delete them anytime.</p>
 
     <h2>How is Fittly different from other virtual try-on apps?</h2>
-    <p>The try-on and the size recommendation are the same widget, not a main feature plus an extra. The shopper sees the garment on and gets a size computed from that garment's real measurements in the same flow. Size recommendation comes with the $9 and $19 plans and is never metered there, so advising a size never costs you a generation, the install is one step because Fittly scans your catalog on its own, and the widget ships in five languages. There is a comparison against the other apps in the category, with Shopify App Store data, at <a href="/en/shopify-virtual-try-on-apps-compared">/en/shopify-virtual-try-on-apps-compared</a>.</p>
+    <p>The try-on and the size recommendation are the same widget, not a main feature plus an extra. The shopper sees the garment on and gets a size computed from that garment's real measurements in the same flow. Size recommendation is also included on every plan and never metered, so advising a size never costs you a generation, the install is one step and you can try it with 15 free try-ons in the editor before picking a plan because Fittly scans your catalog on its own, and the widget ships in five languages. There is a comparison against the other apps in the category, with Shopify App Store data, at <a href="/en/shopify-virtual-try-on-apps-compared">/en/shopify-virtual-try-on-apps-compared</a>.</p>
 
     <h2>Who is behind Fittly?</h2>
     <p>Fittly SpA, a Chilean company founded in May 2026. Fittly is its only product. It is a new app: as of August 2026 it has 1 public review on the Shopify App Store, at 5 stars. We do not publish conversion-lift percentages because we have not measured them in a controlled way yet.</p>
 
     <h2>Do I have to upload my size charts?</h2>
-    <p>No. Fittly scans your catalog on its own and reads the size charts that are already inside your own product photos, so you never upload or retype a table. The scan starts by itself, on your store's first real try-on.</p>
+    <p>No. Fittly scans your catalog on its own and reads the size charts that are already inside your own product photos, so you never upload or retype a table. During the editor preview it reads the product you are looking at; the full catalog scan starts by itself once you activate a plan.</p>
 
     <h2>How long does it take to install?</h2>
     <p>One step: you enable the app embed in the Shopify theme editor and save. There is no code to touch and nothing else to configure, and from there Fittly handles the rest. There is a walkthrough of the whole process at <a href="/en/install-virtual-try-on-shopify">/en/install-virtual-try-on-shopify</a>.</p>
@@ -286,13 +293,13 @@
     <p>Yes. You set a monthly spend cap and Fittly does not go past it. Because billing is per try-on used rather than a fixed allowance you buy up front, the cap is what gives you control.</p>
 
     <h2>Can I try it before paying?</h2>
-    <p>Yes. You get 14 days free or 75 try-ons, whichever comes first, with no card. When the trial ends you are not moved onto a paid plan: you land on the Free plan, which has no monthly fee and charges $0.35 per try-on used.</p>
+    <p>Yes, with no card and no expiry date. Once you enable the app embed you can run 15 free try-ons on your own products, right there in the Shopify theme editor. Those previews are private: only you see them, and the widget appears for your shoppers only once you activate a plan. It is 15 in total per shop, not 15 a day. There used to be a 14-day trial; we removed it on August 27, 2026 because it made you wait two weeks to see something you now see on day one.</p>
 
     <a class="otro-idioma" href="/faq">Leer estas preguntas en español →</a>
 
     <div class="cta-card">
       <div class="t">Try it on your own garments</div>
-      <div class="d">14 days free or 75 try-ons, no card. After that installing is still free and you pay only for the try-ons your shoppers use.</div>
+      <div class="d">15 free try-ons in the theme editor, no card. Installing is free and after that you pay only for the try-ons your shoppers use.</div>
       <a class="btn" href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Install Fittly on Shopify</a>
     </div>
 
