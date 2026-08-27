@@ -84,6 +84,13 @@
     .doc table a:hover { color: #fff; }
     .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 20px; }
     .otro-idioma:hover { color: #fff; }
+    .doc td .nota { display: block; font-size: 12px; font-weight: 600; color: var(--faint); margin-top: 3px; }
+    .aviso { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; font-size: 13.5px; font-weight: 500; color: var(--muted); line-height: 1.65; margin-top: 4px; }
+    .verif { font-size: 12.5px; font-weight: 700; color: var(--faint); margin-top: 14px; letter-spacing: 0.02em; }
+    .doc table a { color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--border-2); }
+    .doc table a:hover { color: #fff; }
+    .otro-idioma { display: inline-block; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--border-2); border-radius: 20px; padding: 7px 14px; margin-top: 20px; }
+    .otro-idioma:hover { color: #fff; }
   </style>
   <script type="application/ld+json">
   {
@@ -152,7 +159,8 @@
           "offers": {
             "@type": "Offer",
             "price": "7.99",
-            "priceCurrency": "USD"
+            "priceCurrency": "USD",
+            "description": "$7,99 · hasta 10 tablas, cargos extra según volumen de pedidos"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -173,7 +181,8 @@
           "offers": {
             "@type": "Offer",
             "price": "19.99",
-            "priceCurrency": "USD"
+            "priceCurrency": "USD",
+            "description": "$19,99 · 100 pruebas/mes, excedente $0,17 por prueba"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -194,7 +203,8 @@
           "offers": {
             "@type": "Offer",
             "price": "33",
-            "priceCurrency": "USD"
+            "priceCurrency": "USD",
+            "description": "$33 · 200 pruebas/mes, sin excedente declarado"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -215,7 +225,8 @@
           "offers": {
             "@type": "Offer",
             "price": "9",
-            "priceCurrency": "USD"
+            "priceCurrency": "USD",
+            "description": "$9 · sin límite de pruebas, más $0,22 por try-on usado"
           }
         }
       }
@@ -250,7 +261,7 @@
         "name": "¿Cuánto cuesta un probador virtual en Shopify?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "El plan pagado más barato de la lista es Kiwi con $7,99 al mes, aunque no incluye probador. Entre los que sí traen probador, Fittly parte en $9 al mes, GenLook en $19,99 y STILARO en $33. A eso hay que sumarle el costo por generación en las apps que cobran por uso."
+          "text": "Depende del modelo de cobro, y los cuatro son distintos. Kiwi parte en $7,99 al mes por hasta 10 tablas, pero no incluye probador y advierte cargos extra según tu volumen de pedidos. Entre las que sí traen probador: GenLook cobra $19,99 al mes con 100 pruebas incluidas y $0,17 por cada prueba extra; STILARO cobra $33 al mes con 200 pruebas incluidas; Fittly cobra $9 al mes sin límite de pruebas más $0,22 por try-on usado, o $0 al mes pagando $0,35 por try-on. Con poco volumen el modelo por uso sale más barato y con mucho volumen los cupos mensuales suelen ganar, así que estima tus pruebas al mes antes de comparar."
         }
       },
       {
@@ -290,12 +301,14 @@
     <div class="table-scroll">
       <table>
         <tr><th>App</th><th>Reseñas</th><th>Publicada</th><th>Plan gratis</th><th>Plan pagado desde</th></tr>
-        <tr><td><a href="https://apps.shopify.com/kiwi-sizing" target="_blank" rel="noopener">Kiwi Size Chart &amp; Recommender</a></td><td>1.115 (4,8★)</td><td>mar 2018</td><td>Sí, hasta 3 tablas</td><td>$7,99</td></tr>
-        <tr><td><a href="https://apps.shopify.com/genlook-virtual-try-on" target="_blank" rel="noopener">GenLook: AI Virtual Try On</a></td><td>35 (5,0★)</td><td>sep 2025</td><td>Sí, 10 pruebas/mes</td><td>$19,99</td></tr>
-        <tr><td><a href="https://apps.shopify.com/stilaro-probador-virtual" target="_blank" rel="noopener">STILARO Virtual Try-On</a></td><td>4 (5,0★)</td><td>mar 2026</td><td>Sí, 30 pruebas/mes</td><td>$33</td></tr>
-        <tr><td><a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Fittly: Try-On &amp; Size Guide</a></td><td>1 (5,0★)</td><td>may 2026</td><td>14 días o 75 pruebas de prueba, después $0 fijo ($0,35 por try-on)</td><td>$9</td></tr>
+        <tr><td><a href="https://apps.shopify.com/kiwi-sizing" target="_blank" rel="noopener">Kiwi Size Chart &amp; Recommender</a></td><td>1.115 (4,8★)</td><td>mar 2018</td><td>Sí, hasta 3 tablas</td><td>$7,99 · hasta 10 tablas<span class="nota">cargos extra según volumen de pedidos</span></td></tr>
+        <tr><td><a href="https://apps.shopify.com/genlook-virtual-try-on" target="_blank" rel="noopener">GenLook: AI Virtual Try On</a></td><td>35 (5,0★)</td><td>sep 2025</td><td>Sí, 10 pruebas/mes</td><td>$19,99 · 100 pruebas/mes<span class="nota">excedente $0,17 por prueba</span></td></tr>
+        <tr><td><a href="https://apps.shopify.com/stilaro-probador-virtual" target="_blank" rel="noopener">STILARO Virtual Try-On</a></td><td>4 (5,0★)</td><td>mar 2026</td><td>Sí, 30 pruebas/mes</td><td>$33 · 200 pruebas/mes<span class="nota">sin excedente declarado</span></td></tr>
+        <tr><td><a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Fittly: Try-On &amp; Size Guide</a></td><td>1 (5,0★)</td><td>may 2026</td><td>Sí, $0 fijo · $0,35 por try-on</td><td>$9 · sin límite de pruebas<span class="nota">más $0,22 por try-on usado</span></td></tr>
       </table>
     </div>
+
+    <p class="aviso">Ojo con leer esa última columna como un ranking de precio: los cuatro números no significan lo mismo. Kiwi, GenLook y STILARO cobran un fee mensual con un cupo incluido; Fittly cobra un fee más bajo y además por cada try-on usado. Cuál sale más barata depende de cuántas pruebas haga tu tienda al mes, así que conviene estimar tu volumen antes de comparar. Sobre pruebas gratis: Fittly da 14 días o 75 try-ons sin tarjeta, y Kiwi da 14 días en sus planes pagados.</p>
 
     <h2>¿Qué resuelve cada una?</h2>
 
@@ -329,7 +342,7 @@
     <p>Las cuatro tienen plan gratis, pero significan cosas distintas. Kiwi te deja publicar hasta 3 tablas de tallas gratis. GenLook da 10 pruebas al mes y STILARO 30. Fittly parte con un trial de 14 días o 75 pruebas y después cae a su plan Free, que no tiene fee mensual y cobra $0,35 por try-on usado, con un tope de gasto que defines tú.</p>
 
     <h3>¿Cuánto cuesta un probador virtual en Shopify?</h3>
-    <p>El plan pagado más barato de la lista es Kiwi con $7,99 al mes, aunque no incluye probador. Entre los que sí traen probador, Fittly parte en $9 al mes, GenLook en $19,99 y STILARO en $33. A eso hay que sumarle el costo por generación en las apps que cobran por uso.</p>
+    <p>Depende del modelo de cobro, y los cuatro son distintos. Kiwi parte en $7,99 al mes por hasta 10 tablas, pero no incluye probador y advierte cargos extra según tu volumen de pedidos. Entre las que sí traen probador: GenLook cobra $19,99 al mes con 100 pruebas incluidas y $0,17 por cada prueba extra; STILARO cobra $33 al mes con 200 pruebas incluidas; Fittly cobra $9 al mes sin límite de pruebas más $0,22 por try-on usado, o $0 al mes pagando $0,35 por try-on. Con poco volumen el modelo por uso sale más barato y con mucho volumen los cupos mensuales suelen ganar, así que estima tus pruebas al mes antes de comparar.</p>
 
     <h3>¿Esta comparativa es imparcial?</h3>
     <p>No del todo, y por eso está declarado arriba: la escribió Fittly, que es una de las apps comparadas. Lo que sí está es verificado: los datos de reseñas, fechas y precios salen de la ficha de cada app en el App Store de Shopify el 27 de agosto de 2026, y la tabla enlaza a cada ficha para que los revises. Fittly aparece como lo que es, la app más nueva y con menos reseñas de las cuatro.</p>
