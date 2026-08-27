@@ -358,9 +358,11 @@
     /* ---------- Footer ---------- */
     .footer { border-top: 1px solid var(--border); }
     .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding: 40px 28px; }
-    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
-    .footer-links a { font-size: 14px; font-weight: 600; color: var(--muted); transition: color 0.2s; }
-    .footer-links a:hover { color: #fff; }
+    .footer-cols { display: grid; grid-template-columns: repeat(2, minmax(160px, auto)); gap: 26px 56px; }
+    .footer-col { display: flex; flex-direction: column; gap: 11px; min-width: 0; }
+    .footer-col .fh { font-size: 11.5px; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; color: var(--faint-2); }
+    .footer-col a { font-size: 14px; font-weight: 600; color: var(--muted); transition: color 0.2s; }
+    .footer-col a:hover { color: #fff; }
     .footer-meta { font-size: 13px; color: var(--faint-2); font-weight: 500; }
 
     /* ---------- Reveal ---------- */
@@ -456,6 +458,7 @@
       .wrap { padding-left: 20px; padding-right: 20px; }
       .social-sep { display: none; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-cols { grid-template-columns: 1fr; gap: 24px; }
     }
   </style>
   <script type="application/ld+json">
@@ -588,7 +591,7 @@
         "name": "Combien ça coûte ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "L'installation est gratuite et aucun abonnement mensuel n'est obligatoire : sur le plan Free vous payez 0,35 $ par essayage utilisé, avec un plafond de dépenses que vous définissez. Quand votre volume grandit, Starter (9 $/mois) baisse le tarif à 0,22 $ et Growth (19 $/mois) à 0,18 $, sans limite d'essayages. La recommandation de taille n'est jamais facturée, et les essayages standards sont mis en cache, donc les résultats répétés sont servis sans frais supplémentaires."
+          "text": "Vous commencez avec 14 jours gratuits ou 75 essayages, au premier des deux, sans carte. Ensuite l'installation reste gratuite et aucun abonnement mensuel n'est obligatoire : sur le plan Free vous payez 0,35 $ par essayage utilisé, avec un plafond de dépenses que vous définissez. Quand votre volume grandit, Starter (9 $/mois) baisse le tarif à 0,22 $ et Growth (19 $/mois) à 0,18 $, sans limite d'essayages. La recommandation de taille n'est jamais facturée, et les essayages standards sont mis en cache, donc les résultats répétés sont servis sans frais supplémentaires."
         }
       },
       {
@@ -929,7 +932,7 @@
       <span class="label">Tarifs</span>
       <h2 class="h">Installation gratuite.<br />Ne payez que ce qu'ils utilisent.</h2>
       <p class="sub" style="max-width:600px;margin-left:auto;margin-right:auto;">Aucun quota à deviner : chaque plan paie par essayage utilisé, et l'abonnement mensuel ne fait que baisser votre tarif. Vous fixez vous-même votre plafond de dépenses mensuel.</p>
-      <div class="price-banner">🎁 <span><b>Installation gratuite</b> · sans frais mensuels · paiement à l'usage</span></div>
+      <div class="price-banner">🎁 <span><b>14 jours gratuits</b> ou 75 essayages, sans carte · ensuite vous payez à l'usage</span></div>
     </div>
     <div class="pricing">
       <div class="pcard reveal">
@@ -992,7 +995,7 @@
       </details>
       <details class="faq-item">
         <summary><h3 class="q">Combien ça coûte ?</h3><span class="pl">+</span></summary>
-        <div class="a">L'installation est gratuite et aucun abonnement mensuel n'est obligatoire : sur le plan Free vous payez 0,35 $ par essayage utilisé, avec un plafond de dépenses que vous définissez. Quand votre volume grandit, Starter (9 $/mois) baisse le tarif à 0,22 $ et Growth (19 $/mois) à 0,18 $, sans limite d'essayages. La recommandation de taille n'est jamais facturée, et les essayages standards sont mis en cache, donc les résultats répétés sont servis sans frais supplémentaires.</div>
+        <div class="a">Vous commencez avec 14 jours gratuits ou 75 essayages, au premier des deux, sans carte. Ensuite l'installation reste gratuite et aucun abonnement mensuel n'est obligatoire : sur le plan Free vous payez 0,35 $ par essayage utilisé, avec un plafond de dépenses que vous définissez. Quand votre volume grandit, Starter (9 $/mois) baisse le tarif à 0,22 $ et Growth (19 $/mois) à 0,18 $, sans limite d'essayages. La recommandation de taille n'est jamais facturée, et les essayages standards sont mis en cache, donc les résultats répétés sont servis sans frais supplémentaires.</div>
       </details>
       <details class="faq-item">
         <summary><h3 class="q">Dans quelles langues l'essayage est-il disponible ?</h3><span class="pl">+</span></summary>
@@ -1025,21 +1028,29 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-inner">
-      <a href="#" class="brand"><img src="/assets/fittly-icon.png" alt="Fittly" style="width:26px;height:26px;" /><span style="font-size:18px;">fittly</span></a>
-      <div class="footer-links">
-        <a href="#producto">Produit</a>
-        <a href="#instalacion">Installation</a>
-        <a href="#tiendas">Pour les boutiques</a>
-        <a href="#precios">Tarifs</a>
-        <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Installer</a>
-        <a href="/partners">Partners</a>
-        <a href="/probador-virtual-shopify">Guide de l'essayage (ES)</a>
-        <a href="/recomendacion-de-tallas-shopify">Guide des tailles (ES)</a>
-        <a href="/en/shopify-virtual-try-on-apps-compared">Comparatif des apps 2026 (EN)</a>
-        <a href="/en/install-virtual-try-on-shopify">How to install</a>
-        <a href="/en/apparel-size-curve">Size curve</a>
+      <div class="footer-brand">
+        <a href="#" class="brand"><img src="/assets/fittly-icon.png" alt="Fittly" style="width:26px;height:26px;" /><span style="font-size:18px;">fittly</span></a>
+        <div class="footer-meta">© 2026 Fittly · Conçu pour Shopify</div>
       </div>
-      <div class="footer-meta">© 2026 Fittly · Conçu pour Shopify</div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <span class="fh">Fittly</span>
+          <a href="#producto">Produit</a>
+          <a href="#instalacion">Installation</a>
+          <a href="#tiendas">Pour les boutiques</a>
+          <a href="#precios">Tarifs</a>
+          <a href="/partners">Partners</a>
+          <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Installer</a>
+        </div>
+        <div class="footer-col">
+          <span class="fh">Guides</span>
+          <a href="/probador-virtual-shopify">Guide de l'essayage (ES)</a>
+          <a href="/recomendacion-de-tallas-shopify">Guide des tailles (ES)</a>
+          <a href="/en/install-virtual-try-on-shopify">Comment installer (EN)</a>
+          <a href="/en/apparel-size-curve">Courbe des tailles (EN)</a>
+          <a href="/en/shopify-virtual-try-on-apps-compared">Comparatif des apps 2026 (EN)</a>
+        </div>
+      </div>
     </div>
   </footer>
 

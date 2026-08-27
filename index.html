@@ -371,9 +371,11 @@
     /* ---------- Footer ---------- */
     .footer { border-top: 1px solid var(--border); }
     .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding: 40px 28px; }
-    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
-    .footer-links a { font-size: 14px; font-weight: 600; color: var(--muted); transition: color 0.2s; }
-    .footer-links a:hover { color: #fff; }
+    .footer-cols { display: grid; grid-template-columns: repeat(2, minmax(160px, auto)); gap: 26px 56px; }
+    .footer-col { display: flex; flex-direction: column; gap: 11px; min-width: 0; }
+    .footer-col .fh { font-size: 11.5px; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; color: var(--faint-2); }
+    .footer-col a { font-size: 14px; font-weight: 600; color: var(--muted); transition: color 0.2s; }
+    .footer-col a:hover { color: #fff; }
     .footer-meta { font-size: 13px; color: var(--faint-2); font-weight: 500; }
 
     /* ---------- Reveal ---------- */
@@ -469,6 +471,7 @@
       .wrap { padding-left: 20px; padding-right: 20px; }
       .social-sep { display: none; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-cols { grid-template-columns: 1fr; gap: 24px; }
     }
   </style>
   <script type="application/ld+json">
@@ -601,7 +604,7 @@
         "name": "¿Cuánto cuesta?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "La instalación es gratuita y no hay fee mensual obligatorio: en el plan Free pagas $0,35 por try-on usado, con un tope de gasto mensual que tú defines. Si tu volumen crece, Starter ($9/mes) baja la tarifa a $0,22 y Growth ($19/mes) a $0,18, sin límites de try-ons. La recomendación de talla nunca se cobra por uso, y los try-ons estándar se cachean, así que los resultados repetidos se sirven sin costo extra."
+          "text": "Primero tienes 14 días gratis o 75 try-ons, lo que se cumpla antes, sin tarjeta. Después la instalación sigue siendo gratuita y no hay fee mensual obligatorio: en el plan Free pagas $0,35 por try-on usado, con un tope de gasto mensual que tú defines. Si tu volumen crece, Starter ($9/mes) baja la tarifa a $0,22 y Growth ($19/mes) a $0,18, sin límites de try-ons. La recomendación de talla nunca se cobra por uso, y los try-ons estándar se cachean, así que los resultados repetidos se sirven sin costo extra."
         }
       },
       {
@@ -942,7 +945,7 @@
       <span class="label">Precios</span>
       <h2 class="h">Instalación gratuita.<br />Pagas solo lo que usan.</h2>
       <p class="sub" style="max-width:600px;margin-left:auto;margin-right:auto;">Sin cupos que adivinar: cada plan paga por try-on usado, y el fee mensual solo baja la tarifa. El tope de gasto mensual lo defines tú.</p>
-      <div class="price-banner">🎁 <span><b>Instalación gratuita</b> · sin fee mensual · pagas por uso</span></div>
+      <div class="price-banner">🎁 <span><b>14 días gratis</b> o 75 pruebas, sin tarjeta · después pagas por uso</span></div>
     </div>
     <div class="pricing">
       <div class="pcard reveal">
@@ -1005,7 +1008,7 @@
       </details>
       <details class="faq-item">
         <summary><h3 class="q">¿Cuánto cuesta?</h3><span class="pl">+</span></summary>
-        <div class="a">La instalación es gratuita y no hay fee mensual obligatorio: en el plan Free pagas $0,35 por try-on usado, con un tope de gasto mensual que tú defines. Si tu volumen crece, Starter ($9/mes) baja la tarifa a $0,22 y Growth ($19/mes) a $0,18, sin límites de try-ons. La recomendación de talla nunca se cobra por uso, y los try-ons estándar se cachean, así que los resultados repetidos se sirven sin costo extra.</div>
+        <div class="a">Primero tienes 14 días gratis o 75 try-ons, lo que se cumpla antes, sin tarjeta. Después la instalación sigue siendo gratuita y no hay fee mensual obligatorio: en el plan Free pagas $0,35 por try-on usado, con un tope de gasto mensual que tú defines. Si tu volumen crece, Starter ($9/mes) baja la tarifa a $0,22 y Growth ($19/mes) a $0,18, sin límites de try-ons. La recomendación de talla nunca se cobra por uso, y los try-ons estándar se cachean, así que los resultados repetidos se sirven sin costo extra.</div>
       </details>
       <details class="faq-item">
         <summary><h3 class="q">¿En qué idiomas está el probador?</h3><span class="pl">+</span></summary>
@@ -1038,21 +1041,29 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-inner">
-      <a href="#" class="brand"><img src="assets/fittly-icon.png" alt="Fittly" style="width:26px;height:26px;" /><span style="font-size:18px;">fittly</span></a>
-      <div class="footer-links">
-        <a href="#producto">Producto</a>
-        <a href="#instalacion">Instalación</a>
-        <a href="#tiendas">Para tiendas</a>
-        <a href="#precios">Precios</a>
-        <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Instalar</a>
-        <a href="/partners">Partners</a>
-        <a href="/probador-virtual-shopify">Probador virtual</a>
-        <a href="/recomendacion-de-tallas-shopify">Tallas para Shopify</a>
-        <a href="/comparativa-apps-probador-virtual-shopify">Comparativa 2026</a>
-        <a href="/instalar-probador-virtual-shopify">Cómo instalar</a>
-        <a href="/curva-de-tallas-tienda-de-ropa">Curva de tallas</a>
+      <div class="footer-brand">
+        <a href="#" class="brand"><img src="assets/fittly-icon.png" alt="Fittly" style="width:26px;height:26px;" /><span style="font-size:18px;">fittly</span></a>
+        <div class="footer-meta">© 2026 Fittly · Hecho para Shopify</div>
       </div>
-      <div class="footer-meta">© 2026 Fittly · Hecho para Shopify</div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <span class="fh">Fittly</span>
+          <a href="#producto">Producto</a>
+          <a href="#instalacion">Instalación</a>
+          <a href="#tiendas">Para tiendas</a>
+          <a href="#precios">Precios</a>
+          <a href="/partners">Partners</a>
+          <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Instalar</a>
+        </div>
+        <div class="footer-col">
+          <span class="fh">Guías</span>
+          <a href="/probador-virtual-shopify">Probador virtual</a>
+          <a href="/recomendacion-de-tallas-shopify">Tallas para Shopify</a>
+          <a href="/instalar-probador-virtual-shopify">Cómo instalar</a>
+          <a href="/curva-de-tallas-tienda-de-ropa">Curva de tallas</a>
+          <a href="/comparativa-apps-probador-virtual-shopify">Comparativa 2026</a>
+        </div>
+      </div>
     </div>
   </footer>
 

@@ -358,9 +358,11 @@
     /* ---------- Footer ---------- */
     .footer { border-top: 1px solid var(--border); }
     .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding: 40px 28px; }
-    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
-    .footer-links a { font-size: 14px; font-weight: 600; color: var(--muted); transition: color 0.2s; }
-    .footer-links a:hover { color: #fff; }
+    .footer-cols { display: grid; grid-template-columns: repeat(2, minmax(160px, auto)); gap: 26px 56px; }
+    .footer-col { display: flex; flex-direction: column; gap: 11px; min-width: 0; }
+    .footer-col .fh { font-size: 11.5px; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; color: var(--faint-2); }
+    .footer-col a { font-size: 14px; font-weight: 600; color: var(--muted); transition: color 0.2s; }
+    .footer-col a:hover { color: #fff; }
     .footer-meta { font-size: 13px; color: var(--faint-2); font-weight: 500; }
 
     /* ---------- Reveal ---------- */
@@ -456,6 +458,7 @@
       .wrap { padding-left: 20px; padding-right: 20px; }
       .social-sep { display: none; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-cols { grid-template-columns: 1fr; gap: 24px; }
     }
   </style>
   <script type="application/ld+json">
@@ -588,7 +591,7 @@
         "name": "Was kostet es?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Die Installation ist kostenlos und es gibt keine Pflicht-Monatsgebühr: Im Free-Plan zahlst du 0,35 $ pro genutzter Anprobe, mit einem Ausgabenlimit, das du festlegst. Wächst dein Volumen, senkt Starter (9 $/Mon.) den Tarif auf 0,22 $ und Growth (19 $/Mon.) auf 0,18 $, ohne Anprobe-Limits. Die Größenempfehlung wird nie abgerechnet, und Standard-Anproben werden gecacht, sodass wiederholte Ergebnisse ohne Zusatzkosten ausgeliefert werden."
+          "text": "Du startest mit 14 Tagen gratis oder 75 Anproben, je nachdem was zuerst eintritt, ohne Karte. Danach ist die Installation weiterhin kostenlos und es gibt keine Pflicht-Monatsgebühr: Im Free-Plan zahlst du 0,35 $ pro genutzter Anprobe, mit einem Ausgabenlimit, das du festlegst. Wächst dein Volumen, senkt Starter (9 $/Mon.) den Tarif auf 0,22 $ und Growth (19 $/Mon.) auf 0,18 $, ohne Anprobe-Limits. Die Größenempfehlung wird nie abgerechnet, und Standard-Anproben werden gecacht, sodass wiederholte Ergebnisse ohne Zusatzkosten ausgeliefert werden."
         }
       },
       {
@@ -929,7 +932,7 @@
       <span class="label">Preise</span>
       <h2 class="h">Kostenlos installieren.<br />Zahl nur, was sie nutzen.</h2>
       <p class="sub" style="max-width:600px;margin-left:auto;margin-right:auto;">Keine Kontingente zu raten: Jeder Plan zahlt pro genutzter Anprobe, und die Monatsgebühr senkt nur deinen Tarif. Dein monatliches Ausgabenlimit legst du selbst fest.</p>
-      <div class="price-banner">🎁 <span><b>Kostenlos installieren</b> · keine Monatsgebühr · Zahlung nach Nutzung</span></div>
+      <div class="price-banner">🎁 <span><b>14 Tage gratis</b> oder 75 Anproben, ohne Karte · danach zahlst du pro Nutzung</span></div>
     </div>
     <div class="pricing">
       <div class="pcard reveal">
@@ -992,7 +995,7 @@
       </details>
       <details class="faq-item">
         <summary><h3 class="q">Was kostet es?</h3><span class="pl">+</span></summary>
-        <div class="a">Die Installation ist kostenlos und es gibt keine Pflicht-Monatsgebühr: Im Free-Plan zahlst du 0,35 $ pro genutzter Anprobe, mit einem Ausgabenlimit, das du festlegst. Wächst dein Volumen, senkt Starter (9 $/Mon.) den Tarif auf 0,22 $ und Growth (19 $/Mon.) auf 0,18 $, ohne Anprobe-Limits. Die Größenempfehlung wird nie abgerechnet, und Standard-Anproben werden gecacht, sodass wiederholte Ergebnisse ohne Zusatzkosten ausgeliefert werden.</div>
+        <div class="a">Du startest mit 14 Tagen gratis oder 75 Anproben, je nachdem was zuerst eintritt, ohne Karte. Danach ist die Installation weiterhin kostenlos und es gibt keine Pflicht-Monatsgebühr: Im Free-Plan zahlst du 0,35 $ pro genutzter Anprobe, mit einem Ausgabenlimit, das du festlegst. Wächst dein Volumen, senkt Starter (9 $/Mon.) den Tarif auf 0,22 $ und Growth (19 $/Mon.) auf 0,18 $, ohne Anprobe-Limits. Die Größenempfehlung wird nie abgerechnet, und Standard-Anproben werden gecacht, sodass wiederholte Ergebnisse ohne Zusatzkosten ausgeliefert werden.</div>
       </details>
       <details class="faq-item">
         <summary><h3 class="q">In welchen Sprachen gibt es die Anprobe?</h3><span class="pl">+</span></summary>
@@ -1025,21 +1028,29 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-inner">
-      <a href="#" class="brand"><img src="/assets/fittly-icon.png" alt="Fittly" style="width:26px;height:26px;" /><span style="font-size:18px;">fittly</span></a>
-      <div class="footer-links">
-        <a href="#producto">Produkt</a>
-        <a href="#instalacion">Einrichtung</a>
-        <a href="#tiendas">Für Shops</a>
-        <a href="#precios">Preise</a>
-        <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Installieren</a>
-        <a href="/partners">Partners</a>
-        <a href="/probador-virtual-shopify">Anprobe-Guide (ES)</a>
-        <a href="/recomendacion-de-tallas-shopify">Größen-Guide (ES)</a>
-        <a href="/en/shopify-virtual-try-on-apps-compared">App-Vergleich 2026 (EN)</a>
-        <a href="/en/install-virtual-try-on-shopify">How to install</a>
-        <a href="/en/apparel-size-curve">Size curve</a>
+      <div class="footer-brand">
+        <a href="#" class="brand"><img src="/assets/fittly-icon.png" alt="Fittly" style="width:26px;height:26px;" /><span style="font-size:18px;">fittly</span></a>
+        <div class="footer-meta">© 2026 Fittly · Gemacht für Shopify</div>
       </div>
-      <div class="footer-meta">© 2026 Fittly · Gemacht für Shopify</div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <span class="fh">Fittly</span>
+          <a href="#producto">Produkt</a>
+          <a href="#instalacion">Einrichtung</a>
+          <a href="#tiendas">Für Shops</a>
+          <a href="#precios">Preise</a>
+          <a href="/partners">Partners</a>
+          <a href="https://apps.shopify.com/fittly" target="_blank" rel="noopener">Installieren</a>
+        </div>
+        <div class="footer-col">
+          <span class="fh">Guides</span>
+          <a href="/probador-virtual-shopify">Anprobe-Guide (ES)</a>
+          <a href="/recomendacion-de-tallas-shopify">Größen-Guide (ES)</a>
+          <a href="/en/install-virtual-try-on-shopify">Installationsanleitung (EN)</a>
+          <a href="/en/apparel-size-curve">Größenkurve (EN)</a>
+          <a href="/en/shopify-virtual-try-on-apps-compared">App-Vergleich 2026 (EN)</a>
+        </div>
+      </div>
     </div>
   </footer>
 
